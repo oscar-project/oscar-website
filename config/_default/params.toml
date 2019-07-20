@@ -58,7 +58,7 @@ time_format = "3:04 PM"
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = ""
+email = "pedro.ortiz@inria.fr"
 phone = ""
 address = ""
 
