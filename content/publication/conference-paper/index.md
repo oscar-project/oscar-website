@@ -31,9 +31,11 @@ featured: true
 links:
 - name: Workshop
   url: http://corpora.ids-mannheim.de/cmlc-2019.html
+- name: HAL
+  url: https://hal.inria.fr/hal-02148693
 url_pdf: http://corpora.ids-mannheim.de/CMLC7-final/CMLC-7_2019-Oritz_et_al.pdf
 url_code: 'https://github.com/pjox/goclassy'
-#url_dataset: 'https://team.inria.fr/almanach/oscar/'
+url_dataset: 'https://traces1.inria.fr/oscar/'
 #url_poster: '#'
 #url_project: ''
 #url_slides: ''
