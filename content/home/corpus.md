@@ -49,10 +49,6 @@ subtitle = ""
 
 All the data is distributed by language, both the original and the deduplicated versions of the data are available. To download a file just click the desired link on the table below. Sizes are for the **uncompressed** files.
 
-{{% alert warning %}}
-We do not own any of the text from which these data has been extracted. Please read the [license section](#license) before downloading.
-{{% /alert %}}
-
 <center>
 
 | Language          | Words original  | Size original | File original | Words deduplicated | Size deduplicated | File deduplicated |
@@ -211,7 +207,7 @@ We do not own any of the text from which these data has been extracted. Please r
 | Uzbek             | 2,450,256       | 21M           |[uz.txt.gz](files/compressed-orig/uz.txt.gz)     | 1,381,644          | 12M               |[uz_dedup.txt.gz](files/Compressed/uz_dedup.txt.gz)   |
 | Venetian          | 3,492           | 18K           |[vec.txt.gz](files/compressed-orig/vec.txt.gz)    | 3,199              | 17K               |[vec_dedup.txt.gz](files/Compressed/vec_dedup.txt.gz)  |
 | Vietnamese        | 12,036,845,359  | 68G           |[vi.txt.gz](files/compressed-orig/vi.txt.gz)     | 5,577,159,843      | 32G               |[vi_dedup.txt.gz](files/Compressed/vi_dedup.txt.gz)   |
-| Volap√ºk          | 321,121         | 2.0M          |[vo.txt.gz](files/compressed-orig/vo.txt.gz)     | 318,568            | 2.0M              |[vo_dedup.txt.gz](files/Compressed/vo_dedup.txt.gz)   |
+| Volapük          | 321,121         | 2.0M          |[vo.txt.gz](files/compressed-orig/vo.txt.gz)     | 318,568            | 2.0M              |[vo_dedup.txt.gz](files/Compressed/vo_dedup.txt.gz)   |
 | Walloon           | 50,720          | 273K          |[wa.txt.gz](files/compressed-orig/wa.txt.gz)     | 37,543             | 203K              |[wa_dedup.txt.gz](files/Compressed/wa_dedup.txt.gz)   |
 | Waray             | 397,315         | 2.5M          |[war.txt.gz](files/compressed-orig/war.txt.gz)    | 336,311            | 2.2M              |[war_dedup.txt.gz](files/Compressed/war_dedup.txt.gz)  |
 | Welsh             | 37,422,441      | 213M          |[cy.txt.gz](files/compressed-orig/cy.txt.gz)     | 23,574,673         | 133M              |[cy_dedup.txt.gz](files/Compressed/cy_dedup.txt.gz)   |
