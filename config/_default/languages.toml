@@ -63,3 +63,31 @@
   name = "Contactenos"
   url = "#contact"
   weight = 70
+
+[pt]
+  languageCode = "pt"
+  contentDir = "content/pt"
+[[pt.menu.main]]
+  name = "Home"
+  url = "#about"
+  weight = 10
+[[pt.menu.main]]
+  name = "Presentaciones"
+  url = "#talks"
+  weight = 20
+[[pt.menu.main]]
+   name = "Publicaciones"
+   url = "#featured"
+   weight = 40
+[[pt.menu.main]]
+  name = "Corpus"
+  url = "#corpus"
+  weight = 50
+[[pt.menu.main]]
+  name = "Lincencia"
+  url = "#license"
+  weight = 60
+[[pt.menu.main]]
+  name = "Contactenos"
+  url = "#contact"
+  weight = 70
