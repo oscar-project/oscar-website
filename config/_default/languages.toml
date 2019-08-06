@@ -68,15 +68,15 @@
   languageCode = "pt"
   contentDir = "content/pt"
 [[pt.menu.main]]
-  name = "Home"
+  name = "Início"
   url = "#about"
   weight = 10
 [[pt.menu.main]]
-  name = "Presentaciones"
+  name = "Apresentações"
   url = "#talks"
   weight = 20
 [[pt.menu.main]]
-   name = "Publicaciones"
+   name = "Publicações"
    url = "#featured"
    weight = 40
 [[pt.menu.main]]
@@ -84,10 +84,10 @@
   url = "#corpus"
   weight = 50
 [[pt.menu.main]]
-  name = "Lincencia"
+  name = "Lincença"
   url = "#license"
   weight = 60
 [[pt.menu.main]]
-  name = "Contactenos"
+  name = "Contacte-nos"
   url = "#contact"
   weight = 70
