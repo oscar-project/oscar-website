@@ -80,6 +80,8 @@ email: ""
 
 OSCAR ou **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almnach/) co**R**pus  é um corpus multilíngue obtido através da clasificação natural de linguagem (NLP) e da filtração do corpus [Common Crawl](https://commoncrawl.org/) usando a arquitectura de [goclassy](https://github.com/pjox/goclassy).
 Atualmente, OSCAR não tem metadata; portanto,  o principal uso deste corpus é para o treinamento não-supervisionado do processamento natural de linguagem (NLP).
-Os dados estão distribuídos pela linguagem no formato original e no formato.  
-Neste momento, temos 166 linguagens disponiveis. 
-Se você usar o OSCAR e quer ajudar-nos com o desenvolvimento do corpus, pode deixar um comentário utilizando o [formulário](#contact) aqui embaixo.
+Os dados estão distribuídos pela linguagem no formato original e no formato.  Neste momento, temos 166 linguagens disponiveis. 
+
+Se você usar o OSCAR e quer ajudar-nos com o desenvolvimento do corpus, pode deixar um comentário utilizando este [formulário](#contact).
+Se você quiser contribuir ao corpus, pode fazê-lo traduzindo a nossa página para outras linguagens ou tokenizando qualquer das linguagens disponíveis (abra um pull request [aqui](https://github.com/pjox/oscar-website)).  
+O corpus foi feito por [Pedro J. Ortiz](https://pjortiz.com/), [Benoît Sagot](http://alpage.inria.fr/~sagot/) e [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
