@@ -3,6 +3,10 @@ title: Writing technical content in Academic
 date: 2019-07-12
 math: true
 diagram: true
+markup: mmark
+image:
+  placement: 3
+  caption: 'Image credit: [**John Moeses Bauan**](https://unsplash.com/photos/OGZtQF8iC0g)'
 ---
 
 Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.
@@ -33,36 +37,36 @@ data.head()
 
 ### Math
 
-Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the `math` option in your `config/_default/params.toml` file or by adding `math: true` to your page front matter.
+Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the `math` option in your `config/_default/params.toml` file and adding `markup: mmark` to your page front matter.
 
-To render a math *block*, wrap your LaTeX math with
+To render *inline* or *block* math, wrap your LaTeX math with `$$...$$`.
 
-    <div>$$...$$</div>
-    
-whereas to render *inline* math, wrap your LaTeX math with backticks
+Example **math block**:
 
-    `$...$`
-    
-otherwise your math will be parsed as Markdown.
-
-Example math block:
-
-```html
-<div>$$
-\gamma_{n} = \frac{ 
+```tex
+$$\gamma_{n} = \frac{ 
 \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T 
 \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
-{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}
-$$</div>
+{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
 ```
 
 renders as
 
-<div>
 $$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
-</div>
 
-Example inline math `\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2` renders as `$\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2$`.
+Example **inline math** `$$\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2$$` renders as $$\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2$$ .
+
+Example **multi-line math** using the `\\` math linebreak:
+
+```tex
+$$f(k;p_0^*) = \begin{cases} p_0^* & \text{if }k=1, \\
+1-p_0^* & \text {if }k=0.\end{cases}$$
+```
+
+renders as
+
+$$f(k;p_0^*) = \begin{cases} p_0^* & \text{if }k=1, \\
+1-p_0^* & \text {if }k=0.\end{cases}$$
 
 ### Diagrams
 
@@ -179,5 +183,17 @@ renders as
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
+
+### Asides
+
+Academic supports a Markdown extension for asides, also referred to as *notices* or *hints*. By prefixing a paragraph with `A>`, it will render as an aside. You can enable this feature by adding `markup: mmark` to your page front matter, or alternatively using the [*Alert* shortcode](https://sourcethemes.com/academic/docs/writing-markdown-latex/#alerts).
+
+```markdown
+A> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+```
+
+renders as
+
+A> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
 
 ### Did you find this page helpful? Consider sharing it 🙌
