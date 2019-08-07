@@ -8,7 +8,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 110  # Order that this section will appear.
 
-title = "License"
+title = "Licencia"
 subtitle = ""
 
 [design]
@@ -47,25 +47,25 @@ subtitle = ""
  css_class = ""
 +++
 
-These data are released under this licensing scheme:
+Estos datos se publican bajo la siguiente licencia:
 
-* We do not own any of the text from which these data has been extracted.
-* We license the actual packaging of these data under the [Creative Commons CC0 license ("no rights reserved")](http://creativecommons.org/publicdomain/zero/1.0/).
-* To the extent possible under law, <a rel="dct:publisher" href="https://team.inria.fr/almanach/oscar/"> <span property="dct:title">Inria</span></a> has waived all copyright and related or neighboring rights to <span property="dct:title">OSCAR</span>.
-* This work is published from: <span property="vcard:Country" datatype="dct:ISO3166" content="FR" about="https://team.inria.fr/almanach/oscar/">France</span>.
+* No somos dueños del texto del que se han extraído estos datos.
+* Licenciamos el empaquetado de estos datos bajo la licencia [CC0 1.0 Universal (CC0 1.0) ("Dedicación de Dominio Público")](https://creativecommons.org/publicdomain/zero/1.0/deed.es).
+* En la medida de lo posible según la ley, <a rel="dct:publisher" href="https://team.inria.fr/almanach/oscar/"> <span property="dct:title">Inria</span></a>  ha renunciado a todos los derechos de autor y derechos relacionados con <span property="dct:title">OSCAR</span>.
+* Este trabajo se publica desde: <span property="vcard:Country" datatype="dct:ISO3166" content="FR" about="https://team.inria.fr/almanach/oscar/">Francia</span>.
 
 <a rel="license"
     href="http://creativecommons.org/publicdomain/zero/1.0/">
   <img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
 </a>
 
-## Notice and take down policy
+## Política de eliminación de datos
 
-**Notice:** Should you consider that our data contains material that is owned by you and should therefore not be reproduced here, please:
+**Aviso:** Si considera que nuestros datos contienen material de su propiedad, y que por lo tanto, no deben reproducirse aquí, por favor:
 
-* Clearly identify yourself, with detailed contact data such as an address, telephone number or email address at which you can be contacted.
-* Clearly identify the copyrighted work claimed to be infringed.
-* Clearly identify the material that is claimed to be infringing and information reasonably sufficient to allow us to locate the material.
-* And use the contact form below.
+* Identifíquese claramente, con datos de contacto detallados, como una dirección, un número de teléfono o una dirección de correo electrónico con los que pueda ser contactado.
+* Identifique claramente la pieza protegida por derechos de autor que supuestamente se ha infringido.
+* Identifique claramente el material que se alega que infringe sus derechos de autor y proporcione información suficiente para permitirnos ubicar el material.
+* Y use el formulario de contacto a continuación.
 
-**Take down:** We will comply to legitimate requests by removing the affected sources from the next release of the corpus.
+**Retirar:** Cumpliremos con las solicitudes legítimas eliminando las piezas afectadas de la próxima versión del corpus.

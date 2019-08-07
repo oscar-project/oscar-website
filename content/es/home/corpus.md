@@ -8,7 +8,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 100  # Order that this section will appear.
 
-title = "Corpus Download"
+title = "Descargar el corpus"
 subtitle = ""
 
 [design]
@@ -47,9 +47,9 @@ subtitle = ""
  css_class = ""
 +++
 
-All the data is distributed by language, both the original and the deduplicated versions of the data are available. To download a file just click the desired link on the table below. We recommend the use of [pigz](https://zlib.net/pigz/) to decompress the bigger files in OSCAR.
+Todos los datos se distribuyen por idioma, tanto las versiones originales como las deduplicadas están disponibles. Para descargar un archivo, simplemente haga clic en el enlace deseado en la tabla a continuación. Recomendamos el uso de [pigz](https://zlib.net/pigz/) para descomprimir los archivos más grandes en OSCAR.
 
-All sizes are for the **uncompressed** files.
+Todos los tamaños listados son para los archivos **sin comprimir**.
 
 <center>
 
