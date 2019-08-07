@@ -20,7 +20,7 @@ organizations:
   url: "https://team.inria.fr/almanach/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Corpus plurilingüe y gigantesco curado por Pedro J. Ortiz Suárez, Benoît Sagot y Laurent Romary, investigadores del equipo ALMAnaCH en Inria.
+bio: Corpus multilíngue curado por Pedro J. Ortiz Suárez, Benoît Sagot e Laurent Romary; pesquisadores do grupo ALMAnaCH, Inria.
 
 #interests:
 #- Corpus Linguistics
