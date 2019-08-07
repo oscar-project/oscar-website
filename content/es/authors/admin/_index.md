@@ -78,12 +78,12 @@ email: ""
 #- Visitors
 ---
 
-OSCAR o **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almanach/) co**R**pus is a huge multilingual corpus obtained by language classification and filtering of the [Common Crawl](https://commoncrawl.org/) corpus using the [goclassy](https://github.com/pjox/goclassy) architecture.
+OSCAR o **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almanach/) co**R**pus en Inglés, es un enorme corpus plurilingüe obtenido a partir de [Common Crawl](https://commoncrawl.org/) tras realizar operaciones de filtraje, limpieza y clasificación por idioma  utilizando la arquitectura [goclassy](https://github.com/pjox/goclassy).
 
-OSCAR is currently shuffled at line level and no metadata is provided. Thus it is mainly intended to be used in the training of unsupervised language models for NLP.
+El orden de las lineas para todos los subcorpus de OSCAR ha sido aleatorizado y los metadatos no han sido publicados. Por tanto, OSCAR está destinado principalmente a ser utilizado en el entrenamiento de modelos de lenguaje no supervisados para NLP.
 
-Data is distributed by language in both original and deduplicated form. There are currently 166 different languages available. If you use OSCAR please consider giving us some feedback using the [contact form](#contact) down below. Also consider citing our [paper](https://hal.inria.fr/hal-02148693).
+Los datos se distribuyen por idioma en formato original y deduplicado. Actualmente hay 166 idiomas diferentes disponibles. Si usa OSCAR, por favor considere darnos su opinión utilizando el [formulario de contacto](#contact) al final de la página. Considere también citar nuestro [artículo](https://hal.inria.fr/hal-02148693).
 
-If you want to contribute to OSCAR, for example by tokenizing one of the corpus for a particular language, or by helping us translate our webpage, please open a pull request [here](https://github.com/pjox/oscar-website).
+Si desea contribuir a OSCAR, por ejemplo, tokenizando uno de los corpus para un idioma en particular o ayudándonos a traducir nuestra página web, abra una pull request [aquí](https://github.com/pjox/oscar-website).
 
-The corpus was put together by [Pedro J. Ortiz](https://pjortiz.com/), [Benoît Sagot](http://alpage.inria.fr/~sagot/) and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
+El corpus fue creado por [Pedro J. Ortiz](https://pjortiz.com/), [Benoît Sagot](http://alpage.inria.fr/~sagot/) y [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).

@@ -116,9 +116,6 @@ menu_align_right = false
 # Show estimated reading time for posts? (true/false)
 reading_time = true
 
-# Display comment count (if commenting enabled in config.toml)? (true/false)
-comment_count = true
-
 # Display next/previous section pager? (true/false)
 section_pager = false
 docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
@@ -145,6 +142,22 @@ sharing = true
   post_view = 2
   publication_view = 2
   talk_view = 2
+
+# Comments.
+[comments]
+  # Comment provider:
+  #   0: Disabled
+  #   1: Disqus (https://disqus.com)
+  #   2: Commento (https://commento.io)
+  engine = 0
+
+  # Which page types are commentable?
+  commentable = {page = true, post = true, docs = true, project = true, publication = true, talk = true}
+
+  # Configuration of Disqus.
+  [comments.disqus]
+    shortname = ""  # Paste the shortname from your Disqus dashboard.
+    show_count = true  # Show comment count in page header? (true/false)
 
 # Search.
 [search]
