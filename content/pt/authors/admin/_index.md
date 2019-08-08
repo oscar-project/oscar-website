@@ -10,7 +10,7 @@ autores:
 superusuário: true
 
 # Role/position
-função: "Corpus Grande"
+função: "Corpus"
 
 # Organizations/Affiliations
 organizações: 
@@ -20,7 +20,7 @@ organizações:
   url: "https://team.inria.fr/almanach/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Corpus multilíngue curado por Pedro J. Ortiz Suárez, Benoît Sagot e Laurent Romary; pesquisadores do grupo ALMAnaCH, Inria.
+bio: Corpus multilíngue curado por Pedro J. Ortiz Suárez, Benoît Sagot e Laurent Romary; pesquisadores do grupo ALMAnaCH, Inria, França.
 
 #interests:
 #- Corpus Linguistics
