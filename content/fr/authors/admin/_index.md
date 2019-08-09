@@ -10,17 +10,17 @@ authors:
 superuser: true
 
 # Role/position
-role: "Humongous Corpus"
+role: "Corpus gigantesque"
 
 # Organizations/Affiliations
 organizations: 
 - name: Inria
-  url: "https://www.inria.fr/en/"
+  url: "https://www.inria.fr/"
 - name: ALMAnaCH
-  url: "https://team.inria.fr/almanach/"
+  url: "https://team.inria.fr/almanach/fr/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Humongous multilingual Corpus put together by Pedro J. Ortiz Suárez, Benoît Sagot and Laurent Romary, researchers at the ALMAnaCH research team at Inria
+bio: Corpus polyglotte et gigantesque créé par Pedro J. Ortiz Suárez, Benoît Sagot et Laurent Romary, chercheurs de l'équipe de recherche ALMAnaCH à Inria Paris.
 
 #interests:
 #- Corpus Linguistics
@@ -78,12 +78,12 @@ email: ""
 #- Visitors
 ---
 
-OSCAR or **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almanach/) co**R**pus is a huge multilingual corpus obtained by language classification and filtering of the [Common Crawl](https://commoncrawl.org/) corpus using the [goclassy](https://github.com/pjox/goclassy) architecture.
+OSCAR ou **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almanach/) co**R**pus en anglais, est un énorme corpus multilingue obtenu par classification et filtrage du corpus [Common Crawl](https://commoncrawl.org/) à l'aide de l'architecture [goclassy](https://github.com/pjox/goclassy).
 
-OSCAR is currently shuffled at line level and no metadata is provided. Thus it is mainly intended to be used in the training of unsupervised language models for NLP.
+OSCAR est actuellement mélangé au niveau de ligne et aucune métadonnée n’est fournie. Ainsi, il est principalement destiné à être utilisé dans l'entraînement de modèles de langage non supervisés pour le TAL.
 
-Data is distributed by language in both original and deduplicated form. There are currently 166 different languages available. If you use OSCAR please consider giving us some feedback using the [contact form](#contact) down below. Also consider citing our [paper](https://hal.inria.fr/hal-02148693).
+Les données sont distribuées par langue sous forme originale et sous forme dédupliquée. Il y a actuellement 166 langues différentes disponibles. Si vous utilisez OSCAR, pensez à de nous laisser des commentaires en utilisant le [formulaire de contact](#contact) en bas. Pensez également à citer notre [article](https://hal.inria.fr/hal-02148693).
 
-If you want to contribute to OSCAR, for example by tokenizing one of the corpus for a particular language, or by helping us translate our webpage, please open a pull request [here](https://github.com/pjox/oscar-website).
+Si vous souhaitez contribuer à OSCAR, par exemple en segmentant l'un des corpus d'une langue en tokens ou en nous aidant à traduire notre site Web, veuillez ouvrir un pull request [ici] (https://github.com/pjox/oscar-website).
 
-The corpus was put together by [Pedro J. Ortiz](https://pjortiz.com/), [Benoît Sagot](http://alpage.inria.fr/~sagot/) and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
+Le corpus a été constitué par [Pedro J. Ortiz](https://pjortiz.com/), [Benoît Sagot](http://alpage.inria.fr/~sagot/) et [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).

@@ -30,15 +30,15 @@ interests:
 
 education:
   courses:
-  - course: PhD in Computer Science
+  - course: Doctorado en Ciencias de la Computación
     institution: Sorbonne Université
-  - course: BASc MIASHS
+  - course: Pregrado MIASHS
     institution: Université Paris 8
     year: 2018
-  - course: MSc in Mathematics
+  - course: Master en Matemáticas
     institution: Aix-Marseille Université
     year: 2017
-  - course: BSc in Mathematics
+  - course: Pregrado en Matemáticas
     institution: Universidad Nacional de Colombia
     year: 2016
 

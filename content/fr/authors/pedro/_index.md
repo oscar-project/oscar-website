@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: "PhD Student"
+role: "Doctorant"
 
 # Organizations/Affiliations
 organizations: 
@@ -20,7 +20,7 @@ organizations:
   url: "https://www.inria.fr/en/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: PhD student in Computer Science at Sorbonne Université and at the ALMAnaCH research team at Inria
+bio: Doctorant en informatique à Sorbonne Université et à l'équipe de recherche ALMAnaCH à Inria
 
 interests:
 - Machine Learning
@@ -30,15 +30,15 @@ interests:
 
 education:
   courses:
-  - course: PhD in Computer Science
+  - course: Doctorat en Informatique
     institution: Sorbonne Université
-  - course: BASc MIASHS
+  - course: Licence MIASHS
     institution: Université Paris 8
     year: 2018
-  - course: MSc in Mathematics
+  - course: Master en Mathématiques
     institution: Aix-Marseille Université
     year: 2017
-  - course: BSc in Mathematics
+  - course: Licence en Mathématiques
     institution: Universidad Nacional de Colombia
     year: 2016
 
@@ -81,8 +81,8 @@ email: ""
 #- Visitors
 ---
 
-PhD student in Computer Science at [Sorbonne Université](https://sorbonne-universite.fr/en) and at the [ALMAnaCH research team](https://team.inria.fr/almanach/) at [Inria](https://www.inria.fr/en/).
+Je suis doctorant en informatique à [Sorbonne Université](https://sorbonne-universite.fr/) et à [l'équipe de recherche ALMAnaCH](https://team.inria.fr/almanach/fr) à [Inria](https://www.inria.fr/).
 
-I work primarily in machine learning, deep learning and NLP.
+Je travaille principalement en machine learning, deep learning et traitement automatique du langage naturel.
 
-I love coffee, cookies and coding.
+J’aime le café, les cookies et la programmation.
