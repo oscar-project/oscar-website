@@ -78,11 +78,13 @@ email: ""
 #- Visitors
 ---
 
-OSCAR ou **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almanach/) co**R**pus en anglais, est un énorme corpus multilingue obtenu par classification et filtrage du corpus [Common Crawl](https://commoncrawl.org/) à l'aide de l'architecture [goclassy](https://github.com/pjox/goclassy).
+OSCAR ou **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almanach/) co**R**pus en anglais, est un gigantesque corpus multilingue obtenu par classification et filtrage du corpus [Common Crawl](https://commoncrawl.org/) à l'aide de l'architecture [goclassy](https://github.com/pjox/goclassy).
 
-OSCAR est actuellement mélangé au niveau de ligne et aucune métadonnée n’est fournie. Ainsi, il est principalement destiné à être utilisé dans l'entraînement de modèles de langage non supervisés pour le TAL.
+OSCAR est actuellement fourni sans métadonnées et mélangé ligne par ligne.
+Ainsi, il est principalement destiné à être utilisé pour l'entraînement de modèles de langue non supervisés pour le TAL.
 
-Les données sont distribuées par langue sous forme originale et sous forme dédupliquée. Il y a actuellement 166 langues différentes disponibles. Si vous utilisez OSCAR, pensez à de nous laisser des commentaires en utilisant le [formulaire de contact](#contact) en bas. Pensez également à citer notre [article](https://hal.inria.fr/hal-02148693).
+Les données sont distribuées triées par langue, sous forme originale et sous forme dédupliquée. Il y a actuellement 166 langues différentes disponibles.
+Si vous utilisez OSCAR, merci de nous laisser des commentaires en utilisant le [formulaire de contact](#contact) en bas de cette page et de citer notre [article](https://hal.inria.fr/hal-02148693).
 
 Si vous souhaitez contribuer à OSCAR, par exemple en segmentant l'un des corpus d'une langue en tokens ou en nous aidant à traduire notre site Web, veuillez ouvrir un pull request [ici] (https://github.com/pjox/oscar-website).
 
