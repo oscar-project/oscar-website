@@ -78,9 +78,9 @@ email: ""
 #- Visitors
 ---
 
-OSCAR ou **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almanach/) co**R**pus en anglais, est un énorme corpus multilingue obtenu par classification et filtrage du corpus [Common Crawl](https://commoncrawl.org/) à l'aide de l'architecture [goclassy](https://github.com/pjox/goclassy).
+OSCAR ou **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almanach/) co**R**pus en anglais, est un gigantesque corpus multilingue obtenu par classification et filtrage du corpus [Common Crawl](https://commoncrawl.org/) à l'aide de l'architecture [goclassy](https://github.com/pjox/goclassy).
 
-OSCAR est actuellemtn fourni sans métadonnées et mélangé ligne par ligne.
+OSCAR est actuellement fourni sans métadonnées et mélangé ligne par ligne.
 Ainsi, il est principalement destiné à être utilisé pour l'entraînement de modèles de langue non supervisés pour le TAL.
 
 Les données sont distribuées triées par langue, sous forme originale et sous forme dédupliquée. Il y a actuellement 166 langues différentes disponibles.
