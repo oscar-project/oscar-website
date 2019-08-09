@@ -61,11 +61,11 @@ Ces données sont publiées sous la licence suivante :
 
 ## Politique de retrait de données
 
-**Avis :** Si vous pensez que nos données contiennent des informations qui vous appartiennent et qui ne doivent donc pas être reproduites ici, veuillez:
+**Avis :** Si vous pensez que nos données contiennent des informations qui vous appartiennent et qui ne doivent pas être reproduites ici, veuillez:
 
-* Identifiez-vous clairement, avec des coordonnées détaillées telles qu'une adresse, un numéro de téléphone ou une adresse électronique à laquelle vous pouvez être contacté.
-* Identifiez clairement l’œuvre protégée par le droit d’auteur prétendue avoir été violée.
-* Identifiez clairement le matériel et donnez des informations raisonnablement suffisantes pour nous permettre de le localiser.
+* Identifiez-vous clairement, avec des coordonnées détaillées telles qu'une adresse, un numéro de téléphone ou une adresse électronique à laquelle vous pouvez être contacté⋅e.
+* Identifiez clairement l’œuvre dont il est question et dont vous détenez les droits
+* Identifiez la portion de nos données qui contient ces informations de façon suffisament précise pour que nous puissions la localiser
 * Et utilisez le formulaire de contact ci-dessous.
 
 **Retrait :** Nous nous conformerons aux requêtes légitimes en supprimant les sources affectées de la prochaine version du corpus.
