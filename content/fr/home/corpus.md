@@ -47,9 +47,9 @@ subtitle = ""
  css_class = ""
 +++
 
-Toutes les données sont distribuées par langue. Les versions originale et dédupliquée des données sont disponibles. Pour télécharger un fichier, cliquez simplement sur le lien souhaité dans le tableau ci-dessous. Nous recommandons l'utilisation de [pigz](https://zlib.net/pigz/)  pour décompresser les fichiers plus volumineux dans OSCAR.
+Nous fournissons pour chaque langue les versions originale et dédupliquée des données. Pour télécharger un fichier, cliquez simplement sur le lien correspondant dans le tableau ci-dessous. Nous recommandons l'utilisation de [pigz](https://zlib.net/pigz/)  pour décompresser les fichiers plus volumineux dans OSCAR.
 
-Toutes les tailles sont pour les fichiers **non compressés**.
+Toutes les tailles données sont celles des fichiers **non compressés**.
 
 <center>
 
