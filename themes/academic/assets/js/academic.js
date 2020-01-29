@@ -13,8 +13,8 @@
 
   // Dynamically get responsive navigation bar height for offsetting Scrollspy.
   function getNavBarHeight() {
-    let $navbar = $('.navbar');
-    let navbar_offset = $navbar.innerHeight();
+    let $navbar = $('#navbar-main');
+    let navbar_offset = $navbar.outerHeight();
     console.debug('Navbar height: ' + navbar_offset);
     return navbar_offset;
   }
@@ -385,25 +385,30 @@
    * --------------------------------------------------------------------------- */
 
   $(document).ready(function() {
-    // Fix Hugo's auto-generated Table of Contents.
-    //   Must be performed prior to initializing ScrollSpy.
-    $('#TableOfContents > ul > li > ul').unwrap().unwrap();
+    // Fix Goldmark table of contents.
+    // - Must be performed prior to initializing ScrollSpy.
     $('#TableOfContents').addClass('nav flex-column');
     $('#TableOfContents li').addClass('nav-item');
     $('#TableOfContents li a').addClass('nav-link');
 
-    // Fix Mmark task lists (remove bullet points).
+    // Fix Goldmark task lists (remove bullet points).
     $("input[type='checkbox'][disabled]").parents('ul').addClass('task-list');
 
     // Fix Mermaid.js clash with Highlight.js.
+    // Refactor Mermaid code blocks as divs to prevent Highlight parsing them and enable Mermaid to parse them.
     let mermaids = [];
     [].push.apply(mermaids, document.getElementsByClassName('language-mermaid'));
-    for (i = 0; i < mermaids.length; i++) {
+    for (let i = 0; i < mermaids.length; i++) {
       $(mermaids[i]).unwrap('pre');  // Remove <pre> wrapper.
       $(mermaids[i]).replaceWith(function(){
         // Convert <code> block to <div> and add `mermaid` class so that Mermaid will parse it.
         return $("<div />").append($(this).contents()).addClass('mermaid');
       });
+    }
+    // Initialise code highlighting if enabled for this page.
+    // Note: this block should be processed after the Mermaid code-->div conversion.
+    if (code_highlighting) {
+      hljs.initHighlighting();
     }
 
     // Get theme variation (day/night).
@@ -433,7 +438,7 @@
         codeHlDark.disabled = false;
       }
       if (diagramEnabled) {
-        mermaid.initialize({ theme: 'dark' });
+        mermaid.initialize({ theme: 'dark', securityLevel: 'loose' });
       }
       $('.js-dark-toggle i').removeClass('fa-moon').addClass('fa-sun');
     } else {
@@ -443,7 +448,7 @@
         codeHlDark.disabled = true;
       }
       if (diagramEnabled) {
-        mermaid.initialize({ theme: 'default' });
+        mermaid.initialize({ theme: 'default', securityLevel: 'loose' });
       }
       $('.js-dark-toggle i').removeClass('fa-sun').addClass('fa-moon');
     }
@@ -453,6 +458,16 @@
       e.preventDefault();
       toggleDarkMode(codeHlEnabled, codeHlLight, codeHlDark, diagramEnabled);
     });
+
+    // Live update of day/night mode on system preferences update (no refresh required).
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeMediaQuery.addListener((e) => {
+      if ($('.js-dark-toggle').length) {
+        const darkModeOn = e.matches;
+        console.log(`Dark mode is ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
+        toggleDarkMode(codeHlEnabled, codeHlLight, codeHlDark, diagramEnabled);
+      }
+    });
   });
 
   /* ---------------------------------------------------------------------------
@@ -460,29 +475,6 @@
    * --------------------------------------------------------------------------- */
 
   $(window).on('load', function() {
-    // Re-initialize Scrollspy with dynamic navbar height offset.
-    fixScrollspy();
-
-    if (window.location.hash) {
-      // When accessing homepage from another page and `#top` hash is set, show top of page (no hash).
-      if (window.location.hash == "#top") {
-        window.location.hash = ""
-      } else if (!$('.projects-container').length) {
-        // If URL contains a hash and there are no dynamically loaded images on the page,
-        // immediately scroll to target ID taking into account responsive offset.
-        // Otherwise, wait for `imagesLoaded()` to complete before scrolling to hash to prevent scrolling to wrong
-        // location.
-        scrollToAnchor();
-      }
-    }
-
-    // Call `fixScrollspy` when window is resized.
-    let resizeTimer;
-    $(window).resize(function() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(fixScrollspy, 200);
-    });
-
     // Filter projects.
     $('.projects-container').each(function(index, container) {
       let $container = $(container);
@@ -605,5 +597,40 @@
 
   // Normalize Bootstrap carousel slide heights.
   $(window).on('load resize orientationchange', normalizeCarouselSlideHeights);
+
+  // Automatic main menu dropdowns on mouse over.
+  $('body').on('mouseenter mouseleave', '.dropdown', function (e) {
+    var dropdown = $(e.target).closest('.dropdown');
+    var menu = $('.dropdown-menu', dropdown);
+    dropdown.addClass('show');
+    menu.addClass('show');
+    setTimeout(function () {
+      dropdown[dropdown.is(':hover') ? 'addClass' : 'removeClass']('show');
+      menu[dropdown.is(':hover') ? 'addClass' : 'removeClass']('show');
+    }, 300);
+
+    // Re-initialize Scrollspy with dynamic navbar height offset.
+    fixScrollspy();
+
+    if (window.location.hash) {
+      // When accessing homepage from another page and `#top` hash is set, show top of page (no hash).
+      if (window.location.hash == "#top") {
+        window.location.hash = ""
+      } else if (!$('.projects-container').length) {
+        // If URL contains a hash and there are no dynamically loaded images on the page,
+        // immediately scroll to target ID taking into account responsive offset.
+        // Otherwise, wait for `imagesLoaded()` to complete before scrolling to hash to prevent scrolling to wrong
+        // location.
+        scrollToAnchor();
+      }
+    }
+
+    // Call `fixScrollspy` when window is resized.
+    let resizeTimer;
+    $(window).resize(function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(fixScrollspy, 200);
+    });
+  });
 
 })(jQuery);
