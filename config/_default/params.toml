@@ -81,12 +81,12 @@ edit_page = {repo_url = "https://github.com/pjox/oscar-website", repo_branch = "
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "pedro.ortiz@inria.fr"
+email = "oscar-corpus@inria.fr" 
 phone = ""
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {}
+address = {street = "Centre Inria de Paris <br> Équipe ALMAnaCH <br> 2 rue Simone Iff <br> CS 42112", city = "Paris", region = "Île-de-France", postcode = "75012", country = "France", country_code = "FR"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
@@ -104,7 +104,14 @@ appointment_url = ""
 
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
-contact_links = []
+contact_links = [
+  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/InriaParisNLP"},
+  #{icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
+  #{icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
+  #{icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
+  # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
+  ]
+
 ############################
 ## Social
 ############################
@@ -126,7 +133,7 @@ date_format = "Jan 2, 2006"
 time_format = "3:04 PM"
 
 # Address format (choose from the [address_formats] list below or add you own to the list).
-address_format = "en-us"
+address_format = "fr-fr"
 
 ############################
 ## Advanced
@@ -160,14 +167,14 @@ plugins_js  = []
   gravatar = false
 
   # Choose a shape for avatar images. Options: circle, square.
-  shape = "circle"
+  shape = "square"
 
 # Available address formats.
 [address_formats]
   en-us = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ' ', '']}
   en-gb = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ', ', '']}
   de = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
-  fr-fr = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
+  fr-fr = {order = ['street', 'postcode', 'city', 'country'], delimiters = ['<br>', ' ', '<br>', '']}
   zh = {order = ['postcode', 'region', 'city', 'street'], delimiters = [' ', ' ', ' ', '']}
 
 # Configuration of publication pages.

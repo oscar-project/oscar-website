@@ -51,7 +51,11 @@ All the data is distributed by language, both the original and the deduplicated 
 
 All sizes are for the **uncompressed** files.
 
-<center>
+**New**: If you need the unshuffled version of OSCAR, please contact us using the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR.
+
+Even though OSCAR is not [Postcardware](https://en.wikipedia.org/wiki/Shareware#Postcardware), we do appreciate when our users send us a postcard. If you want to send us one, you can find the address in the contact section down below.
+
+<div style="margin: 0 auto; width: 1000px;">
 
 | <span style="float:left;">Language</span> | <span style="float:right;">Words original</span> | <span style="float:right;">Size original</span> | <span style="float:left;">File original</span> | <span style="float:left;">Words deduplicated</span> | <span style="float:left;">Size deduplicated</span> |    <span style="float:left;">File deduplicated</span> |
 | :---------------------------------------- | -----------------------------------------------: | ----------------------------------------------: | ---------------------------------------------: | --------------------------------------------------: | -------------------------------------------------: | ----------------------------------------------------: |
@@ -222,4 +226,4 @@ All sizes are for the **uncompressed** files.
 | Yoruba                                    |                                            8,906 |                                             55K |   [yo.txt.gz](files/compressed-orig/yo.txt.gz) |                                               3,518 |                                                27K |   [yo_dedup.txt.gz](files/Compressed/yo_dedup.txt.gz) |
 | Yue Chinese                               |                                              186 |                                            3.7K | [yue.txt.gz](files/compressed-orig/yue.txt.gz) |                                                 128 |                                               2.2K | [yue_dedup.txt.gz](files/Compressed/yue_dedup.txt.gz) |
 
-</center>
+</div>

@@ -51,7 +51,7 @@ Todos los datos se distribuyen por idioma, tanto las versiones originales como l
 
 Todos los tamaños listados son para los archivos **sin comprimir**.
 
-<center>
+<div style="margin: 0 auto; width: 1000px;">
 
 | <span style="float:left;">Language</span> | <span style="float:right;">Words original</span> | <span style="float:right;">Size original</span> | <span style="float:left;">File original</span> | <span style="float:left;">Words deduplicated</span> | <span style="float:left;">Size deduplicated</span> |    <span style="float:left;">File deduplicated</span> |
 | :---------------------------------------- | -----------------------------------------------: | ----------------------------------------------: | ---------------------------------------------: | --------------------------------------------------: | -------------------------------------------------: | ----------------------------------------------------: |
@@ -222,4 +222,4 @@ Todos los tamaños listados son para los archivos **sin comprimir**.
 | Yoruba                                    |                                            8,906 |                                             55K |   [yo.txt.gz](https://traces1.inria.fr/oscar/files/compressed-orig/yo.txt.gz) |                                               3,518 |                                                27K |   [yo_dedup.txt.gz](https://traces1.inria.fr/oscar/files/Compressed/yo_dedup.txt.gz) |
 | Yue Chinese                               |                                              186 |                                            3.7K | [yue.txt.gz](https://traces1.inria.fr/oscar/files/compressed-orig/yue.txt.gz) |                                                 128 |                                               2.2K | [yue_dedup.txt.gz](https://traces1.inria.fr/oscar/files/Compressed/yue_dedup.txt.gz) |
 
-</center>
+</div>
