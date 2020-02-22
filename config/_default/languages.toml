@@ -84,7 +84,7 @@
   url = "#corpus"
   weight = 50
 [[pt.menu.main]]
-  name = "Lincença"
+  name = "Licença"
   url = "#license"
   weight = 60
 [[pt.menu.main]]
