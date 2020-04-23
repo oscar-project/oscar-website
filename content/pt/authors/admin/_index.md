@@ -78,11 +78,11 @@ email: ""
 #- Visitors
 ---
 
-OSCAR ou **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almnach/) co**R**pus é um corpus multilíngue obtido através da clasificação natural de linguagem (NLP) e da filtração do corpus [Common Crawl](https://commoncrawl.org/) usando a arquitectura do [goclassy](https://github.com/pjox/goclassy).
+OSCAR ou **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almnach/) co**R**pus é um corpus multilíngue obtido através da classificação natural de linguagem (NLP) e da filtragem do corpus [Common Crawl](https://commoncrawl.org/) usando a arquitetura do [goclassy](https://github.com/pjox/goclassy).
 
-Atualmente, OSCAR não tem metadata; portanto, o principal uso deste corpus é para o treinamento não-supervisionado de processamento natural de linguagem (NLP). Os dados estão distribuídos por língua - no formato original e no formato desduplicado.  Neste momento, temos 166 línguas disponiveis. 
+Atualmente, OSCAR não tem metadata; portanto, o principal uso deste corpus é para o treinamento não-supervisionado de processamento natural de linguagem (NLP). Os dados estão distribuídos por língua - no formato original e no formato desduplicado.  Neste momento, temos 166 línguas disponíveis. 
 
-Se você usar OSCAR, por favor cosidere deixar a sua opininão utilizando este [formulário](#contact). 
+Se você usar OSCAR, por favor considere deixar a sua opinião utilizando este [formulário](#contact). 
 Além disso, se você usar o nosso corpus, por favor cite a nossa página.
 Se você quiser contribuir ao corpus, pode fazê-lo traduzindo a nossa página para outras línguas ou tokenizando as línguas disponíveis (abra um pull request [aqui](https://github.com/pjox/oscar-website)).  
 O corpus foi feito por [Pedro J. Ortiz](https://pjortiz.com/), [Benoît Sagot](http://alpage.inria.fr/~sagot/) e [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
