@@ -1,6 +1,6 @@
 ---
 # Display name
-nome: Pedro Javier Ortiz Suárez
+title: Pedro Javier Ortiz Suárez
 
 # Username (this should match the folder name)
 autores:

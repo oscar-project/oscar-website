@@ -64,30 +64,30 @@
   url = "#contact"
   weight = 70
 
-[pt]
-  languageCode = "pt"
-  contentDir = "content/pt"
-[[pt.menu.main]]
-  name = "Início"
-  url = "#about"
-  weight = 10
-[[pt.menu.main]]
-  name = "Apresentações"
-  url = "#talks"
-  weight = 20
-[[pt.menu.main]]
-   name = "Publicações"
-   url = "#featured"
-   weight = 40
-[[pt.menu.main]]
-  name = "Corpus"
-  url = "#corpus"
-  weight = 50
-[[pt.menu.main]]
-  name = "Licença"
-  url = "#license"
-  weight = 60
-[[pt.menu.main]]
-  name = "Contacte-nos"
-  url = "#contact"
-  weight = 70
+# [pt]
+#   languageCode = "pt"
+#   contentDir = "content/pt"
+# [[pt.menu.main]]
+#   name = "Início"
+#   url = "#about"
+#   weight = 10
+# [[pt.menu.main]]
+#   name = "Apresentações"
+#   url = "#talks"
+#   weight = 20
+# [[pt.menu.main]]
+#    name = "Publicações"
+#    url = "#featured"
+#    weight = 40
+# [[pt.menu.main]]
+#   name = "Corpus"
+#   url = "#corpus"
+#   weight = 50
+# [[pt.menu.main]]
+#   name = "Licença"
+#   url = "#license"
+#   weight = 60
+# [[pt.menu.main]]
+#   name = "Contacte-nos"
+#   url = "#contact"
+#   weight = 70

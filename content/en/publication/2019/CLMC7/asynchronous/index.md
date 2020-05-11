@@ -5,7 +5,7 @@ authors:
 - Benoît Sagot
 - Laurent Romary
 date: "2019-07-22T00:00:00Z"
-doi: ""
+doi: "10.14618/IDS-PUB-9021"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2017-01-01T00:00:00Z"
@@ -29,25 +29,25 @@ tags:
 featured: true
 
 links:
-- name: Workshop
-  url: http://corpora.ids-mannheim.de/cmlc-2019.html
+- name: CMLC-7
+  url: https://ids-pub.bsz-bw.de/frontdoor/index/index/docId/8998
 - name: HAL
   url: https://hal.inria.fr/hal-02148693
-url_pdf: http://corpora.ids-mannheim.de/CMLC7-final/CMLC-7_2019-Oritz_et_al.pdf
+url_pdf: https://ids-pub.bsz-bw.de/frontdoor/deliver/index/docId/9021/file/Suarez_Sagot_Romary_Asynchronous_Pipeline_for_Processing_Huge_Corpora_2019.pdf
 url_code: 'https://github.com/pjox/goclassy'
 url_dataset: 'https://traces1.inria.fr/oscar/'
 #url_poster: '#'
 #url_project: ''
-#url_slides: ''
+url_slides: '/files/CMLC_7_slides.pdf'
 #url_source: '#'
 #url_video: '#'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
-#image:
-#  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)'
-#  focal_point: ""
-#  preview_only: false
+image:
+ caption: 'Image credit: [**Alix Chagué**](https://alix-tz.github.io/en/index.html)'
+ focal_point: ""
+ preview_only: false
 
 # Associated Projects (optional).
 #   Associate this publication with one or more of your projects.
