@@ -31,9 +31,11 @@ featured: true
 links:
 - name: ACL 2020
   url: https://acl2020.org/
-#url_pdf: https://ids-pub.bsz-bw.de/frontdoor/deliver/index/docId/9021/file/Suarez_Sagot_Romary_Asynchronous_Pipeline_for_Processing_Huge_Corpora_2019.pdf
+- name: HAL
+  url: https://hal.archives-ouvertes.fr/hal-02863875
+url_pdf: https://pjortiz.com/files/A_Monolingual_Approach_to_Contextualized_Word_Embeddings_for_Mid-Resource_Languages.pdf
 #url_code: 'https://github.com/pjox/goclassy'
-#url_dataset: 'https://traces1.inria.fr/oscar/'
+url_dataset: 'https://oscar-corpus.com'
 #url_poster: '#'
 #url_project: ''
 #url_slides: '/files/CMLC_7_slides.pdf'
