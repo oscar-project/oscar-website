@@ -20,7 +20,7 @@ publication_types: ["1"]
 publication: In *The 58th Annual Meeting of the Association for Computational Linguistics*
 publication_short: In *ACL 2020*
 
-abstract: Wikipedia is one of the most widely used datasets to train standard and contextualized word embeddings. However, even for mid-resource languages, the amount of data found in Wikipedia might be too small to train high-quality embeddings. Moreover,  Wikipedia data covers a single specific genre and style. Conversely, Common Crawl is a source of much larger and much more diverse data, although at the expense of some level of noise. We use the multilingual OSCAR corpus, extracted from Common Crawl via language classification, filtering and cleaning, to train monolingual contextualized word embeddings (ELMo) for several mid-resource languages. We then compare the performance of OSCAR-based and Wikipedia-based ELMo embeddings for these languages on the part-of-speech tagging and parsing tasks. We show that, despite the noise in the Common-Crawl-based OSCAR data, embeddings trained on OSCAR perform much better than monolingual embeddings trained on Wikipedia. They actually equal or improve the current state of the art in tagging and parsing for all five languages. In particular, they also improve over multilingual Wikipedia-based contextual embeddings (multilingual BERT), which almost always constitutes the previous state of the art, thereby showing that the benefit of a larger, more diverse corpus surpasses the cross-lingual benefit of multilingual embedding architectures.
+abstract: We use the multilingual OSCAR corpus, extracted from Common Crawl via language classification, filtering and cleaning, to train monolingual contextualized word embeddings (ELMo) for five mid-resource languages. We then compare the performance of OSCAR-based and Wikipedia-based ELMo embeddings for these languages on the part-of-speech tagging and parsing tasks. We show that, despite the noise in the Common-Crawl-based OSCAR data, embeddings trained on OSCAR perform much better than monolingual embeddings trained on Wikipedia. They actually equal or improve the current state of the art in tagging and parsing for all five languages. In particular, they also improve over multilingual Wikipedia-based contextual embeddings (multilingual BERT), which almost always constitutes the previous state of the art, thereby showing that the benefit of a larger, more diverse corpus surpasses the cross-lingual benefit of multilingual embedding architectures.
 
 # Summary. An optional shortened abstract.
 summary: We explore the impact of the training corpus on contextualized word embeddings in five mid-resource languages.
@@ -33,6 +33,8 @@ links:
   url: https://acl2020.org/
 - name: HAL
   url: https://hal.archives-ouvertes.fr/hal-02863875
+- name: arXiv
+  url: https://arxiv.org/abs/2006.06202
 url_pdf: https://pjortiz.com/files/A_Monolingual_Approach_to_Contextualized_Word_Embeddings_for_Mid-Resource_Languages.pdf
 #url_code: 'https://github.com/pjox/goclassy'
 url_dataset: 'https://oscar-corpus.com'
