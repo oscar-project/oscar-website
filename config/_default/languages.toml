@@ -16,13 +16,13 @@
   url = "#about"
   weight = 10
 [[fr.menu.main]]
-  name = "Présentations"
-  url = "#talks"
-  weight = 20
-[[fr.menu.main]]
    name = "Publications"
    url = "#featured"
-   weight = 40
+   weight = 20
+[[fr.menu.main]]
+  name = "Présentations"
+  url = "#talks"
+  weight = 40
 [[fr.menu.main]]
   name = "Corpus"
   url = "#corpus"
@@ -44,13 +44,13 @@
   url = "#about"
   weight = 10
 [[es.menu.main]]
-  name = "Presentaciones"
-  url = "#talks"
-  weight = 20
-[[es.menu.main]]
    name = "Publicaciones"
    url = "#featured"
-   weight = 40
+   weight = 20
+[[es.menu.main]]
+  name = "Presentaciones"
+  url = "#talks"
+  weight = 40
 [[es.menu.main]]
   name = "Corpus"
   url = "#corpus"

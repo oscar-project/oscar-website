@@ -7286,12 +7286,12 @@ pre,
 code {
   font-family: "Roboto Mono", monospace;
   color: #c7254e;
-  background-color: #f9f2f4; }
+  /* Match bg of default highlight theme. */
+  background-color: #f8f8f8; }
 
 pre {
   margin: 0 0 1rem 0;
-  background-color: #f8f8f8;
-  /* Match default highlight theme. */
+  /* Match bg of default highlight theme. */
   border-color: #f8f8f8;
   font-size: 0.7rem;
   border-radius: 4px; }
@@ -9076,7 +9076,7 @@ body.dark,
   background-color: #44475a; }
 
 .dark pre {
-  background-color: #44475a;
+  /* Match `pre` bg color above. */
   border-color: #44475a; }
 
 .dark .markup-quote {
