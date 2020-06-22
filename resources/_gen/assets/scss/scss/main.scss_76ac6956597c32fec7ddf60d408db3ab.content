@@ -7841,6 +7841,11 @@ ul.nav-icons li.nav-item a.nav-link {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   border: 1px solid #44475a; }
 
+/* In page listings, display the linked summaries as normal text except for the hover cursor. */
+a.summary-link {
+  color: unset;
+  text-decoration: none; }
+
 .card {
   margin-bottom: 1.5rem;
   overflow: hidden;

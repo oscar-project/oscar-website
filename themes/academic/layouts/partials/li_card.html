@@ -54,9 +54,11 @@
   </h3>
 
   {{ with $summary }}
-  <div class="article-style">
-    <p>{{.}}</p>
-  </div>
+  <a href="{{ $item.RelPermalink }}" class="summary-link">
+    <div class="article-style">
+      <p>{{.}}</p>
+    </div>
+  </a>
   {{ end }}
 
   {{ if $show_buttons }}

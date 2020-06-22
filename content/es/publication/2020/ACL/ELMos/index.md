@@ -29,13 +29,15 @@ tags:
 featured: true
 
 links:
+- name: ACL Anthology
+  url: https://www.aclweb.org/anthology/2020.acl-main.156/
 - name: ACL 2020
   url: https://acl2020.org/
 - name: HAL
   url: https://hal.archives-ouvertes.fr/hal-02863875
 - name: arXiv
   url: https://arxiv.org/abs/2006.06202
-url_pdf: https://pjortiz.com/files/A_Monolingual_Approach_to_Contextualized_Word_Embeddings_for_Mid-Resource_Languages.pdf
+url_pdf: https://www.aclweb.org/anthology/2020.acl-main.156.pdf
 #url_code: 'https://github.com/pjox/goclassy'
 url_dataset: 'https://oscar-corpus.com'
 #url_poster: '#'
