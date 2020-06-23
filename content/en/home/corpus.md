@@ -8,7 +8,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 100  # Order that this section will appear.
 
-title = "Corpus Download"
+title = "Corpus"
 subtitle = ""
 
 [design]
@@ -47,13 +47,65 @@ subtitle = ""
  css_class = ""
 +++
 
+## Citing OSCAR
+
+If you use OSCAR to train a language model, text generation model or any other ML model in general please consider citing our latest paper:
+
+```latex
+@inproceedings{ortiz-suarez-etal-2020-monolingual,
+    title = "A Monolingual Approach to Contextualized Word Embeddings for Mid-Resource Languages",
+    author = "Ortiz Su{\'a}rez, Pedro Javier  and
+      Romary, Laurent  and
+      Sagot, Beno{\^\i}t",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.156",
+    pages = "1703--1714",
+    abstract = "We use the multilingual OSCAR corpus, extracted from Common Crawl via language classification, filtering and cleaning, to train monolingual contextualized word embeddings (ELMo) for five mid-resource languages. We then compare the performance of OSCAR-based and Wikipedia-based ELMo embeddings for these languages on the part-of-speech tagging and parsing tasks. We show that, despite the noise in the Common-Crawl-based OSCAR data, embeddings trained on OSCAR perform much better than monolingual embeddings trained on Wikipedia. They actually equal or improve the current state of the art in tagging and parsing for all five languages. In particular, they also improve over multilingual Wikipedia-based contextual embeddings (multilingual BERT), which almost always constitutes the previous state of the art, thereby showing that the benefit of a larger, more diverse corpus surpasses the cross-lingual benefit of multilingual embedding architectures.",
+}
+
+```
+
+If you however use the [goclassy pipeline](https://github.com/pjox/goclassy) or just use OSCAR for any non machine learning related application, please consider citing the original paper:
+
+```latex
+@inproceedings{OrtizSuarezSagotRomary2019,
+  author    = {Pedro Javier {Ortiz Su{\´a}rez} and Beno{\^i}t Sagot and Laurent Romary},
+  title     = {Asynchronous pipelines for processing huge corpora on medium to low resource infrastructures},
+  series = {Proceedings of the Workshop on Challenges in the Management of Large Corpora (CMLC-7) 2019. Cardiff, 22nd July 2019},
+  editor    = {Piotr Bański and Adrien Barbaresi and Hanno Biber and Evelyn Breiteneder and Simon Clematide and Marc Kupietz and Harald L{\"u}ngen and Caroline Iliadi},
+  publisher = {Leibniz-Institut f{\"u}r Deutsche Sprache},
+  address   = {Mannheim},
+  doi       = {10.14618/ids-pub-9021},
+  url       = {http://nbn-resolving.de/urn:nbn:de:bsz:mh39-90215},
+  pages     = {9 -- 16},
+  year      = {2019},
+  abstract  = {Common Crawl is a considerably large, heterogeneous multilingual corpus comprised of crawled documents from the internet, surpassing 20TB of data and distributed as a set of more than 50 thousand plain text files where each contains many documents written in a wide variety of languages. Even though each document has a metadata block associated to it, this data lacks any information about the language in which each document is written, making it extremely difficult to use Common Crawl for monolingual applications. We propose a general, highly parallel, multithreaded pipeline to clean and classify Common Crawl by language; we specifically design it so that it runs efficiently on medium to low resource infrastructures where I/O speeds are the main constraint. We develop the pipeline so that it can be easily reapplied to any kind of heterogeneous corpus and so that it can be parameterised to a wide range of infrastructures. We also distribute a 6.3TB version of Common Crawl, filtered, classified by language, shuffled at line level in order to avoid copyright issues, and ready to be used for NLP applications.},
+  language  = {en}
+}
+
+```
+
+{{% alert note %}}
+Citing our papers can help us with both funding and project visibility, so please consider doing it!
+{{% /alert %}}
+
+## The Unshuffled OSCAR
+
+Due to ethic and copyright reasons, the unshuffled OSCAR is not currently distributed freely, if you need a copy of any of the unshuffled sub-corpora, please contact us using the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR. We will evaluate your request and answer accordingly.
+
+## Send us a postcard!
+
+Even though OSCAR is not [Postcardware](https://en.wikipedia.org/wiki/Shareware#Postcardware), we do appreciate when our users send us a postcard. If you want to send us one, you can find the address in the contact section down below.
+
+## Downloading OSCAR
+
 All the data is distributed by language, both the original and the deduplicated versions of the data are available. To download a file just click the desired link on the table below. We recommend the use of [pigz](https://zlib.net/pigz/) to decompress the bigger files in OSCAR.
 
 All sizes are for the **uncompressed** files.
-
-**New**: If you need the unshuffled version of OSCAR, please contact us using the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR.
-
-Even though OSCAR is not [Postcardware](https://en.wikipedia.org/wiki/Shareware#Postcardware), we do appreciate when our users send us a postcard. If you want to send us one, you can find the address in the contact section down below.
 
 <div style="margin: 0 auto; width: 992px;">
 

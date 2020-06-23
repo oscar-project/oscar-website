@@ -8,61 +8,61 @@
   contentDir = "content/en"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
 
 # Uncomment the lines below to configure your website in a second language.
-[fr]
-  languageCode = "fr"
-  contentDir = "content/fr"
-[[fr.menu.main]]
-  name = "Accueil"
-  url = "#about"
-  weight = 10
-[[fr.menu.main]]
-   name = "Publications"
-   url = "#featured"
-   weight = 20
-[[fr.menu.main]]
-  name = "Présentations"
-  url = "#talks"
-  weight = 40
-[[fr.menu.main]]
-  name = "Corpus"
-  url = "#corpus"
-  weight = 50
-[[fr.menu.main]]
-  name = "Licence"
-  url = "#license"
-  weight = 60
-[[fr.menu.main]]
-  name = "Contactez nous"
-  url = "#contact"
-  weight = 70
+# [fr]
+#   languageCode = "fr"
+#   contentDir = "content/fr"
+# [[fr.menu.main]]
+#   name = "Accueil"
+#   url = "#about"
+#   weight = 10
+# [[fr.menu.main]]
+#    name = "Publications"
+#    url = "#featured"
+#    weight = 20
+# [[fr.menu.main]]
+#   name = "Présentations"
+#   url = "#talks"
+#   weight = 40
+# [[fr.menu.main]]
+#   name = "Corpus"
+#   url = "#corpus"
+#   weight = 50
+# [[fr.menu.main]]
+#   name = "Licence"
+#   url = "#license"
+#   weight = 60
+# [[fr.menu.main]]
+#   name = "Contactez nous"
+#   url = "#contact"
+#   weight = 70
 
-[es]
-  languageCode = "es"
-  contentDir = "content/es"
-[[es.menu.main]]
-  name = "Home"
-  url = "#about"
-  weight = 10
-[[es.menu.main]]
-   name = "Publicaciones"
-   url = "#featured"
-   weight = 20
-[[es.menu.main]]
-  name = "Presentaciones"
-  url = "#talks"
-  weight = 40
-[[es.menu.main]]
-  name = "Corpus"
-  url = "#corpus"
-  weight = 50
-[[es.menu.main]]
-  name = "Lincencia"
-  url = "#license"
-  weight = 60
-[[es.menu.main]]
-  name = "Contactenos"
-  url = "#contact"
-  weight = 70
+# [es]
+#   languageCode = "es"
+#   contentDir = "content/es"
+# [[es.menu.main]]
+#   name = "Home"
+#   url = "#about"
+#   weight = 10
+# [[es.menu.main]]
+#    name = "Publicaciones"
+#    url = "#featured"
+#    weight = 20
+# [[es.menu.main]]
+#   name = "Presentaciones"
+#   url = "#talks"
+#   weight = 40
+# [[es.menu.main]]
+#   name = "Corpus"
+#   url = "#corpus"
+#   weight = 50
+# [[es.menu.main]]
+#   name = "Lincencia"
+#   url = "#license"
+#   weight = 60
+# [[es.menu.main]]
+#   name = "Contactenos"
+#   url = "#contact"
+#   weight = 70
 
 # [pt]
 #   languageCode = "pt"
