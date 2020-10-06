@@ -1,5 +1,5 @@
-module github.com/wowchemy/wowchemy-hugo-modules
+module github.com/pjox/oscar-website
 
 go 1.15
 
-require github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20200928004651-12b7ad9f019e // indirect
+require github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201001144923-e58ee0ffc576 // indirect
