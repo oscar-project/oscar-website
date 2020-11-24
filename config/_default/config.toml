@@ -20,9 +20,6 @@ copyright = "[Inria](https://www.inria.fr/en/) &copy; {year} · Mascot by [Alix 
 ## Advanced options below ##
 ############################
 
-# Name of Academic theme folder in `themes/`.
-theme = "academic"
-
 # Get last modified date for content from Git?
 enableGitInfo = true
 
@@ -35,6 +32,7 @@ removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issu
 summaryLength = 30  # Listing summary length in words. Also, see `abstract_length` in `params.toml`.
 paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true
+enableRobotsTXT = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 

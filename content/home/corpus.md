@@ -89,11 +89,11 @@ If you however use the [goclassy pipeline](https://github.com/pjox/goclassy) or 
 
 ```
 
-{{% alert note %}}
+{{% callout note %}}
 Citing our papers can help us with both funding and project visibility, so please consider doing it!
-{{% /alert %}}
+{{% /callout %}}
 
-## The Unshuffled OSCAR
+<!-- ## The Unshuffled OSCAR
 
 Due to ethic and copyright reasons, the unshuffled OSCAR is not currently distributed freely, if you need a copy of any of the unshuffled sub-corpora, please contact us using the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR. We will evaluate your request and answer accordingly.
 
@@ -278,4 +278,7 @@ All sizes are for the **uncompressed** files.
 | Yoruba                                    |                                            8,906 |                                             55K |   [yo.txt.gz](https://oscar-public.huma-num.fr/shuffled/yo.txt.gz) |                                               3,518 |                                                27K |   [yo_dedup.txt.gz](https://oscar-public.huma-num.fr/shuffled/yo_dedup.txt.gz) |
 | Yue Chinese                               |                                              186 |                                            3.7K | [yue.txt.gz](https://oscar-public.huma-num.fr/shuffled/yue.txt.gz) |                                                 128 |                                               2.2K | [yue_dedup.txt.gz](https://oscar-public.huma-num.fr/shuffled/yue_dedup.txt.gz) |
 
-</div>
+</div> -->
+
+
+{{< tweet 1329832602820292609 >}}
