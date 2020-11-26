@@ -97,5 +97,3 @@ The corpus was put together by [Pedro J. Ortiz](https://pjortiz.com/), [Benoît 
 <!-- **New**: If you need the unshuffled version of OSCAR, please contact us using the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR.
 
 Even though OSCAR is not [Postcardware](https://en.wikipedia.org/wiki/Shareware#Postcardware), we do appreciate when our users send us a postcard. If you want to send us one, you can find the address in the contact section down below. -->
-
-{{< tweet 1329832602820292609 >}}
