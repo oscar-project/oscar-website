@@ -77,6 +77,13 @@ highlight_name: false
 #- Visitors
 ---
 
+{{% callout warning %}}
+The OSCAR data repository is temporarily unavailable: OSCAR corpora
+cannot be downloaded at the moment.<br>
+We are aware of the situation and are working hard to solve the
+problem as soon as possible. Thank you for your patience and understanding.
+{{% /callout %}}
+
 OSCAR or **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almanach/) co**R**pus is a huge multilingual corpus obtained by language classification and filtering of the [Common Crawl](https://commoncrawl.org/) corpus using the [goclassy](https://github.com/pjox/goclassy) architecture.
 
 OSCAR is currently shuffled at line level and no metadata is provided. Thus it is mainly intended to be used in the training of unsupervised language models for NLP.
