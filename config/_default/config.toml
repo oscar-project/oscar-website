@@ -34,11 +34,12 @@ paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true
 enableRobotsTXT = true
 footnotereturnlinkcontents = "<sup>^</sup>"
-ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 
-# Workaround Hugo publishing taxonomy URLs as plurals - consistently use singular across Academic.
 [permalinks]
-  authors = "/author/:slug/"
+  # If only creating events which are talks, we can optimize event URLs for talks.
+  event = "/talk/:slug/"
+  # Workaround Hugo publishing taxonomy URLs as plurals - consistently use singular across Academic.
   tags = "/tag/:slug/"
   categories = "/category/:slug/"
   publication_types = "/publication-type/:slug/"
@@ -68,7 +69,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 
 [imaging]
   resampleFilter = "lanczos"
-  quality = 90
+  quality = 75
   anchor = "smart"  # Anchor for cropping. Options include Smart and Center.
 
 # Taxonomies.
