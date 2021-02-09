@@ -1,5 +1,5 @@
 # Configuration of Hugo
-# Guide: https://sourcethemes.com/academic/docs/get-started/
+# Guide: https://wowchemy.com/docs/get-started/
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 #
 # This file is formatted using TOML syntax - learn more at https://learnxinyminutes.com/docs/toml/
@@ -35,6 +35,7 @@ enableEmoji = true
 enableRobotsTXT = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+disableAliases = true  # Disable aliases when `redirects` is added to the `outputs` below.
 
 [permalinks]
   # If only creating events which are talks, we can optimize event URLs for talks.
@@ -45,15 +46,8 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   publication_types = "/publication-type/:slug/"
 
 [outputs]
-  home = [ "HTML", "RSS", "JSON", "WebAppManifest" ]
-  section = [ "HTML", "RSS" ]
-
-[mediaTypes."application/manifest+json"]
-  suffixes = ["webmanifest"]
-
-[outputFormats.WebAppManifest]
-  mediaType = "application/manifest+json"
-  rel = "manifest"
+  home = ["HTML", "RSS", "JSON", "WebAppManifest", "headers", "redirects"]
+  section = ["HTML", "RSS"]
 
 # Configure the Markdown renderer.
 [markup]
@@ -100,10 +94,6 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   [[related.indices]]
     name = "categories"
     weight = 70.0
-
-  [[related.indices]]
-    name = "authors"
-    weight = 20.0
 
 # Install Wowchemy
 [module]
