@@ -73,7 +73,7 @@ If you however use the [goclassy pipeline](https://github.com/pjox/goclassy) or 
 
 ```latex
 @inproceedings{OrtizSuarezSagotRomary2019,
-  author    = {Pedro Javier {Ortiz Su{\´a}rez} and Beno{\^i}t Sagot and Laurent Romary},
+  author    = {Pedro Javier {Ortiz Su{\'a}rez} and Beno{\^i}t Sagot and Laurent Romary},
   title     = {Asynchronous pipelines for processing huge corpora on medium to low resource infrastructures},
   series = {Proceedings of the Workshop on Challenges in the Management of Large Corpora (CMLC-7) 2019. Cardiff, 22nd July 2019},
   editor    = {Piotr Bański and Adrien Barbaresi and Hanno Biber and Evelyn Breiteneder and Simon Clematide and Marc Kupietz and Harald L{\"u}ngen and Caroline Iliadi},
@@ -95,7 +95,12 @@ Citing our papers can help us with both funding and project visibility, so pleas
 
 ## The Unshuffled OSCAR
 
-Due to ethic and copyright reasons, the unshuffled OSCAR is not currently distributed freely, if you need a copy of any of the unshuffled sub-corpora, please contact us using the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR. We will evaluate your request and answer accordingly.
+If you need a copy of any of the unshuffled sub-corpora, please contact us using the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR. We will evaluate your request and answer accordingly.
+
+{{% callout note %}}
+The unshuffled OSCAR is now available in [HuggingFace’s datasets library](https://huggingface.co/docs/datasets/)
+{{% /callout %}}
+They have obtained our permission to redistribute the unshuffled OSCAR and they allow users to download a corpus all at once as opposed to file by file. You can get more information about how to download OSCAR using their library by visiting [OSCAR's dataset card](https://huggingface.co/datasets/oscar).
 
 ## Send us a postcard!
 

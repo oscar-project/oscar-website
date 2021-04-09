@@ -77,7 +77,7 @@ highlight_name: false
 #- Visitors
 ---
 
-OSCAR or **O**pen **S**uper-large **C**rawled [**A**LMAnaCH](https://team.inria.fr/almanach/) co**R**pus is a huge multilingual corpus obtained by language classification and filtering of the [Common Crawl](https://commoncrawl.org/) corpus using the [goclassy](https://github.com/pjox/goclassy) architecture.
+OSCAR or **O**pen **S**uper-large **C**rawled **A**gregated co**R**pus is a huge multilingual corpus obtained by language classification and filtering of the [Common Crawl](https://commoncrawl.org/) corpus using the [goclassy](https://github.com/pjox/goclassy) architecture.
 
 OSCAR is currently shuffled at line level and no metadata is provided. Thus it is mainly intended to be used in the training of unsupervised language models for NLP.
 
@@ -87,6 +87,6 @@ If you want to contribute to OSCAR, for example by tokenizing one of the corpora
 
 The corpus was put together by [Pedro J. Ortiz](https://pjortiz.com/), [Benoît Sagot](http://alpage.inria.fr/~sagot/), and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
 
- If you need the unshuffled version of OSCAR, please contact us using the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR.
+If you need the unshuffled version of OSCAR, please contact us using the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR. You can also download it using [HuggingFace’s datasets library](https://huggingface.co/datasets/oscar).
 
 Even though OSCAR is not [Postcardware](https://en.wikipedia.org/wiki/Shareware#Postcardware), we do appreciate when our users send us a postcard. If you want to send us one, you can find the address in the contact section down below.
