@@ -3,7 +3,7 @@
 title: Pedro Javier Ortiz Suárez
 
 # Is this the primary user of the site?
-superuser: false
+superuser: true
 
 # Role/position/tagline
 role: "PhD Student"
@@ -69,9 +69,6 @@ social:
 - icon: dblp
   icon_pack: ai
   link: https://dblp.uni-trier.de/pers/hd/s/Su=aacute=rez:Pedro_Javier_Ortiz
-- icon: mendeley
-  icon_pack: ai
-  link: https://www.mendeley.com/profiles/pedro-javier-ortiz-surez/
 - icon: github
   icon_pack: fab
   link: https://github.com/pjox
