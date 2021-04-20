@@ -16,7 +16,7 @@ site_type: Person
 local_business_type: ''
 org_name: ''
 description: 'Humongous Corpus'
-twitter: 'InriaParisNLP'
+twitter: 'oscarnlp'
 
 # Contact (edit or remove options as required)
 
@@ -41,7 +41,7 @@ contact_links:
   - icon: twitter
     icon_pack: fab
     name: DM Me
-    link: 'https://twitter.com/pjox13'
+    link: 'https://twitter.com/oscarnlp'
   # - icon: skype
   #   icon_pack: fab
   #   name: Skype Me

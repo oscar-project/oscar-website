@@ -110,6 +110,8 @@ Even though OSCAR is not [Postcardware](https://en.wikipedia.org/wiki/Shareware#
 
 All the data is distributed by language, both the original and the deduplicated versions of the data are available. To download a file just click the desired link on the table below. Languages are split in shards of around 700MB, these shards are standalone. A plain text file with checksums is also provided.
 
+The OSCAR corpus is yet to be filtered, so **please be careful when using it**, specially for text generation tasks! To see which sub-corpora have been audited, please refer to the list of publications above for more information.
+
 You'll be asked to create an [HumanID](https://humanid.huma-num.fr) account in order to download a corpus. This is intended, and we do it in order to limit traffic and reduce abuse of the infrastructure. The OSCAR corpus is hosted by [Huma-Num](https://www.huma-num.fr), you can read more about them on their website.
 
 All sizes are for the **uncompressed** files.

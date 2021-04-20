@@ -46,15 +46,15 @@ social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-#- icon: twitter
-#  icon_pack: fab
-#  link: https://twitter.com/pjox13
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/oscarnlp
 #- icon: google-scholar
 #  icon_pack: ai
 #  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/pjox/goclassy
+  link: https://github.com/oscar-corpus
 #- icon: "key"
 #  icon_pack: "fas"
 #  link: files/PedroJOrtiz.asc
@@ -77,7 +77,7 @@ highlight_name: false
 #- Visitors
 ---
 
-OSCAR or **O**pen **S**uper-large **C**rawled **A**gregated co**R**pus is a huge multilingual corpus obtained by language classification and filtering of the [Common Crawl](https://commoncrawl.org/) corpus using the [goclassy](https://github.com/pjox/goclassy) architecture.
+OSCAR or **O**pen **S**uper-large **C**rawled **A**ggregated co**R**pus is a huge multilingual corpus obtained by language classification and filtering of the [Common Crawl](https://commoncrawl.org/) corpus using the [goclassy](https://github.com/pjox/goclassy) architecture.
 
 OSCAR is currently shuffled at line level and no metadata is provided. Thus it is mainly intended to be used in the training of unsupervised language models for NLP.
 
