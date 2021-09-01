@@ -13,7 +13,7 @@ organizations:
 - name: Inria
   url: "https://www.inria.fr/en/"
 - name: ALMAnaCH
-  url: "https://team.inria.fr/almanach/"
+  url: "https://almanach.inria.fr/index-en.html"
 
 # Short bio (displayed in user profile at end of posts)
 bio: Humongous multilingual Corpus put together by Pedro J. Ortiz Suárez, Benoît Sagot and Laurent Romary, researchers at the ALMAnaCH research team at Inria
@@ -85,7 +85,7 @@ Data is distributed by language in both original and deduplicated form. There ar
 
 If you want to contribute to OSCAR, for example by tokenizing one of the corpora for a particular language, or by helping us translate our webpage, please open a pull request [here](https://github.com/pjox/oscar-website).
 
-The corpus was put together by [Pedro J. Ortiz](https://pjortiz.com/), [Benoît Sagot](http://alpage.inria.fr/~sagot/), and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
+The corpus was put together by [Pedro Ortiz Suarez](https://pjortiz.eu/), [Benoît Sagot](http://alpage.inria.fr/~sagot/), and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
 
 If you need the unshuffled version of OSCAR, please contact us using the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR. You can also download it using [HuggingFace’s datasets library](https://huggingface.co/datasets/oscar).
 
