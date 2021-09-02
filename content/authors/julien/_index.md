@@ -24,10 +24,10 @@ interests:
 - Machine Translation
 - Computational Linguistics
 interests:
-- Corpus generation
-- Corpus filtering
 - Software engineering in big data contexts
-- Corpus linguistics
+- Corpus generation
+- Offensive Content Detection
+
 
 # Education to show in About widget
 education:
@@ -53,9 +53,9 @@ social:
 - icon: semantic-scholar
   icon_pack: ai
   link: https://www.semanticscholar.org/author/Julien-Abadji/2122367898
-- icon: arxiv
-  icon_pack: ai
-  link: https://arxiv.org/search/cs?searchtype=author&query=Suárez%2C+P+J+O
+#- icon: arxiv
+#  icon_pack: ai
+#  link: https://arxiv.org/search/cs?searchtype=author&query=Suárez%2C+P+J+O
 - icon: researchgate
   icon_pack: ai
   link: https://www.researchgate.net/profile/Julien-Abadji-2
@@ -68,6 +68,9 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/uinelj
+- icon: gitlab
+  icon_pack: fab
+  link: https://gitlab.com/uinelj
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/julien-abadji
