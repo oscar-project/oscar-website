@@ -77,7 +77,7 @@ social:
   link: https://orcid.org/0000-0002-0107-8526
 - icon: dblp
   icon_pack: ai
-  link: https://dblp.uni-trier.de/pers/hd/s/Su=aacute=rez:Pedro_Javier_Ortiz
+  link: https://dblp.org/pid/66/1016.html
 - icon: github
   icon_pack: fab
   link: https://github.com/bsagot
