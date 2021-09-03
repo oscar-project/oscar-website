@@ -16,7 +16,7 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 publishDate: "2017-01-01T00:00:00Z"
 
-authors: [pedro, Benoît Sagot, Laurent Romary]
+authors: [pedro, benoit, laurent]
 tags: []
 
 # Is this a featured talk? (true/false)
@@ -29,7 +29,7 @@ featured: true
 links:
 - name: Workshop
   url: http://corpora.ids-mannheim.de/cmlc-2019.html
-url_code: "https://github.com/pjox/goclassy"
+url_code: "https://github.com/oscar-corpus/goclassy"
 url_pdf: "http://corpora.ids-mannheim.de/CMLC7-final/CMLC-7_2019-Oritz_et_al.pdf"
 url_slides: ""
 url_video: ""
