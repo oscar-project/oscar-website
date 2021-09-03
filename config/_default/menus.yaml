@@ -10,6 +10,9 @@ main:
   - name: News
     weight: 15
     url: 'post/'
+  - name: FAQ
+    weight: 16
+    url: 'faq'
   - name: Publications
     url: '#featured'
     weight: 20
