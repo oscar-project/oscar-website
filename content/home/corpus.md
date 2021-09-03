@@ -106,7 +106,7 @@ They have obtained our permission to redistribute the unshuffled OSCAR and they 
 
 Even though OSCAR is not [Postcardware](https://en.wikipedia.org/wiki/Shareware#Postcardware), we do appreciate when our users send us a postcard. If you want to send us one, you can find the address in the contact section down below.
 
-## Downloading OSCAR
+## Downloading OSCAR 2018
 
 All the data is distributed by language, both the original and the deduplicated versions of the data are available. To download a file just click the desired link on the table below. Languages are split in shards of around 700MB, these shards are standalone. A plain text file with checksums is also provided.
 
