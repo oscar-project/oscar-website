@@ -2,8 +2,8 @@
 title: "Asynchronous Pipeline for Processing Huge Corpora on Medium to Low Resource Infrastructures"
 authors:
 - pedro
-- Benoît Sagot
-- Laurent Romary
+- benoit
+- laurent
 date: "2019-07-22T00:00:00Z"
 doi: "10.14618/IDS-PUB-9021"
 

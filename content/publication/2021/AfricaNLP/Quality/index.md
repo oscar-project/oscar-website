@@ -14,7 +14,7 @@ authors:
 - Monang Setyawan
 - Supheakmungkol Sarin
 - Sokhar Samb
-- Benoît Sagot
+- benoit
 - Clara Rivera
 - Annette Rios
 - Isabel Papadimitriou
