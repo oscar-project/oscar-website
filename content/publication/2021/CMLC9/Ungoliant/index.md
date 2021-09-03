@@ -1,7 +1,7 @@
 ---
 title: "Ungoliant: An Optimized Pipeline for the Generation of a Very Large-Scale Multilingual Web Corpus"
 authors:
-- Julien Abadji
+- julien
 - pedro
 - Laurent Romary
 - Benoît Sagot
