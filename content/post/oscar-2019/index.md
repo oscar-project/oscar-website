@@ -2,9 +2,9 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "OSCAR 2018"
+title: "OSCAR 2019"
 subtitle: ""
-summary: "The first OSCAR Corpus version from 2018."
+summary: "The first OSCAR Corpus version from 2019."
 authors: ["pedro"]
 tags: []
 categories: ["corpus", "update"]
@@ -29,14 +29,14 @@ projects: []
 
 ---
 
-OSCAR 2018 is the original 2018 release of the [OSCAR](https://oscar-corpus.com)  corpus.
+OSCAR 2019 is the original 2019 release of the [OSCAR](https://oscar-corpus.com)  corpus.
 It has been generated from [Common Crawl](https://commoncrawl.org/) corpus using the [goclassy](https://github.com/pjox/goclassy) architecture.
 
 {{< toc >}}
 
 ## Features
 
-OSCAR 2018 is shuffled at line level and no metadata is provided. Thus it is mainly intended to be used in the training of unsupervised language models for NLP.
+OSCAR 2019 is shuffled at line level and no metadata is provided. Thus it is mainly intended to be used in the training of unsupervised language models for NLP.
 
 Data is distributed by language in both original and deduplicated form.
 
