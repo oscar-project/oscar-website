@@ -4,7 +4,7 @@
 title: "Ungoliant v1"
 subtitle: "The first version of the new pipeline generation tool."
 summary: "The first version of the new pipeline generation tool."
-authors: []
+authors: ["julien", "pedro"]
 tags: []
 categories: ["tool", "update"]
 date: 2021-09-02T14:59:23+02:00

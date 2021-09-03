@@ -4,9 +4,9 @@
 title: "Oscar 21.08"
 subtitle: "The August, 2021 version of the OSCAR Corpus."
 summary: "The August, 2021 version of the OSCAR Corpus."
-authors: []
+authors: ["julien", "pedro"]
 tags: []
-categories: ["Corpus", "update"]
+categories: ["corpus", "update"]
 date: 2021-09-02T15:02:11+02:00
 lastmod: 2021-09-02T15:02:11+02:00
 featured: true

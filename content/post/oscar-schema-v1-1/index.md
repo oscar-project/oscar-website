@@ -4,7 +4,7 @@
 title: "Oscar Schema v1.1"
 subtitle: "The new OSCAR Schema brings metadata while staying backward compatible."
 summary: "The new OSCAR Schema brings metadata while staying backward compatible."
-authors: []
+authors: ["julien", "pedro"]
 tags: []
 categories: ["schema", "update"]
 date: 2021-09-02T15:02:03+02:00

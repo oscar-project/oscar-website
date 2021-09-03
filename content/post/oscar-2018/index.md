@@ -4,10 +4,10 @@
 
 title: "OSCAR 2018"
 subtitle: ""
-summary: ""
-authors: ["julien"]
+summary: "The first OSCAR Corpus version from 2018."
+authors: ["pedro"]
 tags: []
-categories: []
+categories: ["corpus", "update"]
 date: 2021-09-02T14:07:40+02:00
 lastmod: 2021-09-02T14:07:40+02:00
 featured: false
