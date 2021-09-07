@@ -49,175 +49,173 @@ These are the versions of tooling, schemes and data
 
 ## Table
 
-|     | fullname                    | before   | after   | before_dedup   | after_dedup   |
-|:----|:----------------------------|:---------|:--------|:---------------|:--------------|
-| af  | Afrikaans                   | 251MB    | 258MB   | 170MB          | 157MB         |
-| sq  | Albanian                    | 2GB      | 3GB     | 1GB            | 1GB           |
-| am  | Amharic                     | 377MB    | 405MB   | 215MB          | 241MB         |
-| ar  | Arabic                      | 87GB     | 69GB    | 33GB           | 35GB          |
-| an  | Aragonese                   | 1MB      | 1MB     | 822KB          | 608KB         |
-| hy  | Armenian                    | 3GB      | 4GB     | 1GB            | 1GB           |
-| as  | Assamese                    | 117MB    | 135MB   | 73MB           | 95MB          |
-| ast | Asturian                    | 2MB      | 7MB     | 2MB            | 4MB           |
-| av  | Avaric                      | 418KB    | 421KB   | 331KB          | 325KB         |
-| az  | Azerbaijani                 | 2GB      | 3GB     | 1GB            | 1GB           |
-| bn  | Bangla                      | 10GB     | 14GB    | 6GB            | 7GB           |
-| ba  | Bashkir                     | 133MB    | 110MB   | 93MB           | 77MB          |
-| eu  | Basque                      | 889MB    | 900MB   | 358MB          | 503MB         |
-| bar | Bavarian                    | 507B     | 2KB     | 507B           | 1KB           |
-| be  | Belarusian                  | 1GB      | 2GB     | 1GB            | 1GB           |
-| bh  | Bihari languages            | 112KB    | 579KB   | 34KB           | 120KB         |
-| bpy | Bishnupriya                 | 4MB      | 11MB    | 1MB            | 4MB           |
-| bs  | Bosnian                     | 459KB    | 310KB   | 120KB          | 175KB         |
-| br  | Breton                      | 29MB     | 49MB    | 16MB           | 23MB          |
-| bg  | Bulgarian                   | 33GB     | 34GB    | 14GB           | 15GB          |
-| my  | Burmese                     | 2GB      | 2GB     | 1GB            | 1GB           |
-| yue | Cantonese                   | 3KB      | 0B      | 2KB            | 0B            |
-| ca  | Catalan                     | 8GB      | 13GB    | 4GB            | 6GB           |
-| ceb | Cebuano                     | 40MB     | 81MB    | 24MB           | 58MB          |
-| bcl | Central Bikol               | 886B     | 0B      | 886B           | 0B            |
-| ckb | Central Kurdish             | 509MB    | 784MB   | 236MB          | 367MB         |
-| cbk | Chavacano                   | 521B     | 168B    | 521B           | 168B          |
-| ce  | Chechen                     | 8MB      | 29MB    | 6MB            | 20MB          |
-| zh  | Chinese                     | 544GB    | 500GB   | 267GB          | 266GB         |
-| cv  | Chuvash                     | 40MB     | 60MB    | 27MB           | 41MB          |
-| kw  | Cornish                     | 44KB     | 119KB   | 14KB           | 72KB          |
-| hr  | Croatian                    | 237MB    | 361MB   | 115MB          | 169MB         |
-| cs  | Czech                       | 56GB     | 72GB    | 25GB           | 33GB          |
-| da  | Danish                      | 16GB     | 18GB    | 10GB           | 10GB          |
-| diq | Dimli (individual language) | 147B     | 294B    | 147B           | 147B          |
-| dv  | Divehi                      | 131MB    | 143MB   | 81MB           | 111MB         |
-| nl  | Dutch                       | 82GB     | 97GB    | 41GB           | 47GB          |
-| mhr | Eastern Mari                | 7MB      | 15MB    | 6MB            | 10MB          |
-| arz | Egyptian Arabic             | 68MB     | 48MB    | 34MB           | 21MB          |
-| en  | English                     | 2520GB   | 2936GB  | 1294GB         | 1342GB        |
-| myv | Erzya                       | 1KB      | 29KB    | 1KB            | 2KB           |
-| eo  | Esperanto                   | 312MB    | 560MB   | 238MB          | 390MB         |
-| et  | Estonian                    | 5GB      | 7GB     | 2GB            | 3GB           |
-| tl  | Filipino                    | 601MB    | 699MB   | 426MB          | 383MB         |
-| fi  | Finnish                     | 28GB     | 35GB    | 13GB           | 20GB          |
-| fr  | French                      | 302GB    | 340GB   | 147GB          | 161GB         |
-| gl  | Galician                    | 650MB    | 989MB   | 402MB          | 549MB         |
-| ka  | Georgian                    | 3GB      | 6GB     | 1GB            | 2GB           |
-| de  | German                      | 330GB    | 433GB   | 155GB          | 184GB         |
-| gom | Goan Konkani                | 2MB      | 3MB     | 1MB            | 2MB           |
-| el  | Greek                       | 66GB     | 72GB    | 28GB           | 30GB          |
-| gn  | Guarani                     | 36KB     | 32KB    | 23KB           | 25KB          |
-| gu  | Gujarati                    | 1GB      | 1GB     | 756MB          | 950MB         |
-| ht  | Haitian Creole              | 3KB      | 2KB     | 3KB            | 1KB           |
-| he  | Hebrew                      | 21GB     | 29GB    | 10GB           | 11GB          |
-| hi  | Hindi                       | 17GB     | 26GB    | 9GB            | 13GB          |
-| hu  | Hungarian                   | 42GB     | 60GB    | 18GB           | 29GB          |
-| is  | Icelandic                   | 1GB      | 2GB     | 887MB          | 1GB           |
-| io  | Ido                         | 151KB    | 276KB   | 133KB          | 221KB         |
-| ilo | Iloko                       | 896KB    | 1MB     | 653KB          | 857KB         |
-| id  | Indonesian                  | 32GB     | 40GB    | 16GB           | 22GB          |
-| ia  | Interlingua                 | 678KB    | 291KB   | 368KB          | 172KB         |
-| ie  | Interlingue                 | 24KB     | 7KB     | 1KB            | 2KB           |
-| ga  | Irish                       | 91MB     | 131MB   | 62MB           | 69MB          |
-| it  | Italian                     | 146GB    | 192GB   | 73GB           | 94GB          |
-| ja  | Japanese                    | 231GB    | 208GB   | 112GB          | 96GB          |
-| jv  | Javanese                    | 675KB    | 858KB   | 598KB          | 728KB         |
-| xal | Kalmyk                      | 115KB    | 62KB    | 114KB          | 62KB          |
-| kn  | Kannada                     | 1GB      | 2GB     | 1GB            | 1GB           |
-| krc | Karachay-Balkar             | 2MB      | 2MB     | 2MB            | 2MB           |
-| kk  | Kazakh                      | 2GB      | 3GB     | 1GB            | 1GB           |
-| km  | Khmer                       | 1GB      | 1GB     | 608MB          | 860MB         |
-| kv  | Komi                        | 2MB      | 1MB     | 1MB            | 588KB         |
-| ko  | Korean                      | 25GB     | 35GB    | 11GB           | 15GB          |
-| ku  | Kurdish                     | 98MB     | 152MB   | 62MB           | 108MB         |
-| ky  | Kyrgyz                      | 629MB    | 485MB   | 406MB          | 334MB         |
-| lo  | Lao                         | 181MB    | 287MB   | 118MB          | 163MB         |
-| la  | Latin                       | 26MB     | 103MB   | 8MB            | 9MB           |
-| lv  | Latvian                     | 4GB      | 6GB     | 1GB            | 2GB           |
-| lez | Lezghian                    | 3MB      | 2MB     | 3MB            | 2MB           |
-| li  | Limburgish                  | 29KB     | 76KB    | 27KB           | 54KB          |
-| lt  | Lithuanian                  | 9GB      | 12GB    | 4GB            | 5GB           |
-| jbo | Lojban                      | 753KB    | 929KB   | 694KB          | 731KB         |
-| lmo | Lombard                     | 454KB    | 1MB     | 444KB          | 1MB           |
-| nds | Low German                  | 18MB     | 25MB    | 13MB           | 17MB          |
-| dsb | Lower Sorbian               | 13KB     | 31KB    | 7KB            | 14KB          |
-| lb  | Luxembourgish               | 30MB     | 54MB    | 21MB           | 37MB          |
-| mk  | Macedonian                  | 2GB      | 3GB     | 1GB            | 1GB           |
-| mai | Maithili                    | 324KB    | 685KB   | 10KB           | 24KB          |
-| mg  | Malagasy                    | 21MB     | 59MB    | 13MB           | 38MB          |
-| ms  | Malay                       | 116MB    | 146MB   | 43MB           | 60MB          |
-| ml  | Malayalam                   | 5GB      | 4GB     | 2GB            | 2GB           |
-| mt  | Maltese                     | 24MB     | 51MB    | 17MB           | 26MB          |
-| gv  | Manx                        | 0B       | 1KB     | 0B             | 907B          |
-| mr  | Marathi                     | 2GB      | 3GB     | 1GB            | 1GB           |
-| mzn | Mazanderani                 | 708KB    | 1MB     | 617KB          | 1MB           |
-| min | Minangkabau                 | 622KB    | 8MB     | 317KB          | 1MB           |
-| xmf | Mingrelian                  | 6MB      | 16MB    | 4MB            | 10MB          |
-| mwl | Mirandese                   | 1KB      | 3KB     | 1KB            | 2KB           |
-| mn  | Mongolian                   | 2GB      | 1GB     | 879MB          | 912MB         |
-| nah | Nahuatl languages           | 11KB     | 34KB    | 10KB           | 21KB          |
-| nap | Neapolitan                  | 17KB     | 1KB     | 13KB           | 1KB           |
-| ne  | Nepali                      | 1GB      | 3GB     | 1GB            | 2GB           |
-| new | Newari                      | 5MB      | 6MB     | 4MB            | 4MB           |
-| frr | Northern Frisian            | 4KB      | 7KB     | 4KB            | 5KB           |
-| lrc | Northern Luri               | 77KB     | 183B    | 64KB           | 183B          |
-| no  | Norwegian Bokmål            | 8GB      | 9GB     | 5GB            | 4GB           |
-| nn  | Norwegian Nynorsk           | 88MB     | 123MB   | 56MB           | 66MB          |
-| oc  | Occitan                     | 6MB      | 12MB    | 3MB            | 5MB           |
-| or  | Odia                        | 259MB    | 538MB   | 196MB          | 357MB         |
-| os  | Ossetic                     | 12MB     | 11MB    | 10MB           | 6MB           |
-| pam | Pampanga                    | 763B     | 3KB     | 307B           | 3KB           |
-| ps  | Pashto                      | 378MB    | 404MB   | 253MB          | 286MB         |
-| fa  | Persian                     | 84GB     | 79GB    | 39GB           | 35GB          |
-| pms | Piedmontese                 | 2MB      | 4MB     | 1MB            | 3MB           |
-| pl  | Polish                      | 116GB    | 122GB   | 50GB           | 48GB          |
-| pt  | Portuguese                  | 132GB    | 159GB   | 67GB           | 71GB          |
-| pa  | Punjabi                     | 799MB    | 769MB   | 481MB          | 430MB         |
-| qu  | Quechua                     | 80KB     | 322KB   | 68KB           | 230KB         |
-| ro  | Romanian                    | 26GB     | 37GB    | 11GB           | 15GB          |
-| rm  | Romansh                     | 7KB      | 3KB     | 6KB            | 3KB           |
-| bxr | Russia Buriat               | 12KB     | 22KB    | 10KB           | 18KB          |
-| ru  | Russian                     | 1239GB   | 1201GB  | 609GB          | 542GB         |
-| rue | Rusyn                       | 0B       | 247B    | 0B             | 247B          |
-| sah | Sakha                       | 43MB     | 57MB    | 27MB           | 39MB          |
-| sa  | Sanskrit                    | 96MB     | 72MB    | 38MB           | 43MB          |
-| sco | Scots                       | 0B       | 1KB     | 0B             | 1KB           |
-| gd  | Scottish Gaelic             | 1MB      | 2MB     | 1MB            | 1MB           |
-| sr  | Serbian                     | 4GB      | 6GB     | 2GB            | 3GB           |
-| sh  | Serbian (Latin)             | 25MB     | 13MB    | 6MB            | 9MB           |
-| scn | Sicilian                    | 3KB      | 4KB     | 2KB            | 3KB           |
-| sd  | Sindhi                      | 363MB    | 75MB    | 274MB          | 50MB          |
-| si  | Sinhala                     | 1GB      | 1GB     | 840MB          | 791MB         |
-| sk  | Slovak                      | 9GB      | 14GB    | 4GB            | 6GB           |
-| sl  | Slovenian                   | 2GB      | 4GB     | 1GB            | 1GB           |
-| so  | Somali                      | 62KB     | 15KB    | 15KB           | 13KB          |
-| azb | South Azerbaijani           | 28MB     | 47MB    | 19MB           | 29MB          |
-| es  | Spanish                     | 297GB    | 342GB   | 159GB          | 160GB         |
-| su  | Sundanese                   | 216KB    | 397KB   | 145KB          | 274KB         |
-| sw  | Swahili                     | 13MB     | 11MB    | 8MB            | 7MB           |
-| sv  | Swedish                     | 46GB     | 43GB    | 26GB           | 19GB          |
-| tg  | Tajik                       | 396MB    | 985MB   | 260MB          | 321MB         |
-| ta  | Tamil                       | 9GB      | 10GB    | 5GB            | 5GB           |
-| tt  | Tatar                       | 701MB    | 947MB   | 319MB          | 424MB         |
-| te  | Telugu                      | 2GB      | 3GB     | 1GB            | 1GB           |
-| th  | Thai                        | 38GB     | 62GB    | 17GB           | 26GB          |
-| bo  | Tibetan                     | 195MB    | 439MB   | 144MB          | 358MB         |
-| als | Tosk Albanian               | 5MB      | 7MB     | 2MB            | 5MB           |
-| tr  | Turkish                     | 63GB     | 73GB    | 28GB           | 33GB          |
-| tk  | Turkmen                     | 10MB     | 25MB    | 7MB            | 20MB          |
-| tyv | Tuvinian                    | 11KB     | 9KB     | 8KB            | 7KB           |
-| uk  | Ukrainian                   | 56GB     | 53GB    | 29GB           | 28GB          |
-| eml | Unknown language [eml]      | 25KB     | 22KB    | 23KB           | 20KB          |
-| hsb | Upper Sorbian               | 4MB      | 2MB     | 1MB            | 1MB           |
-| ur  | Urdu                        | 2GB      | 2GB     | 1GB            | 1GB           |
-| ug  | Uyghur                      | 127MB    | 187MB   | 86MB           | 123MB         |
-| uz  | Uzbek                       | 21MB     | 56MB    | 11MB           | 28MB          |
-| vec | Venetian                    | 18KB     | 37KB    | 16KB           | 28KB          |
-| vi  | Vietnamese                  | 72GB     | 87GB    | 33GB           | 42GB          |
-| vo  | Volapük                     | 2MB      | 2MB     | 2MB            | 2MB           |
-| wa  | Walloon                     | 280KB    | 511KB   | 207KB          | 329KB         |
-| war | Waray                       | 2MB      | 4MB     | 2MB            | 4MB           |
-| cy  | Welsh                       | 223MB    | 307MB   | 139MB          | 180MB         |
-| vls | West Flemish                | 0B       | 134B    | 0B             | 134B          |
-| fy  | Western Frisian             | 35MB     | 82MB    | 26MB           | 57MB          |
-| mrj | Western Mari                | 1MB      | 645KB   | 1MB            | 521KB         |
-| pnb | Western Panjabi             | 11MB     | 68MB    | 9MB            | 45MB          |
-| wuu | Wu Chinese                  | 111KB    | 145KB   | 32KB           | 69KB          |
-| yi  | Yiddish                     | 146MB    | 199MB   | 87MB           | 93MB          |
-| yo  | Yoruba                      | 56KB     | 229KB   | 26KB           | 120KB         |
+|     | language                    | size   | words           | size (dedup)   | words (dedup)   |
+|:----|:----------------------------|:-------|:----------------|:---------------|:----------------|
+| af  | Afrikaans                   | 258MB  | 44,628,392      | 157MB          | 27,057,785      |
+| als | Tosk Albanian               | 7MB    | 1,212,699       | 5MB            | 871,664         |
+| am  | Amharic                     | 405MB  | 30,991,914      | 241MB          | 18,326,043      |
+| an  | Aragonese                   | 1MB    | 115,938         | 608KB          | 89,043          |
+| ar  | Arabic                      | 69GB   | 6,494,332,191   | 35GB           | 3,365,025,866   |
+| arz | Egyptian Arabic             | 48MB   | 4,998,963       | 21MB           | 2,341,904       |
+| ast | Asturian                    | 7MB    | 1,085,670       | 4MB            | 776,069         |
+| as  | Assamese                    | 135MB  | 7,917,923       | 95MB           | 5,605,207       |
+| av  | Avaric                      | 421KB  | 25,104          | 325KB          | 19,133          |
+| azb | South Azerbaijani           | 47MB   | 3,595,569       | 29MB           | 2,243,562       |
+| az  | Azerbaijani                 | 3GB    | 344,187,319     | 1GB            | 169,655,478     |
+| bar | Bavarian                    | 2KB    | 247             | 1KB            | 245             |
+| ba  | Bashkir                     | 110MB  | 8,121,603       | 77MB           | 5,625,158       |
+| be  | Belarusian                  | 2GB    | 168,911,341     | 1GB            | 98,212,442      |
+| bg  | Bulgarian                   | 34GB   | 2,994,775,106   | 15GB           | 1,315,091,995   |
+| bh  | Bihari languages            | 579KB  | 46,436          | 120KB          | 9,181           |
+| bn  | Bangla                      | 14GB   | 814,550,777     | 7GB            | 466,289,242     |
+| bo  | Tibetan                     | 439MB  | 3,751,935       | 358MB          | 2,797,085       |
+| bpy | Bishnupriya                 | 11MB   | 558,819         | 4MB            | 280,825         |
+| br  | Breton                      | 49MB   | 8,067,480       | 23MB           | 4,032,467       |
+| bs  | Bosnian                     | 310KB  | 50,266          | 175KB          | 25,157          |
+| bxr | Russia Buriat               | 22KB   | 1,625           | 18KB           | 1,335           |
+| ca  | Catalan                     | 13GB   | 2,110,833,307   | 6GB            | 1,012,770,904   |
+| cbk | Chavacano                   | 168B   | 2               | 168B           | 2               |
+| ceb | Cebuano                     | 81MB   | 12,921,589      | 58MB           | 9,201,870       |
+| ce  | Chechen                     | 29MB   | 2,283,093       | 20MB           | 1,638,963       |
+| ckb | Central Kurdish             | 784MB  | 63,417,572      | 367MB          | 29,355,017      |
+| cs  | Czech                       | 72GB   | 9,996,052,434   | 33GB           | 4,739,928,730   |
+| cv  | Chuvash                     | 60MB   | 4,592,449       | 41MB           | 3,141,872       |
+| cy  | Welsh                       | 307MB  | 50,606,998      | 180MB          | 30,198,860      |
+| da  | Danish                      | 18GB   | 2,892,004,180   | 10GB           | 1,704,605,898   |
+| de  | German                      | 433GB  | 58,716,727,164  | 184GB          | 25,446,071,671  |
+| diq | Dimli (individual language) | 294B   | 38              | 147B           | 19              |
+| dsb | Lower Sorbian               | 31KB   | 4,115           | 14KB           | 1,873           |
+| dv  | Divehi                      | 143MB  | 8,293,093       | 111MB          | 6,481,260       |
+| el  | Greek                       | 72GB   | 6,024,414,850   | 30GB           | 2,539,719,195   |
+| eml | Unknown language [eml]      | 22KB   | 4,360           | 20KB           | 3,876           |
+| en  | English                     | 2936GB | 488,723,815,522 | 1342GB         | 223,669,114,922 |
+| eo  | Esperanto                   | 560MB  | 84,432,772      | 390MB          | 59,411,208      |
+| es  | Spanish                     | 342GB  | 54,715,337,438  | 160GB          | 25,877,724,186  |
+| et  | Estonian                    | 7GB    | 954,732,803     | 3GB            | 455,553,053     |
+| eu  | Basque                      | 900MB  | 110,676,692     | 503MB          | 62,812,888      |
+| fa  | Persian                     | 79GB   | 8,566,653,720   | 35GB           | 3,902,206,854   |
+| fi  | Finnish                     | 35GB   | 4,074,911,658   | 20GB           | 2,357,264,196   |
+| frr | Northern Frisian            | 7KB    | 1,702           | 5KB            | 1,267           |
+| fr  | French                      | 340GB  | 52,839,365,242  | 161GB          | 25,245,127,073  |
+| fy  | Western Frisian             | 82MB   | 13,094,538      | 57MB           | 9,329,828       |
+| ga  | Irish                       | 131MB  | 20,142,627      | 69MB           | 10,835,410      |
+| gd  | Scottish Gaelic             | 2MB    | 332,946         | 1MB            | 173,588         |
+| gl  | Galician                    | 989MB  | 155,030,216     | 549MB          | 87,015,417      |
+| gn  | Guarani                     | 32KB   | 3,828           | 25KB           | 3,056           |
+| gom | Goan Konkani                | 3MB    | 177,357         | 2MB            | 148,801         |
+| gu  | Gujarati                    | 1GB    | 124,652,589     | 950MB          | 63,150,641      |
+| gv  | Manx                        | 1KB    | 264             | 907B           | 141             |
+| he  | Hebrew                      | 29GB   | 2,829,132,925   | 11GB           | 1,156,588,919   |
+| hi  | Hindi                       | 26GB   | 2,009,754,819   | 13GB           | 1,038,914,735   |
+| hr  | Croatian                    | 361MB  | 51,654,735      | 169MB          | 24,583,270      |
+| hsb | Upper Sorbian               | 2MB    | 305,176         | 1MB            | 207,715         |
+| ht  | Haitian Creole              | 2KB    | 592             | 1KB            | 351             |
+| hu  | Hungarian                   | 60GB   | 7,415,936,687   | 29GB           | 3,765,883,306   |
+| hy  | Armenian                    | 4GB    | 322,429,587     | 1GB            | 124,515,953     |
+| ia  | Interlingua                 | 291KB  | 74,696          | 172KB          | 41,625          |
+| id  | Indonesian                  | 40GB   | 5,767,715,387   | 22GB           | 3,126,926,138   |
+| ie  | Interlingue                 | 7KB    | 1,432           | 2KB            | 424             |
+| ilo | Iloko                       | 1MB    | 275,029         | 857KB          | 140,579         |
+| io  | Ido                         | 276KB  | 46,463          | 221KB          | 36,976          |
+| is  | Icelandic                   | 2GB    | 290,997,158     | 1GB            | 176,018,529     |
+| it  | Italian                     | 192GB  | 29,252,541,808  | 94GB           | 14,426,829,908  |
+| ja  | Japanese                    | 208GB  | 5,357,000,179   | 96GB           | 1,319,938,248   |
+| jbo | Lojban                      | 929KB  | 179,684         | 731KB          | 140,749         |
+| jv  | Javanese                    | 858KB  | 121,271         | 728KB          | 101,386         |
+| ka  | Georgian                    | 6GB    | 304,329,117     | 2GB            | 116,422,468     |
+| kk  | Kazakh                      | 3GB    | 236,767,203     | 1GB            | 126,886,720     |
+| km  | Khmer                       | 1GB    | 28,188,612      | 860MB          | 13,408,408      |
+| kn  | Kannada                     | 2GB    | 111,460,546     | 1GB            | 56,801,321      |
+| ko  | Korean                      | 35GB   | 3,367,279,749   | 15GB           | 1,475,474,588   |
+| krc | Karachay-Balkar             | 2MB    | 193,207         | 2MB            | 153,755         |
+| ku  | Kurdish                     | 152MB  | 23,845,402      | 108MB          | 17,264,310      |
+| kv  | Komi                        | 1MB    | 89,105          | 588KB          | 46,219          |
+| kw  | Cornish                     | 119KB  | 20,775          | 72KB           | 12,687          |
+| ky  | Kyrgyz                      | 485MB  | 33,401,287      | 334MB          | 23,102,129      |
+| la  | Latin                       | 103MB  | 15,869,314      | 9MB            | 1,488,545       |
+| lb  | Luxembourgish               | 54MB   | 7,953,887       | 37MB           | 5,454,220       |
+| lez | Lezghian                    | 2MB    | 214,890         | 2MB            | 198,433         |
+| li  | Limburgish                  | 76KB   | 12,105          | 54KB           | 8,472           |
+| lmo | Lombard                     | 1MB    | 203,002         | 1MB            | 182,533         |
+| lo  | Lao                         | 287MB  | 6,928,229       | 163MB          | 3,620,360       |
+| lrc | Northern Luri               | 183B   | 26              | 183B           | 26              |
+| lt  | Lithuanian                  | 12GB   | 1,573,926,673   | 5GB            | 701,326,575     |
+| lv  | Latvian                     | 6GB    | 799,923,431     | 2GB            | 352,753,044     |
+| mai | Maithili                    | 685KB  | 144,859         | 24KB           | 1,916           |
+| mg  | Malagasy                    | 59MB   | 8,103,631       | 38MB           | 5,220,655       |
+| mhr | Eastern Mari                | 15MB   | 1,170,650       | 10MB           | 784,071         |
+| min | Minangkabau                 | 8MB    | 451,591         | 1MB            | 74,882          |
+| mk  | Macedonian                  | 3GB    | 261,571,966     | 1GB            | 134,544,934     |
+| ml  | Malayalam                   | 4GB    | 182,898,691     | 2GB            | 87,615,430      |
+| mn  | Mongolian                   | 1GB    | 143,244,180     | 912MB          | 71,138,550      |
+| mrj | Western Mari                | 645KB  | 51,812          | 521KB          | 41,950          |
+| mr  | Marathi                     | 3GB    | 173,001,078     | 1GB            | 99,858,901      |
+| ms  | Malay                       | 146MB  | 20,433,250      | 60MB           | 8,301,250       |
+| mt  | Maltese                     | 51MB   | 6,162,888       | 26MB           | 3,179,815       |
+| mwl | Mirandese                   | 3KB    | 419             | 2KB            | 302             |
+| my  | Burmese                     | 2GB    | 54,624,239      | 1GB            | 35,969,724      |
+| myv | Erzya                       | 29KB   | 2,844           | 2KB            | 236             |
+| mzn | Mazanderani                 | 1MB    | 134,128         | 1MB            | 106,533         |
+| nah | Nahuatl languages           | 34KB   | 3,664           | 21KB           | 2,363           |
+| nap | Neapolitan                  | 1KB    | 550             | 1KB            | 235             |
+| nds | Low German                  | 25MB   | 3,998,912       | 17MB           | 2,868,608       |
+| ne  | Nepali                      | 3GB    | 207,891,824     | 2GB            | 142,087,100     |
+| new | Newari                      | 6MB    | 433,880         | 4MB            | 254,711         |
+| nl  | Dutch                       | 97GB   | 15,248,924,083  | 47GB           | 7,584,055,321   |
+| nn  | Norwegian Nynorsk           | 123MB  | 20,629,675      | 66MB           | 11,095,804      |
+| no  | Norwegian Bokmål            | 9GB    | 1,492,984,384   | 4GB            | 776,354,517     |
+| oc  | Occitan                     | 12MB   | 1,822,595       | 5MB            | 834,187         |
+| or  | Odia                        | 538MB  | 30,838,706      | 357MB          | 20,357,839      |
+| os  | Ossetic                     | 11MB   | 911,794         | 6MB            | 536,525         |
+| pam | Pampanga                    | 3KB    | 405             | 3KB            | 405             |
+| pa  | Punjabi                     | 769MB  | 59,031,334      | 430MB          | 33,413,527      |
+| pl  | Polish                      | 122GB  | 16,120,806,481  | 48GB           | 6,496,098,108   |
+| pms | Piedmontese                 | 4MB    | 804,600         | 3MB            | 644,017         |
+| pnb | Western Panjabi             | 68MB   | 7,757,785       | 45MB           | 5,221,168       |
+| ps  | Pashto                      | 404MB  | 49,643,597      | 286MB          | 35,345,424      |
+| pt  | Portuguese                  | 159GB  | 24,770,395,312  | 71GB           | 11,190,148,216  |
+| qu  | Quechua                     | 322KB  | 40,691          | 230KB          | 29,108          |
+| rm  | Romansh                     | 3KB    | 512             | 3KB            | 429             |
+| ro  | Romanian                    | 37GB   | 5,629,438,576   | 15GB           | 2,387,230,734   |
+| rue | Rusyn                       | 247B   | 14              | 247B           | 14              |
+| ru  | Russian                     | 1201GB | 89,568,364,811  | 542GB          | 41,194,052,384  |
+| sah | Sakha                       | 57MB   | 2,600,989       | 39MB           | 1,944,651       |
+| sa  | Sanskrit                    | 72MB   | 3,288,786       | 43MB           | 1,998,089       |
+| scn | Sicilian                    | 4KB    | 712             | 3KB            | 516             |
+| sco | Scots                       | 1KB    | 523             | 1KB            | 282             |
+| sd  | Sindhi                      | 75MB   | 8,937,427       | 50MB           | 6,064,102       |
+| sh  | Serbian (Latin)             | 13MB   | 2,164,175       | 9MB            | 1,461,045       |
+| si  | Sinhala                     | 1GB    | 91,456,436      | 791MB          | 47,770,919      |
+| sk  | Slovak                      | 14GB   | 2,002,088,524   | 6GB            | 865,456,498     |
+| sl  | Slovenian                   | 4GB    | 610,843,131     | 1GB            | 288,222,997     |
+| so  | Somali                      | 15KB   | 849             | 13KB           | 449             |
+| sq  | Albanian                    | 3GB    | 493,861,192     | 1GB            | 257,278,518     |
+| sr  | Serbian                     | 6GB    | 574,460,746     | 3GB            | 289,211,579     |
+| su  | Sundanese                   | 397KB  | 54,420          | 274KB          | 37,082          |
+| sv  | Swedish                     | 43GB   | 6,542,433,732   | 19GB           | 2,964,887,952   |
+| sw  | Swahili                     | 11MB   | 1,853,022       | 7MB            | 1,279,350       |
+| ta  | Tamil                       | 10GB   | 438,489,984     | 5GB            | 215,856,584     |
+| te  | Telugu                      | 3GB    | 182,268,133     | 1GB            | 73,193,605      |
+| tg  | Tajik                       | 985MB  | 79,016,232      | 321MB          | 26,069,632      |
+| th  | Thai                        | 62GB   | 1,694,658,532   | 26GB           | 635,230,676     |
+| tk  | Turkmen                     | 25MB   | 2,693,720       | 20MB           | 2,221,760       |
+| tl  | Filipino                    | 699MB  | 115,471,760     | 383MB          | 62,473,283      |
+| tr  | Turkish                     | 73GB   | 8,763,467,387   | 33GB           | 3,950,989,357   |
+| tt  | Tatar                       | 947MB  | 68,793,924      | 424MB          | 31,485,000      |
+| tyv | Tuvinian                    | 9KB    | 638             | 7KB            | 542             |
+| ug  | Uyghur                      | 187MB  | 12,786,741      | 123MB          | 8,410,269       |
+| uk  | Ukrainian                   | 53GB   | 4,014,675,914   | 28GB           | 2,131,491,321   |
+| ur  | Urdu                        | 2GB    | 354,937,986     | 1GB            | 234,111,239     |
+| uz  | Uzbek                       | 56MB   | 6,237,371       | 28MB           | 3,327,595       |
+| vec | Venetian                    | 37KB   | 6,694           | 28KB           | 5,139           |
+| vi  | Vietnamese                  | 87GB   | 14,523,772,784  | 42GB           | 7,011,404,625   |
+| vls | West Flemish                | 134B   | 2               | 134B           | 2               |
+| vo  | Volapük                     | 2MB    | 426,052         | 2MB            | 410,688         |
+| war | Waray                       | 4MB    | 750,162         | 4MB            | 702,336         |
+| wa  | Walloon                     | 511KB  | 93,163          | 329KB          | 59,906          |
+| wuu | Wu Chinese                  | 145KB  | 9,130           | 69KB           | 3,031           |
+| xal | Kalmyk                      | 62KB   | 5,495           | 62KB           | 5,495           |
+| xmf | Mingrelian                  | 16MB   | 807,158         | 10MB           | 510,700         |
+| yi  | Yiddish                     | 199MB  | 18,699,112      | 93MB           | 8,716,366       |
+| yo  | Yoruba                      | 229KB  | 34,468          | 120KB          | 17,487          |
+| zh  | Chinese                     | 500GB  | 10,118,381,906  | 266GB          | 3,898,987,727   |
