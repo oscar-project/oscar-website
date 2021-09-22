@@ -86,8 +86,6 @@ You'll be asked to create an [HumanID](https://humanid.huma-num.fr) account in o
 
 All sizes are for the **uncompressed** files.
 
-<div style="margin: 0 auto; width: 992px;">
-
 | <span style="float:left;">Language</span> | <span style="float:right;">Words original</span> | <span style="float:right;">Size original</span> |         <span style="float:left;">File original</span> | <span style="float:left;">Words deduplicated</span> | <span style="float:left;">Size deduplicated</span> |      <span style="float:left;">File deduplicated</span> |
 | :---------------------------------------- | -----------------------------------------------: | ----------------------------------------------: | -----------------------------------------------------: | --------------------------------------------------: | -------------------------------------------------: | ------------------------------------------------------: |
 | Afrikaans                                 |                                       43,482,801 |                                            241M |   [af](https://oscar-public.huma-num.fr/shuff-orig/af) |                                          29,533,437 |                                               163M |   [af](https://oscar-public.huma-num.fr/shuff-dedup/af) |
@@ -256,9 +254,6 @@ All sizes are for the **uncompressed** files.
 | Yiddish                                   |                                       13,834,320 |                                            141M |   [yi](https://oscar-public.huma-num.fr/shuff-orig/yi) |                                           8,212,970 |                                                84M |   [yi](https://oscar-public.huma-num.fr/shuff-dedup/yi) |
 | Yoruba                                    |                                            8,906 |                                             55K |   [yo](https://oscar-public.huma-num.fr/shuff-orig/yo) |                                               3,518 |                                                27K |   [yo](https://oscar-public.huma-num.fr/shuff-dedup/yo) |
 | Yue Chinese                               |                                              186 |                                            3.7K | [yue](https://oscar-public.huma-num.fr/shuff-orig/yue) |                                                 128 |                                               2.2K | [yue](https://oscar-public.huma-num.fr/shuff-dedup/yue) |
-
-
-</div>
 
 ## License
 
