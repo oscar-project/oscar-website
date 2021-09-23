@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Pedro Javier Ortiz Suárez
+title: Pedro Ortiz Suarez
 
 # Is this the primary user of the site?
 superuser: true
@@ -20,10 +20,11 @@ bio: I'm a PhD student in Computer Science at Sorbonne Université and at the AL
 
 # Interests to show in About widget
 interests:
-- Machine Learning
-- Deep Learning
-- Text Mining
-- NLP
+- Language modeling
+- Corpus linguistics
+- Named Entity Recognition
+- Machine Translation
+- Computational Linguistics
 
 # Education to show in About widget
 education:
@@ -47,7 +48,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:pedro.ortiz@inria.fr'  # For a direct email link, use "mailto:test@example.org".
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.fr/citations?user=5sNdyvkAAAAJ&hl=en
@@ -72,20 +73,20 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/pjox
+- icon: gitlab
+  icon_pack: fab
+  link: https://gitlab.com/pjox
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/pedro-j-ortiz/
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/pjox13
-- icon: "key"
-  icon_pack: "fas"
-  link: files/PedroJOrtiz.asc
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-- icon: cv
-  icon_pack: ai
-  link: files/cv.pdf
+# - icon: cv
+#   icon_pack: ai
+#   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -95,13 +96,12 @@ highlight_name: true
 
 # Organizational groups that you belong to (for People widget)
 #   Remove this if you are not using the People widget.
-#user_groups:
-#- Researchers
-#- Visitors
+user_groups:
+- Core
 ---
 
-I'm a PhD student in Computer Science at [Sorbonne Université](https://sorbonne-universite.fr/en) and at the [ALMAnaCH research team](https://team.inria.fr/almanach/) at [Inria](https://www.inria.fr/en/).
+I'm a PhD student in Computer Science woking in Natural Language Processing (NLP) for historical documents at [Sorbonne Université](https://sorbonne-universite.fr/en) and at the [ALMAnaCH research team](https://team.inria.fr/almanach/) at [Inria](https://www.inria.fr/en/).
 
-I work primarily in machine learning, deep learning and NLP.
+I am interested in [large corpora](https://oscar-corpus.com) for training [language models](https://camembert-model.fr), specially for under resourced languages and historical languages. I am interested in tasks such as Name Entity Recognition (NER), Dependency Parsing and Part-of-Speech tagging, Machine Translation and Document structuration.
 
-I love coffee, cookies and coding.
+I love coffee, cookies and maths.

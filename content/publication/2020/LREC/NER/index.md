@@ -4,8 +4,8 @@ authors:
 - pedro
 - Yoann Dupont
 - Benjamin Muller
-- Laurent Romary
-- Benoît Sagot
+- laurent
+- benoit
 date: "2020-05-16T00:00:00Z"
 doi: ""
 

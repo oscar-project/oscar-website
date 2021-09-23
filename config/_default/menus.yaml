@@ -7,6 +7,12 @@ main:
   - name: Home
     url: '#about'
     weight: 10
+  - name: News
+    weight: 15
+    url: 'post/'
+  - name: FAQ
+    weight: 16
+    url: 'faq'
   - name: Publications
     url: '#featured'
     weight: 20

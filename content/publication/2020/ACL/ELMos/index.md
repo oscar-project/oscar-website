@@ -2,8 +2,8 @@
 title: "A Monolingual Approach to Contextualized Word Embeddings for Mid-Resource Languages"
 authors:
 - pedro
-- Laurent Romary
-- Benoît Sagot
+- laurent
+- benoit
 date: "2020-07-06T00:00:00Z"
 doi: ""
 
