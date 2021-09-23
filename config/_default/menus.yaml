@@ -22,4 +22,7 @@ main:
   - name: Contact
     url: '#contact'
     weight: 50
+  - name: Community
+    url: 'https://discord.com/invite/4JNg9FTar4'
+    weight: 60
 
