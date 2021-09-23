@@ -27,7 +27,6 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-# OSCAR 21.09
 
 OSCAR or Open Super-large Crawled Aggregated coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus using [Ungoliant](https://github.com/oscar-corpus/ungoliant).
 
@@ -43,7 +42,7 @@ These are the versions of tooling, schemes and data
 
 ## Changes
 
-- As per [OSCAR Schema v1.1](TODO), each document/record has associated metadata.
+- As per [OSCAR Schema v1.1](../oscar-schema-v1-1), each document/record has associated metadata.
 - New languages: Manx, Rusyn, Scots and West Flemish
 - Removed languages: Central Bikol and Cantonese
 
