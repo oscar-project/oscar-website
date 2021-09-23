@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Oscar 21.08"
+title: "Oscar 21.09"
 subtitle: "The August, 2021 version of the OSCAR Corpus."
 summary: "The August, 2021 version of the OSCAR Corpus."
 authors: ["julien", "pedro"]
@@ -27,7 +27,7 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-# OSCAR 21.08
+# OSCAR 21.09
 
 OSCAR or Open Super-large Crawled Aggregated coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus using [Ungoliant](https://github.com/oscar-corpus/ungoliant).
 
@@ -49,7 +49,7 @@ These are the versions of tooling, schemes and data
 
 ## Table
 
-|     | Language                    | OSCAR 2018   | OSCAR 2018 deduplicated   | OSCAR 21.08   | OSCAR 21.08 deduplicated   |
+|     | Language                    | OSCAR 2018   | OSCAR 2018 deduplicated   | OSCAR 21.09   | OSCAR 21.09 deduplicated   |
 |:----|:----------------------------|:-------------|:--------------------------|:--------------|:---------------------------|
 | af  | Afrikaans                   | 251MB        | 170MB                     | 258MB         | 157MB                      |
 | sq  | Albanian                    | 2GB          | 1GB                       | 3GB           | 1GB                        |
