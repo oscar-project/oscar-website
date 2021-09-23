@@ -18,16 +18,11 @@ bio: Inria Senior Researcher, DARIAH EU infrastructure, director, ISO/TC 37 chai
 
 # Interests to show in About widget
 interests:
-- Morphosyntactic analysis and parsing
-- Development of lexical resources
-- Neural language models
-- Interpretability of neural networks
-- Text simplification
-- Raw corpus processing
-- Computational and quantitative morphology
-- “Classical” and computational etymology
-- Computational historical linguistics
-- Applications of NLP
+- Digital humanities
+- TEI
+- Standardization
+- Lexicography
+- Computational Linguistics
 
 
 # Education to show in About widget
