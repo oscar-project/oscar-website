@@ -27,6 +27,9 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+{{% callout warning %}}
+If you want to get the new corpus please contact us using the [contact form in our homepage](/#contact). Please do not create a new Huma-Num account by yourself, we will do it for you when we give you the access.
+{{% /callout %}}
 
 OSCAR or Open Super-large Crawled Aggregated coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus using [Ungoliant](https://github.com/oscar-corpus/ungoliant).
 

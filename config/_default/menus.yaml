@@ -19,16 +19,7 @@ main:
   - name: Talks
     url: '#talks'
     weight: 40
-  - name: Corpus
-    url: '#corpus'
-    weight: 50
-  - name: License
-    url: '#license'
-    weight: 60
-  - name: Models
-    url: '#models'
-    weight: 70
   - name: Contact
     url: '#contact'
-    weight: 80
+    weight: 50
 
