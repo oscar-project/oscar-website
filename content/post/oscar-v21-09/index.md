@@ -46,8 +46,8 @@ These are the versions of tooling, schemes and data
 ## Changes
 
 - As per [OSCAR Schema v1.1](../oscar-schema-v1-1), each document/record has associated metadata.
-- New languages: Manx, Rusyn, Scots and West Flemish
-- Removed languages: Central Bikol and Cantonese
+- New languages: Manx, Rusyn, Scots and West Flemish. **Their size and quality still has to be assessed.**
+- Removed languages: Central Bikol and Cantonese. Cantonsese was of a very [low quality](https://github.com/oscar-corpus/oscar-website/issues/11). **Central Bikol corpus is still available on [OSCAR 2019](../oscar-2019).**
 
 ## Table
 
@@ -74,10 +74,10 @@ These are the versions of tooling, schemes and data
 | br  | Breton                      | 29MB         | 16MB                      | 49MB          | 23MB                       |
 | bg  | Bulgarian                   | 33GB         | 14GB                      | 34GB          | 15GB                       |
 | my  | Burmese                     | 2GB          | 1GB                       | 2GB           | 1GB                        |
-| yue | Cantonese                   | 3KB          | 2KB                       | 0B            | 0B                         |
+| yue | Cantonese                   | 3KB          | 2KB                       | -             | -                          |
 | ca  | Catalan                     | 8GB          | 4GB                       | 13GB          | 6GB                        |
 | ceb | Cebuano                     | 40MB         | 24MB                      | 81MB          | 58MB                       |
-| bcl | Central Bikol               | 886B         | 886B                      | 0B            | 0B                         |
+| bcl | Central Bikol               | 886B         | 886B                      | -             | -                          |
 | ckb | Central Kurdish             | 509MB        | 236MB                     | 784MB         | 367MB                      |
 | cbk | Chavacano                   | 521B         | 521B                      | 168B          | 168B                       |
 | ce  | Chechen                     | 8MB          | 6MB                       | 29MB          | 20MB                       |
@@ -146,7 +146,7 @@ These are the versions of tooling, schemes and data
 | ms  | Malay                       | 116MB        | 43MB                      | 146MB         | 60MB                       |
 | ml  | Malayalam                   | 5GB          | 2GB                       | 4GB           | 2GB                        |
 | mt  | Maltese                     | 24MB         | 17MB                      | 51MB          | 26MB                       |
-| gv  | Manx                        | 0B           | 0B                        | 1KB           | 907B                       |
+| gv  | Manx                        | -            | -                         | 1KB           | 907B                       |
 | mr  | Marathi                     | 2GB          | 1GB                       | 3GB           | 1GB                        |
 | mzn | Mazanderani                 | 708KB        | 617KB                     | 1MB           | 1MB                        |
 | min | Minangkabau                 | 622KB        | 317KB                     | 8MB           | 1MB                        |
@@ -176,10 +176,10 @@ These are the versions of tooling, schemes and data
 | rm  | Romansh                     | 7KB          | 6KB                       | 3KB           | 3KB                        |
 | bxr | Russia Buriat               | 12KB         | 10KB                      | 22KB          | 18KB                       |
 | ru  | Russian                     | 1239GB       | 609GB                     | 1201GB        | 542GB                      |
-| rue | Rusyn                       | 0B           | 0B                        | 247B          | 247B                       |
+| rue | Rusyn                       | -            | -                         | 247B          | 247B                       |
 | sah | Sakha                       | 43MB         | 27MB                      | 57MB          | 39MB                       |
 | sa  | Sanskrit                    | 96MB         | 38MB                      | 72MB          | 43MB                       |
-| sco | Scots                       | 0B           | 0B                        | 1KB           | 1KB                        |
+| sco | Scots                       | -            | -                         | 1KB           | 1KB                        |
 | gd  | Scottish Gaelic             | 1MB          | 1MB                       | 2MB           | 1MB                        |
 | sr  | Serbian                     | 4GB          | 2GB                       | 6GB           | 3GB                        |
 | sh  | Serbian (Latin)             | 25MB         | 6MB                       | 13MB          | 9MB                        |
@@ -200,12 +200,12 @@ These are the versions of tooling, schemes and data
 | te  | Telugu                      | 2GB          | 1GB                       | 3GB           | 1GB                        |
 | th  | Thai                        | 38GB         | 17GB                      | 62GB          | 26GB                       |
 | bo  | Tibetan                     | 195MB        | 144MB                     | 439MB         | 358MB                      |
-| als | Tosk Albanian               | 5MB          | 2MB                       | 7MB           | 5MB                        |
+| gsw[^1] | Alemannic German        | 5MB          | 2MB                       | 7MB           | 5MB                        |
 | tr  | Turkish                     | 63GB         | 28GB                      | 73GB          | 33GB                       |
 | tk  | Turkmen                     | 10MB         | 7MB                       | 25MB          | 20MB                       |
 | tyv | Tuvinian                    | 11KB         | 8KB                       | 9KB           | 7KB                        |
 | uk  | Ukrainian                   | 56GB         | 29GB                      | 53GB          | 28GB                       |
-| eml | Unknown language [eml]      | 25KB         | 23KB                      | 22KB          | 20KB                       |
+| eml | Emiliano-Romagnolo[^2]      | 25KB         | 23KB                      | 22KB          | 20KB                       |
 | hsb | Upper Sorbian               | 4MB          | 1MB                       | 2MB           | 1MB                        |
 | ur  | Urdu                        | 2GB          | 1GB                       | 2GB           | 1GB                        |
 | ug  | Uyghur                      | 127MB        | 86MB                      | 187MB         | 123MB                      |
@@ -216,10 +216,13 @@ These are the versions of tooling, schemes and data
 | wa  | Walloon                     | 280KB        | 207KB                     | 511KB         | 329KB                      |
 | war | Waray                       | 2MB          | 2MB                       | 4MB           | 4MB                        |
 | cy  | Welsh                       | 223MB        | 139MB                     | 307MB         | 180MB                      |
-| vls | West Flemish                | 0B           | 0B                        | 134B          | 134B                       |
+| vls | West Flemish                | -            | -                         | 134B          | 134B                       |
 | fy  | Western Frisian             | 35MB         | 26MB                      | 82MB          | 57MB                       |
 | mrj | Western Mari                | 1MB          | 1MB                       | 645KB         | 521KB                      |
 | pnb | Western Panjabi             | 11MB         | 9MB                       | 68MB          | 45MB                       |
 | wuu | Wu Chinese                  | 111KB        | 32KB                      | 145KB         | 69KB                       |
 | yi  | Yiddish                     | 146MB        | 87MB                      | 199MB         | 93MB                       |
 | yo  | Yoruba                      | 56KB         | 26KB                      | 229KB         | 120KB                      |
+
+[^1]: `gsw` is [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/langcodes_name.php?code_ID=177) for Alemannic German. It was previously identified as `als` in previous OSCAR versions, due to a [bug](https://github.com/facebookresearch/fastText/issues/482) in fasttext.
+[^2]: `eml` identification tag is deprecated and corresponds to `rgn` and `egl` tags in [ISO 639-3](https://iso639-3.sil.org/request/2008-040) 
