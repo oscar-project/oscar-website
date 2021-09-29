@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Oscar Schema v1.1"
+title: "OSCAR Schema v1.1"
 subtitle: "The new OSCAR Schema brings metadata while staying backward compatible."
 summary: "The new OSCAR Schema brings metadata while staying backward compatible."
 authors: ["julien", "pedro"]
