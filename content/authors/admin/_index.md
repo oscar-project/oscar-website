@@ -54,7 +54,9 @@ social:
 #  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/oscar-corpus
+- icon: discord
+  icon_pack: fab
+  link: https://discord.com/invite/4JNg9FTar4
 #- icon: "key"
 #  icon_pack: "fas"
 #  link: files/PedroJOrtiz.asc
@@ -93,6 +95,6 @@ If you want to contribute to OSCAR, for example by tokenizing one of the corpora
 
 The corpus was put together by [Pedro Ortiz Suarez](https://pjortiz.eu/), [Julien Abadji](https://ujj.space), [Benoît Sagot](http://alpage.inria.fr/~sagot/), and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
 
-If you are interested in OSCAR and would like to access the corpus, use the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR. You can also download it using [HuggingFace’s datasets library](https://huggingface.co/datasets/oscar).
+If you are interested in OSCAR and would like to access the corpus, use the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR.
 
 Even though OSCAR is not [Postcardware](https://en.wikipedia.org/wiki/Shareware#Postcardware), we do appreciate when our users send us a postcard. If you want to send us one, you can find the address in the contact section down below.
