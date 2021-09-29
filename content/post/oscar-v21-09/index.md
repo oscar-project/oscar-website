@@ -2,8 +2,8 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Oscar 21.09"
-subtitle: "The August, 2021 version of the OSCAR Corpus."
-summary: "The August, 2021 version of the OSCAR Corpus."
+subtitle: "The September, 2021 version of the OSCAR Corpus."
+summary: "The September, 2021 version of the OSCAR Corpus."
 authors: ["julien", "pedro"]
 tags: []
 categories: ["corpus", "update"]
