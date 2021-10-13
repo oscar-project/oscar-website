@@ -51,7 +51,7 @@ These are the versions of tooling, schemes and data
 
 ## Table
 
-|     | Language                    | OSCAR 2018   | OSCAR 2018 deduplicated   | OSCAR 21.09   | OSCAR 21.09 deduplicated   |
+|     | Language                    | OSCAR 2019   | OSCAR 2019 deduplicated   | OSCAR 21.09   | OSCAR 21.09 deduplicated   |
 |:----|:----------------------------|:-------------|:--------------------------|:--------------|:---------------------------|
 | af  | Afrikaans                   | 251MB        | 170MB                     | 258MB         | 157MB                      |
 | sq  | Albanian                    | 2GB          | 1GB                       | 3GB           | 1GB                        |
