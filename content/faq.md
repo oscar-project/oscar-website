@@ -12,7 +12,7 @@ OSCAR is distributed in split files that are compressed in order to save spave. 
 Here are some programs that work well depending on OSes:
 
 - OSX/Linux: Use `gzip -d FILE.gz`.
-- Windows: Use [7zip](https://www.7-zip.org/
+- Windows: Use [7zip](https://www.7-zip.org/)
 
 ## Having a question or an issue with OSCAR?
 
