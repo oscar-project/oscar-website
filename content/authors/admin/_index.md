@@ -45,7 +45,7 @@ bio: Humongous multilingual Corpus put together by Pedro J. Ortiz Suárez, Beno�
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:oscar-corpus@inria.fr'  # For a direct email link, use "mailto:test@example.org".
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/oscarnlp
@@ -89,12 +89,12 @@ Grab the latest OSCAR release [here](post/oscar-v21-09/)!
 Join our Discord community [here](https://discord.com/invite/4JNg9FTar4)!
 {{% /callout %}}
 
-Data is distributed by language in both original and deduplicated form. There are currently 166 different languages available. If you use OSCAR please consider giving us some feedback using the [contact form](#contact) down below. Also consider citing our [papers](#featured).
+Data is distributed by language in both original and deduplicated form. There are currently 166 different languages available. If you use OSCAR please consider giving us some feedback by writing to our [mail address](#contact) down below. Also consider citing our [papers](#featured).
 
 If you want to contribute to OSCAR, for example by tokenizing one of the corpora for a particular language, or by helping us translate our webpage, please open a pull request [here](https://github.com/oscar-corpus/oscar-website).
 
 The corpus was put together by [Pedro Ortiz Suarez](https://pjortiz.eu/), [Julien Abadji](https://ujj.space), [Benoît Sagot](http://alpage.inria.fr/~sagot/), and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
 
-If you are interested in OSCAR and would like to access the corpus, use the contact form down below. Please include your name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR.
+If you are interested in OSCAR and would like to access the corpus, send us a mail using the [mail address down below](#contact), with "OSCAR Access Request" as mail title. Please include your name, last name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR.
 
 Even though OSCAR is not [Postcardware](https://en.wikipedia.org/wiki/Shareware#Postcardware), we do appreciate when our users send us a postcard. If you want to send us one, you can find the address in the contact section down below.
