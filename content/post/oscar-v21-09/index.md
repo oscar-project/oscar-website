@@ -198,7 +198,7 @@ These are the versions of tooling, schemes and data
 | su      | Sundanese                   | 216KB      | 145KB                   | 397KB       | 274KB                    |        |
 | sw      | Swahili                     | 13MB       | 8MB                     | 11MB        | 7MB                      |        |
 | sv      | Swedish                     | 46GB       | 26GB                    | 43GB        | 19GB                     |        |
-| tg      | Tajik                       | 396MB      | 260MB                   | 985MB       | 321MB                    |        |
+| tg      | Tajik                       | 396MB      | 260MB                   | 985MB       | 321MB                    |{{< issue tg >}}|
 | ta      | Tamil                       | 9GB        | 5GB                     | 10GB        | 5GB                      |        |
 | tt      | Tatar                       | 701MB      | 319MB                   | 947MB       | 424MB                    |        |
 | te      | Telugu                      | 2GB        | 1GB                     | 3GB         | 1GB                      |        |
@@ -220,11 +220,11 @@ These are the versions of tooling, schemes and data
 | wa      | Walloon                     | 280KB      | 207KB                   | 511KB       | 329KB                    |        |
 | war     | Waray                       | 2MB        | 2MB                     | 4MB         | 4MB                      |        |
 | cy      | Welsh                       | 223MB      | 139MB                   | 307MB       | 180MB                    |        |
-| vls     | West Flemish                | -          | -                       | 134B        | 134B                     |        |
+| vls     | West Flemish                | -          | -                       | 134B        | 134B                     |{{< issue vls >}}|
 | fy      | Western Frisian             | 35MB       | 26MB                    | 82MB        | 57MB                     |        |
 | mrj     | Western Mari                | 1MB        | 1MB                     | 645KB       | 521KB                    |        |
 | pnb     | Western Panjabi             | 11MB       | 9MB                     | 68MB        | 45MB                     |        |
-| wuu     | Wu Chinese                  | 111KB      | 32KB                    | 145KB       | 69KB                     |        |
+| wuu     | Wu Chinese                  | 111KB      | 32KB                    | 145KB       | 69KB                     |{{< issue wuu >}}|
 | yi      | Yiddish                     | 146MB      | 87MB                    | 199MB       | 93MB                     |        |
 | yo      | Yoruba                      | 56KB       | 26KB                    | 229KB       | 120KB                    |        |
 
