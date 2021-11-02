@@ -7188,7 +7188,7 @@ a.text-dark:hover, a.text-dark:focus {
  *  Wowchemy: The Website Builder for Hugo
  *  Designed by @GeorgeCushen
  *  https://wowchemy.com/
- *  License: https://github.com/wowchemy/wowchemy-hugo-modules/blob/main/LICENSE.md
+ *  License: https://github.com/wowchemy/wowchemy-hugo-themes/blob/main/LICENSE.md
  **************************************************/
 /* Wowchemy Helpers */
 /*************************************************
@@ -9116,6 +9116,30 @@ ul.ul-edu li .description p.course {
 ul.ul-edu li .description p.institution {
   font-size: 0.75rem;
   color: rgba(0, 0, 0, 0.6); }
+
+.avatar-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto; }
+  .avatar-wrapper .avatar-emoji {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-size: 20px;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04), 0 0 1px rgba(0, 0, 0, 0.04); }
+
+.dark .avatar-emoji {
+  background-color: #000;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04), 0 0 1px rgba(255, 255, 255, 0.96); }
 
 /*************************************************
  *  Contact
