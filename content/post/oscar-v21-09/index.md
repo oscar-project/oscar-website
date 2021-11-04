@@ -87,7 +87,7 @@ These are the versions of tooling, schemes and data
 | ceb     | Cebuano                     | 40MB       | 24MB                    | 81MB        | 58MB                     |        |
 | bcl     | Central Bikol               | 886B       | 886B                    | -           | -                        |        |
 | ckb     | Central Kurdish             | 509MB      | 236MB                   | 784MB       | 367MB                    |        |
-| cbk     | Chavacano                   | 521B       | 521B                    | 168B        | 168B                     |        |
+| cbk     | Chavacano                   | 521B       | 521B                    | 168B        | 168B                     |{{< issue cbk >}}|
 | ce      | Chechen                     | 8MB        | 6MB                     | 29MB        | 20MB                     |        |
 | zh      | Chinese                     | 544GB      | 267GB                   | 500GB       | 266GB                    |        |
 | cv      | Chuvash                     | 40MB       | 27MB                    | 60MB        | 41MB                     |        |
@@ -162,10 +162,10 @@ These are the versions of tooling, schemes and data
 | mwl     | Mirandese                   | 1KB        | 1KB                     | 3KB         | 2KB                      |        |
 | mn      | Mongolian                   | 2GB        | 879MB                   | 1GB         | 912MB                    |        |
 | nah     | Nahuatl languages           | 11KB       | 10KB                    | 34KB        | 21KB                     |        |
-| nap     | Neapolitan                  | 17KB       | 13KB                    | 1KB         | 1KB                      |        |
+| nap     | Neapolitan                  | 17KB       | 13KB                    | 1KB         | 1KB                      |{{< issue nap >}}        |
 | ne      | Nepali                      | 1GB        | 1GB                     | 3GB         | 2GB                      |        |
 | new     | Newari                      | 5MB        | 4MB                     | 6MB         | 4MB                      |        |
-| frr     | Northern Frisian            | 4KB        | 4KB                     | 7KB         | 5KB                      |        |
+| frr     | Northern Frisian            | 4KB        | 4KB                     | 7KB         | 5KB                      |{{< issue frr >}}        |
 | lrc     | Northern Luri               | 77KB       | 64KB                    | 183B        | 183B                     |        |
 | no      | Norwegian Bokmål            | 8GB        | 5GB                     | 9GB         | 4GB                      |        |
 | nn      | Norwegian Nynorsk           | 88MB       | 56MB                    | 123MB       | 66MB                     |        |
@@ -187,7 +187,7 @@ These are the versions of tooling, schemes and data
 | rue     | Rusyn                       | -          | -                       | 247B        | 247B                     |        |
 | sah     | Sakha                       | 43MB       | 27MB                    | 57MB        | 39MB                     |        |
 | sa      | Sanskrit                    | 96MB       | 38MB                    | 72MB        | 43MB                     |        |
-| sco     | Scots                       | -          | -                       | 1KB         | 1KB                      |        |
+| sco     | Scots                       | -          | -                       | 1KB         | 1KB                      | {{< issue sco >}}       |
 | gd      | Scottish Gaelic             | 1MB        | 1MB                     | 2MB         | 1MB                      |        |
 | sr      | Serbian                     | 4GB        | 2GB                     | 6GB         | 3GB                      |        |
 | sh      | Serbian (Latin)             | 25MB       | 6MB                     | 13MB        | 9MB                      |        |
@@ -196,7 +196,7 @@ These are the versions of tooling, schemes and data
 | si      | Sinhala                     | 1GB        | 840MB                   | 1GB         | 791MB                    |        |
 | sk      | Slovak                      | 9GB        | 4GB                     | 14GB        | 6GB                      |        |
 | sl      | Slovenian                   | 2GB        | 1GB                     | 4GB         | 1GB                      |        |
-| so      | Somali                      | 62KB       | 15KB                    | 15KB        | 13KB                     |        |
+| so      | Somali                      | 62KB       | 15KB                    | 15KB        | 13KB                     | {{< issue so >}}       |
 | azb     | South Azerbaijani           | 28MB       | 19MB                    | 47MB        | 29MB                     |        |
 | es      | Spanish                     | 297GB      | 159GB                   | 342GB       | 160GB                    |        |
 | su      | Sundanese                   | 216KB      | 145KB                   | 397KB       | 274KB                    |        |
