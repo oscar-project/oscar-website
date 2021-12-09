@@ -34,4 +34,4 @@ Here are some programs that work well for the three mainstream operating systems
 
 ## Having a question or an issue with OSCAR?
 
-Send us your question via our [contact form](/#contact)!
+Send us your question by mail using the [mail address in our homepage](/#contact)
