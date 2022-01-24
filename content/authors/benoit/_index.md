@@ -5,6 +5,8 @@ title: Benoît Sagot
 # Is this the primary user of the site?
 superuser: true
 
+weight: 40
+
 # Role/position/tagline
 role: "Senior researcher"
 

@@ -5,6 +5,8 @@ title: Julien Abadji
 # Is this the primary user of the site?
 superuser: true
 
+weight: 20
+
 # Role/position/tagline
 role: "Research Engineer"
 

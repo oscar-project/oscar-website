@@ -8088,6 +8088,23 @@ a.summary-link {
 /*************************************************
  *  Navigation bar
  **************************************************/
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear; }
+
+.headroom--pinned {
+  transform: translateY(0%); }
+
+.headroom--unpinned {
+  transform: translateY(-100%); }
+
+.header--fixed {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0; }
+
 .dropdown-menu {
   background-color: #fff !important;
   color: #34495e !important;
@@ -8098,11 +8115,6 @@ a.summary-link {
   background: #fff;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.11);
   font-size: 16.17px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
   padding: 0 1rem; }
   .navbar .nav-item {
     position: relative; }
@@ -8754,6 +8766,27 @@ html[dir='rtl'] body {
   left: 0.7rem;
   top: 0.6rem;
   overflow-x: hidden; }
+
+.ais-Hits-item,
+.ais-InfiniteHits-item {
+  background: unset;
+  box-shadow: unset;
+  padding: unset; }
+
+.ais-SearchBox-form::before {
+  all: unset;
+  height: 1rem;
+  left: 1rem;
+  margin-top: -0.5rem;
+  position: absolute;
+  top: 50%;
+  width: 1rem;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f002';
+  font-size: 100%;
+  opacity: 0.7;
+  line-height: 1; }
 
 .dark #search-query {
   background-color: #23252f; }

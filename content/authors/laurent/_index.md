@@ -5,6 +5,8 @@ title: Laurent Romary
 # Is this the primary user of the site?
 superuser: true
 
+weight: 30
+
 # Role/position/tagline
 role: "Senior researcher"
 

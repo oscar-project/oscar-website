@@ -5,6 +5,8 @@ title: OSCAR
 # Is this the primary user of the site?
 superuser: true
 
+weight: 80
+
 # Role/position
 role: "Humongous Corpus"
 
@@ -54,6 +56,7 @@ social:
 #  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
+  link: https://github.com/oscar-corpus
 - icon: discord
   icon_pack: fab
   link: https://discord.com/invite/4JNg9FTar4
