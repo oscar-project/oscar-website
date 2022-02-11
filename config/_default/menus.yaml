@@ -7,11 +7,14 @@ main:
   - name: Home
     url: '#about'
     weight: 10
-  - name: News
+  - name: Blog
     weight: 15
-    url: 'post/'
-  - name: FAQ
+    url: 'blog/'
+  - name: Versions
     weight: 16
+    url: 'versions/'
+  - name: FAQ
+    weight: 17
     url: 'faq'
   - name: Publications
     url: '#featured'
