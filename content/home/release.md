@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 60
 
-title: News and Releases
+title: Releases
 subtitle:
 
 content:
@@ -20,7 +20,7 @@ content:
   # Filter on criteria
   filters:
     author: ""
-    category: ""
+    category: "corpus"
     tag: ""
     exclude_featured: false
     exclude_future: false
