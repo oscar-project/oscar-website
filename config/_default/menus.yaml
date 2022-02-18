@@ -9,10 +9,10 @@ main:
     weight: 10
   - name: Blog
     weight: 15
-    url: 'blog/'
-  - name: Versions
+    url: '#blog'
+  - name: Releases
     weight: 16
-    url: 'versions/'
+    url: '#release'
   - name: FAQ
     weight: 17
     url: 'faq'
