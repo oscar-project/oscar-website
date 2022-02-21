@@ -85,7 +85,7 @@ highlight_name: false
 OSCAR or **O**pen **S**uper-large **C**rawled **A**ggregated co**R**pus is a huge multilingual corpus obtained by language classification and filtering of the [Common Crawl](https://commoncrawl.org/) corpus using the [Ungoliant](https://github.com/oscar-corpus/ungoliant) architecture.
 
 {{% callout note %}}
-Grab the latest OSCAR release [here](versions/oscar-v21-09/)!
+Grab the latest OSCAR release [here](post/oscar-v21-09/)!
 {{% /callout %}}
 
 {{% callout note %}}
