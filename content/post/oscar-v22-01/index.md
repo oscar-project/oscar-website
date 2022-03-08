@@ -36,7 +36,7 @@ Please do not create a new Huma-Num account by yourself, this will delay your ac
 {{% /callout %}}
 
 <!-- {{% callout note %}}
-OSCAR 21.09 is now freely available on the [Hugging Face's datasets hub](https://huggingface.co/datasets/oscar-corpus/OSCAR-2109)! :rocket:
+OSCAR 22.01 is now freely available on the [Hugging Face's datasets hub](https://huggingface.co/datasets/oscar-corpus/OSCAR-2109)! :rocket:
 {{% /callout %}} -->
 
 OSCAR or Open Super-large Crawled Aggregated coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus using [Ungoliant](https://github.com/oscar-corpus/ungoliant).
@@ -55,13 +55,88 @@ These are the versions of tooling, schemes and data
 ## Changes
 
 - The corpus is **not** backward compatible, as the metadata and textual content have been merged into JSON objects.
-- **Document-oriented**: Identifications are done per document, which means that sentences in different languages can be found in a document.
+- **Document-oriented**: Identifications are done per document, based on the proportion of content in a single language.
 - **Annotations**: Annotations are labels you can filter on, potentially enabling better quality control (sacrificing corpus size).
 - **Per-line identification**: Metadata hold line-level identification/confidence.
-- TODO removed languages
-- TODO new languages
+- **Multilingual corpus**: A new, 12GB multilingual corpus containing documents with sentences in different languages in significant proportion.
+- **Removed languages**: Bavarian, Chavacano, Northern Frisian, Manx, Haitian Creole, Interlingue, Northern Luri, Mirandese, Eryza, Neapolitan, Pampanga, Romansh, Rusyn, Scots, Tuvinian, Venetian, West Flemish.
+- **No deduplicated corpus**: Since the corpora are document oriented, doing a corpus-wide deduplication would break documents' integrity. We may consult the community and provide tools for deduplication later on.
 
 
+### Data layout
+
+The corpus is now distributed in [JSONLines](https://jsonlines.org/) format, which means that each line represents a single document, encoded in a JSON object.
+
+```json
+
+{
+  "content":"newline\nseparaaaaaaaaaaated\ncontent", //content itself
+  // Headers from the crawler
+  // Note that nothing is changed, so the content length may be incorrect.
+  "warc_headers":{ 
+    "warc-refers-to":"<urn:uuid:83f2e1d4-5ed3-41db-86ff-f7826c4c20f9>",
+    "warc-date":"2021-09-16T11:07:14Z",
+    "warc-block-digest":"sha1:X3OWP47FG2O5LBNMFSNB44FJF2SSRC26",
+    "warc-type":"conversion",
+    "warc-identified-content-language":"eng",
+    "content-length":"1694",
+    "warc-target-uri":"https://foo.bar",
+    "warc-record-id":"<urn:uuid:3304bc27-17d0-4ffd-a692-340381478a5f>",
+    "content-type":"text/plain"
+  },
+  "metadata":{
+    // Document-wide identification.
+    // The "prob" is the weighted average of the identified lines.
+    "identification":{
+      "label":"en",
+      "prob":0.6268374
+    },
+
+    // Annotations. Can be null if no annotations have been added.
+    "annotation":[
+      "short_sentences",
+      "footer"
+    ],
+
+    // Line-by-line identifications
+    // Can have null values for lines that did not get an identification.
+    "sentence_identifications":[
+      {
+        "label":"en",
+        "prob":0.93925816
+      },
+      null,
+      {
+        "label":"en",
+        "prob":0.9606543
+      }
+    ]
+  }
+}
+
+```
+### Annotations
+
+As a first step towards a better filtering of the corpus, we introduce annotations as tools to filter the corpus depending on users' criteria.
+
+*These annotations are imperfect and we will work on improving their usefulness.*
+
+- `tiny`: The document has a low (<5) number of lines.
+- `short_sentences`: The document has a high number (>50%) of short lines (<400 bytes)
+- `header`: The document has a high number of short lines at its head, suggesting the presence of low quality content.
+- `footer`: The document has a high number of short lines at its tail, suggesting the presence of low quality content.
+- `noisy`: The document has a high percentage of punctuation (>50%)
+- `adult`: The document contains adult content. This annotation uses a blocklist and labels a tiny part of the corpus: It does not catch most of the adult content.
+
+More information about the thresholds and annotators are present in our [paper](http://localhost:1313/publication/2022/arxiv/towards/).
+
+### About the absence of some low-resource languages
+
+A number of low resource languages have disappeared or shrunk dramatically. This is due to the new document-level language identification, which may shadow low-resource languages that exhibit a linguistic proximity with higher-resourced ones. 
+
+As an example, Swiss German went from 5MB (21.09) to 360KB (22.01), but we found that the German (500GB) corpus contained around 30MB of Swiss German (without filtering out the sentences classified as <0.8 confidence).
+
+It should be possible to rebuild or increase the size of low resource corpora by looking into other corpora and filtering on identifications.
 
 ## Table
 
@@ -70,6 +145,7 @@ These are the versions of tooling, schemes and data
 |:----------------------------|:----------|:------------|:----------------|
 | Afrikaans                   | 47.0 MB   | 12,393      | 6,227,310       |
 | Albanian                    | 3.0 GB    | 437,287     | 326,325,149     |
+| Alemannic / Swiss German    | 363.6 kB  | 139         | 37,381          |
 | Amharic                     | 461.0 MB  | 37,513      | 30,481,153      |
 | Arabic                      | 84.2 GB   | 8,718,929   | 6,103,711,887   |
 | Aragonese                   | 10.6 kB   | 12          | 51              |
@@ -199,7 +275,6 @@ These are the versions of tooling, schemes and data
 | Telugu                      | 3.4 GB    | 249,756     | 137,752,065     |
 | Thai                        | 66.1 GB   | 5,030,254   | 1,626,779,846   |
 | Tibetan                     | 234.5 MB  | 18,683      | 2,286,269       |
-| Alemannic / Swiss German    | 363.6 kB  | 139         | 37,381          |
 | Turkish                     | 75.1 GB   | 10,826,031  | 6,421,221,358   |
 | Turkmen                     | 4.4 MB    | 2,485       | 276,632         |
 | Ukrainian                   | 48.8 GB   | 4,558,214   | 2,879,585,992   |
