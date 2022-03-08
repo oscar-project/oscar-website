@@ -49,7 +49,7 @@ These are the versions of tooling, schemes and data
 
 - CommonCrawl version: November/December 2021 ([2021.49](https://commoncrawl.org/2021/03/february-march-2021-crawl-archive-now-available/))
 - OSCAR Schema version: [v2](../oscar-schema-v2) : Document oriented, with text and metadata merged in JSONLines.
-- Ungoliant version: [v1.1.0](https://github.com/oscar-corpus/ungoliant/pull/37) : Document oriented pipeline, multilingual corpus, annotations
+- Ungoliant version: [v1.1.0](https://github.com/oscar-corpus/ungoliant/pull/37) : Document oriented pipeline, multilingual subcorpus, annotations
 
 
 ## Changes
@@ -58,15 +58,16 @@ These are the versions of tooling, schemes and data
 - **Document-oriented**: Identifications are done per document, based on the proportion of content in a single language.
 - **Annotations**: Annotations are labels you can filter on, potentially enabling better quality control (sacrificing corpus size).
 - **Per-line identification**: Metadata hold line-level identification/confidence.
-- **Multilingual corpus**: A new, 12GB multilingual corpus containing documents with sentences in different languages in significant proportion.
+- **Multilingual subcorpus**: A new, 12GB multilingual subcorpus containing documents with sentences in different languages in significant proportion.
 - **Removed languages**: Bavarian, Chavacano, Northern Frisian, Manx, Haitian Creole, Interlingue, Northern Luri, Mirandese, Eryza, Neapolitan, Pampanga, Romansh, Rusyn, Scots, Tuvinian, Venetian, West Flemish.
-- **No deduplicated corpus**: Since the corpora are document oriented, doing a corpus-wide deduplication would break documents' integrity. We may consult the community and provide tools for deduplication later on.
+- **No deduplicated corpus**: Since the subcorpora are document oriented, doing a subcorpus-wide deduplication would break documents' integrity. We may consult the community and provide tools for deduplication later on.
 
 
 ### Data layout
 
 The corpus is now distributed in [JSONLines](https://jsonlines.org/) format, which means that each line represents a single document, encoded in a JSON object.
 
+A text extraction utility is being added in the [`oscar-tools`](https://github.com/oscar-corpus/oscar-tools) binary, enabling the creation of plain-text datasets from JSONL subcorpora. 
 ```json
 
 {
@@ -134,15 +135,17 @@ More information about the thresholds and annotators are present in our [paper](
 
 A number of low resource languages have disappeared or shrunk dramatically. This is due to the new document-level language identification, which may shadow low-resource languages that exhibit a linguistic proximity with higher-resourced ones. 
 
-As an example, Swiss German went from 5MB (21.09) to 360KB (22.01), but we found that the German (500GB) corpus contained around 30MB of Swiss German (without filtering out the sentences classified as <0.8 confidence).
+As an example, Swiss German went from 5MB (21.09) to 360KB (22.01), but we found that the German (500GB) subcorpus contained around 30MB of Swiss German (without filtering out the sentences classified as <0.8 confidence).
 
 It should be possible to rebuild or increase the size of low resource corpora by looking into other corpora and filtering on identifications.
 
-## Table
+We are working on improving the language classification step, which should help addressing the issue on future corpora. 
 
+## Table
 
 | lang                        | size      | docs        | words           |
 |:----------------------------|:----------|:------------|:----------------|
+| _Multilingual_              | 12.1 GB   | 1,210,685   | 936,187,711     |
 | Afrikaans                   | 47.0 MB   | 12,393      | 6,227,310       |
 | Albanian                    | 3.0 GB    | 437,287     | 326,325,149     |
 | Alemannic / Swiss German    | 363.6 kB  | 139         | 37,381          |
