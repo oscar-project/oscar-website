@@ -5,34 +5,33 @@ title: Pedro Ortiz Suarez
 # Is this the primary user of the site?
 superuser: true
 
-weight: 1
-
 # Role/position/tagline
-role: "PhD Student"
+role: "Postdoctoral Researcher"
 
 # Organizations/Affiliations to show in About widget
 organizations: 
-- name: Sorbonne Université 
-  url: "https://www.sorbonne-universite.fr/en"
-- name: Inria
-  url: "https://www.inria.fr/en/"
+- name: Universität Mannheim 
+  url: "https://www.uni-mannheim.de/en/"
+- name: Data and Web Science Group
+  url: "https://www.uni-mannheim.de/dws/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: I'm a PhD student in Computer Science at Sorbonne Université and at the ALMAnaCH research team at Inria
+bio: I'm a postdoctoral researcher at the Data and Web Science Group at the University of Mannheim.
 
 # Interests to show in About widget
 interests:
 - Language modeling
 - Corpus linguistics
 - Named Entity Recognition
-- Machine Translation
 - Computational Linguistics
+- Machine Translation
 
 # Education to show in About widget
 education:
   courses:
   - course: PhD in Computer Science
     institution: Sorbonne Université
+    year: 2022
   - course: BASc MIASHS
     institution: Université Paris 8
     year: 2018
@@ -50,7 +49,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:pedro.ortiz@inria.fr'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:pedro.ortiz@uni-mannheim.de'  # For a direct email link, use "mailto:test@example.org".
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.fr/citations?user=5sNdyvkAAAAJ&hl=en
@@ -59,10 +58,10 @@ social:
   link: https://cv.archives-ouvertes.fr/pedro-ortiz-suarez
 - icon: semantic-scholar
   icon_pack: ai
-  link: https://www.semanticscholar.org/author/Pedro-Javier-Ortiz-Suárez/147846651
+  link: https://www.semanticscholar.org/author/Pedro-Ortiz-Suarez/147846651?sort=influence
 - icon: arxiv
   icon_pack: ai
-  link: https://arxiv.org/search/cs?searchtype=author&query=Suárez%2C+P+J+O
+  link: https://arxiv.org/a/ortizsuarez_p_1.html
 - icon: researchgate
   icon_pack: ai
   link: https://www.researchgate.net/profile/Pedro_Ortiz_Suarez
@@ -80,7 +79,7 @@ social:
   link: https://gitlab.com/pjox
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/pedro-j-ortiz/
+  link: https://www.linkedin.com/in/pjox/
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/pjox13
@@ -102,8 +101,8 @@ user_groups:
 - Core
 ---
 
-I'm a PhD student in Computer Science woking in Natural Language Processing (NLP) for historical documents at [Sorbonne Université](https://sorbonne-universite.fr/en) and at the [ALMAnaCH research team](https://team.inria.fr/almanach/) at [Inria](https://www.inria.fr/en/).
+I'm a postdoctoral researcher at the [Data and Web Science Group](https://www.uni-mannheim.de/dws/) at the [University of Mannheim](https://www.uni-mannheim.de/en/).
 
 I am interested in [large corpora](https://oscar-corpus.com) for training [language models](https://camembert-model.fr), specially for under resourced languages and historical languages. I am interested in tasks such as Name Entity Recognition (NER), Dependency Parsing and Part-of-Speech tagging, Machine Translation and Document structuration.
 
-I love coffee, cookies and maths.
+I love coffee, cookies and maths. :coffee::cookie:

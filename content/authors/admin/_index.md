@@ -85,7 +85,7 @@ highlight_name: false
 OSCAR or **O**pen **S**uper-large **C**rawled **A**ggregated co**R**pus is a huge multilingual corpus obtained by language classification and filtering of the [Common Crawl](https://commoncrawl.org/) corpus using the [Ungoliant](https://github.com/oscar-corpus/ungoliant) architecture.
 
 {{% callout note %}}
-Grab the latest OSCAR release [here](post/oscar-v21-09/)!
+Grab the latest OSCAR release [here](post/oscar-v22-01/)!
 {{% /callout %}}
 
 {{% callout note %}}
@@ -96,7 +96,7 @@ Data is distributed by language in both original and deduplicated form. There ar
 
 If you want to contribute to OSCAR, for example by tokenizing one of the corpora for a particular language, or by helping us translate our webpage, please open a pull request [here](https://github.com/oscar-corpus/oscar-website).
 
-The corpus was put together by [Pedro Ortiz Suarez](https://pjortiz.eu/), [Julien Abadji](https://ujj.space), [Benoît Sagot](http://alpage.inria.fr/~sagot/), and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
+The corpus was put together by [Pedro Ortiz Suarez](https://portizs.eu/), [Julien Abadji](https://ujj.space), [Benoît Sagot](http://alpage.inria.fr/~sagot/), and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
 
 If you are interested in OSCAR and would like to access the corpus, send us a mail using the [mail address down below](#contact), with "OSCAR Access Request" as mail title. Please include your name, last name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR.
 
