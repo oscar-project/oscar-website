@@ -1,10 +1,10 @@
 ---
 title: "Towards a Cleaner Document-Oriented Multilingual Crawled Corpus"
 authors:
-- Julien Abadji
-- admin
-- Laurent Romary
-- Benoît Sagot
+- julien
+- pedro
+- laurent
+- benoit
 date: "2022-01-17T22:12:59Z"
 doi: ""
 
