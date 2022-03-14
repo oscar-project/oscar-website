@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Set Bootstrap variables */
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -4564,7 +4565,7 @@ a.close.disabled {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
+  width: 6rem;
   color: #fff;
   text-align: center;
   opacity: 0.5;
@@ -4590,8 +4591,8 @@ a.close.disabled {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 4rem;
+  height: 4rem;
   background: 50% / 100% 100% no-repeat; }
 
 .carousel-control-prev-icon {
@@ -4609,8 +4610,8 @@ a.close.disabled {
   display: flex;
   justify-content: center;
   padding-left: 0;
-  margin-right: 15%;
-  margin-left: 15%;
+  margin-right: 6rem;
+  margin-left: 6rem;
   list-style: none; }
   .carousel-indicators li {
     box-sizing: content-box;
@@ -7259,6 +7260,9 @@ p {
   margin-top: 0;
   margin-bottom: 1rem; }
 
+p:last-child {
+  margin-bottom: 0; }
+
 /* Lists */
 ul,
 ol,
@@ -7347,7 +7351,10 @@ a:focus {
 
 pre,
 code {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto Mono", monospace; }
+
+pre,
+code:not(.hljs) {
   color: #c7254e;
   /* Match bg of default highlight theme. */
   background-color: #f8f8f8; }
@@ -7612,6 +7619,9 @@ div.alert a {
     margin-top: 0;
     margin-bottom: 0; }
 
+.dark .article-style a {
+  text-decoration: inherit; }
+
 .article-metadata {
   margin-bottom: 15px;
   overflow: hidden;
@@ -7649,6 +7659,12 @@ article .article-metadata {
 
 .middot-divider::after {
   content: '\00B7'; }
+
+caption {
+  text-align: center; }
+
+.dark caption {
+  color: rgba(255, 255, 255, 0.8); }
 
 /*************************************************
  *  Content widgets
@@ -7699,6 +7715,21 @@ article .article-metadata {
   bottom: 0.1em;
   line-height: 1;
   position: relative; }
+
+.task-list input[type='checkbox']:checked {
+  appearance: initial;
+  width: 1em;
+  height: 1em;
+  border: none;
+  background: initial;
+  position: relative; }
+
+.task-list input[type='checkbox']:not(:checked) {
+  width: .9em;
+  height: .9em; }
+
+.task-list input[type='checkbox']:checked::after {
+  content: "✅"; }
 
 img,
 video {
@@ -7808,8 +7839,6 @@ a[data-fancybox] {
  **************************************************/
 /* Based on Bootstrap's `table-responsive` style. */
 table {
-  display: block;
-  width: 100%;
   overflow-x: scroll;
   margin-bottom: 1rem;
   font-size: 0.8rem;
@@ -7817,44 +7846,8 @@ table {
   word-wrap: normal;
   word-break: normal; }
 
-table > thead > tr > th,
-table > tbody > tr > th,
-table > tfoot > tr > th,
-table > thead > tr > td,
-table > tbody > tr > td,
-table > tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.43;
-  vertical-align: top;
-  border-top: 1px solid #ddd; }
-
-table > thead > tr > th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #ddd; }
-
-table > caption + thead > tr:first-child > th,
-table > colgroup + thead > tr:first-child > th,
-table > thead:first-child > tr:first-child > th,
-table > caption + thead > tr:first-child > td,
-table > colgroup + thead > tr:first-child > td,
-table > thead:first-child > tr:first-child > td {
-  border-top: 0; }
-
-table > tbody + tbody {
-  border-top: 2px solid #ddd; }
-
-table table {
-  background-color: #fff; }
-
-/* Table Striped */
-table > tbody > tr:nth-child(odd) > td,
-table > tbody > tr:nth-child(odd) > th {
-  background-color: #f9f9f9; }
-
-/* Table Hover */
-table > tbody > tr:hover > td,
-table > tbody > tr:hover > th {
-  background-color: #e5e5e5; }
+.dark .table {
+  color: white; }
 
 /**************************************************
  *  Tags/Labels
@@ -8364,6 +8357,14 @@ details {
 
 summary:focus {
   outline: none; }
+
+details p {
+  margin-left: 0.3rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.8); }
+
+.dark details p {
+  border-left: 1px solid rgba(255, 255, 255, 0.8); }
 
 /*************************************************
  *  Documentation layout
@@ -8894,14 +8895,17 @@ html[dir='rtl'] body {
   padding: 110px 0 110px 0;
   z-index: 0; }
 
-.home-section.fullscreen {
+.home-section.fullscreen,
+.fullscreen {
   min-height: calc(100vh - 70px); }
 
 @media (max-width: 991.98px) {
-  .home-section.fullscreen {
+  .home-section.fullscreen,
+  .fullscreen {
     min-height: calc(100vh - 50px); } }
 
-.no-navbar .home-section.fullscreen {
+.no-navbar .home-section.fullscreen,
+.no-navbar .fullscreen {
   min-height: 100vh; }
 
 .home-section.light,
@@ -9462,7 +9466,7 @@ body.dark,
   color: #fff; }
 
 .dark pre,
-.dark code {
+.dark code:not(.hljs) {
   color: #8be9fd;
   background-color: #44475a; }
 

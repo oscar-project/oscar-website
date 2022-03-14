@@ -5,34 +5,67 @@
 
 # Appearance
 
-theme: minimal
-day_night: true
-font: ''
-font_size: L
+appearance:
+  theme_day: minimal
+  theme_night: minimal
+  font: minimal
+  font_size: L
 
 # SEO
 
-site_type: Person
-local_business_type: ''
-org_name: ''
-description: 'Humongous Corpus'
-twitter: 'oscarnlp'
+marketing:
+  seo:
+    site_type: Person
+    local_business_type: ''
+    org_name: ''
+    description: 'Humongous Corpus'
+    twitter: 'oscarnlp'
+  analytics:
+    google_analytics: ''
+    baidu_tongji: ''
+  verification:
+    google: ''
+    baidu: ''
+
+# Site header
+
+header:
+  navbar:
+    enable: true
+    align: l
+    show_logo: true
+    show_language: false
+    show_day_night: true
+    show_search: true
+    highlight_active_link: true
+
+footer:
+  copyright:
+    notice: '© {year} Inria. Logos by [Alix Chagué](http://alix-chague.eu) © {year} . This work is licensed under {license}'
+    license:
+      enable: true
+      allow_derivatives: true
+      share_alike: false
+      allow_commercial: true
+
+# Localization
+
+locale:
+  date_format: 'Jan 2, 2006'
+  time_format: '3:04 PM'
+  address_format: fr-fr
 
 # Contact (edit or remove options as required)
-
-email: oscar-corpus@inria.fr
-phone: (+33) 01 80 49 40 00
-address:
-  street: 'Centre Inria de Paris <br> Équipe ALMAnaCH <br> 2 rue Simone Iff <br> CS 42112'
-  city: Paris
-  region: Île-de-France
-  postcode: '75012'
-  country: France
-  country_code: FR
-coordinates:
-  latitude: ''
-  longitude: ''
-directions: ''
+content:
+  email: oscar-corpus@inria.fr
+  phone: (+33) 01 80 49 40 00
+  address:
+    street: 'Centre Inria de Paris <br> Équipe ALMAnaCH <br> 2 rue Simone Iff <br> CS 42112'
+    city: Paris
+    region: Île-de-France
+    postcode: '75012'
+    country: France
+    country_code: FR
 # office_hours:
 #   - ''
 #   - ''
@@ -42,119 +75,55 @@ contact_links:
     icon_pack: fab
     name: DM Me
     link: 'https://twitter.com/oscarnlp'
-  # - icon: skype
-  #   icon_pack: fab
-  #   name: Skype Me
-  #   link: 'skype:echo123?call'
-  # - icon: keybase
-  #   icon_pack: fab
-  #   name: Chat on Keybase
-  #   link: 'https://keybase.io/'
-  # - icon: comments
-  #   icon_pack: fas
-  #   name: Discuss on Forum
-  #   link: 'https://discourse.gohugo.io'
-
-# Site header
-
-main_menu:
-  enable: true
-  align: l
-  show_logo: true
-  show_language: false
-  show_day_night: true
-  show_search: true
-  highlight_active_link: true
-
-# Localization
-
-date_format: 'Jan 2, 2006'
-time_format: '3:04 PM'
-address_format: fr-fr
 
 # Site features
 
-highlight: true
-highlight_languages:
-  - r
-  - python
-  - latex
-math: false
-diagram: false
-privacy_pack: true
-edit_page:
-  repo_url: 'https://github.com/pjox/oscar-website'
-  content_dir: 'content'
-  repo_branch: master
-  editable:
-    page: false
-    post: false
-    book: false
-show_related:
-  book: true
-  page: false
-  post: true
-  project: true
-  publication: true
-  event: true
-reading_time: true
-section_pager: false
-docs_section_pager: true
-sharing: true
-copyright_license:
-  enable: false
-  allow_derivatives: false
-  share_alike: true
-  allow_commercial: false
-  notice: 'This work is licensed under {license}'
-abstract_length: 135
-plugins_js: []
-avatar:
-  gravatar: false
-  shape: circle
-publications:
-  date_format: January 2006
-  citation_style: apa
-projects:
-  post_view: 2
-  publication_view: 2
-  talk_view: 2
-breadcrumb:
-  page_types:
-    book: true
-comments:
-  provider: ''
-  commentable:
-    post: true
-    book: true
-    project: true
-    publication: true
-    event: true
-  disqus:
-    shortname: ''
-    show_count: true
-  commento:
-    url: ''
-search:
-  provider: wowchemy
-  algolia:
-    app_id: ''
+features:
+  syntax_highlighter:
+    enable: true
+    extra_languages:
+      - r
+      - latex
+  math:
+    enable: false
+  diagram:
+    enable: false
+  privacy_pack:
+    enable: false
+  repository:
+    url: 'https://github.com/<username>/<repository>'
+    content_dir: content
+    branch: master
+  avatar:
+    gravatar: false
+    shape: circle
+  comment:
+    provider: ''
+    disqus:
+      shortname: ''
+      show_count: true
+    commento:
+      url: ''
+  search:
+    provider: wowchemy
+    algolia:
+      app_id: ''
+      api_key: ''
+      index_name: ''
+      show_logo: false
+  map:
+    provider: ''
     api_key: ''
-    index_name: ''
-    show_logo: false
-map:
-  provider: ''
-  api_key: ''
-  zoom: ''
-marketing:
-  google_analytics: ''
-  google_tag_manager: ''
-  google_site_verification: ''
-  baidu_site_verification: ''
-  baidu_tongji: ''
-# cms:
-#   branch: master
-#   local_backend: false
-icon:
-  pack:
-    ai: true
+    zoom: 15
+
+# Extensions
+
+extensions:
+  cms:
+    branch: master
+    local_backend: false
+  isotope:
+    # Enable if you use the Portfolio widget or Publication filter
+    enable: true
+  academicons:
+    enable: true
