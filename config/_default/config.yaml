@@ -5,7 +5,6 @@
 
 title: OSCAR # Website name
 baseurl: 'https://oscar-corpus.com/' # Website URL
-copyright: '[Inria](https://www.inria.fr/en/) &copy; {year} · Mascot by [Alix Chagué](https://twitter.com/Alix_Tz) &copy; {year}' # Footer text, e.g. '© {year} Me'
 
 ############################
 ## LANGUAGE
