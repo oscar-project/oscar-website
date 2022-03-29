@@ -18,7 +18,7 @@ organizations:
   url: "https://almanach.inria.fr/index-en.html"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Humongous multilingual Corpus put together by Pedro J. Ortiz Suárez, Benoît Sagot and Laurent Romary, researchers at the ALMAnaCH research team at Inria
+bio: Humongous multilingual Corpus put together by Pedro Ortiz Suarez, Julien Abadji, Benoît Sagot and Laurent Romary, researchers at the ALMAnaCH research team at Inria
 
 #interests:
 #- Corpus Linguistics
