@@ -28,7 +28,15 @@ image:
 projects: []
 ---
 {{% callout note %}}
-If you want to get the new corpus please send us a mail using the [mail in our homepage](/#contact), with "OSCAR Access Request" as mail title. Please include your name, last name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR. :email::books:
+If you want to get the new corpus please send us a mail using the [mail in our homepage](/#contact), with "OSCAR Access Request" as mail title. 
+We will need the following information to properly create your account. Missing information could delay your access by days:
+- First and last name:
+- Affiliation:
+- Contact details:
+- Corpus version (or all if you need multiple ones):
+- Languages:
+
+:email::books:
 {{% /callout %}}
 
 {{% callout warning %}}
