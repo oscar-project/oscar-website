@@ -137,7 +137,7 @@ As a first step towards a better filtering of the corpus, we introduce annotatio
 - `noisy`: The document has a high percentage of punctuation (>50%)
 - `adult`: The document contains adult content. This annotation uses a blocklist and labels a tiny part of the corpus: It does not catch most of the adult content.
 
-More information about the thresholds and annotators are present in our [paper](http://localhost:1313/publication/2022/arxiv/towards/).
+More information about the thresholds and annotators are present in our [paper](https://oscar-corpus.com/publication/2022/arxiv/towards/).
 
 ### About the absence of some low-resource languages
 
