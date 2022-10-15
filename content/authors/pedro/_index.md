@@ -5,6 +5,8 @@ title: Pedro Ortiz Suarez
 # Is this the primary user of the site?
 superuser: true
 
+weight: 1
+
 # Role/position/tagline
 role: "Postdoctoral Researcher"
 

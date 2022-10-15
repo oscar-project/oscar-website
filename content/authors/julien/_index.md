@@ -20,12 +20,6 @@ bio: I'm a research engineer at ALMAnaCH research team at Inria
 
 # Interests to show in About widget
 interests:
-- Language modeling
-- Corpus linguistics
-- Named Entity Recognition
-- Machine Translation
-- Computational Linguistics
-interests:
 - Software engineering in big data contexts
 - Corpus generation
 - Offensive Content Detection
