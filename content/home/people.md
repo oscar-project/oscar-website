@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 20
 
-title: Core Team
+title: The OSCAR Team
 subtitle:
 
 content:
@@ -17,6 +17,7 @@ content:
   #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
   user_groups:
   - Core
+  - Contributors
 design:
   show_interests: false
   show_role: true
