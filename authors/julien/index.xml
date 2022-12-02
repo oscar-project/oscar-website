@@ -1,0 +1,2783 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Julien Abadji | OSCAR</title><link>https://oscar-project.org/authors/julien/</link><atom:link href="https://oscar-project.org/authors/julien/index.xml" rel="self" type="application/rss+xml"/><description>Julien Abadji</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://oscar-project.org/authors/julien/avatar_hu38702a0866988ab4e7be8bfa3176e88b_165596_270x270_fill_q100_lanczos_center.jpg</url><title>Julien Abadji</title><link>https://oscar-project.org/authors/julien/</link></image><item><title>Towards a Cleaner Document-Oriented Multilingual Crawled Corpus</title><link>https://oscar-project.org/publication/2022/arxiv/towards/</link><pubDate>Mon, 17 Jan 2022 22:12:59 +0000</pubDate><guid>https://oscar-project.org/publication/2022/arxiv/towards/</guid><description/></item><item><title>OSCAR 22.01</title><link>https://oscar-project.org/post/oscar-v22-01/</link><pubDate>Sat, 01 Jan 2022 15:02:11 +0200</pubDate><guid>https://oscar-project.org/post/oscar-v22-01/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>If you want to get the new corpus please send us a mail using the &lt;a href="https://oscar-project.org/#contact">mail in our homepage&lt;/a>, with &amp;ldquo;OSCAR Access Request&amp;rdquo; as mail title.
+We will need the following information to properly create your account. Missing information could delay your access by days:&lt;/p>
+&lt;ul>
+&lt;li>First and last name:&lt;/li>
+&lt;li>Affiliation:&lt;/li>
+&lt;li>Contact details:&lt;/li>
+&lt;li>Corpus version (or all if you need multiple ones):&lt;/li>
+&lt;li>Languages:&lt;/li>
+&lt;/ul>
+&lt;p>✉️📚&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="alert alert-warning">
+&lt;div>
+Please do not create a new Huma-Num account by yourself, this will delay your access to the corpus by weeks! We will create an account for you. 📆
+&lt;/div>
+&lt;/div>
+&lt;!--
+&lt;div class="alert alert-note">
+&lt;div>
+OSCAR 22.01 is now freely available on the &lt;a href="https://huggingface.co/datasets/oscar-corpus/OSCAR-2109" target="_blank" rel="noopener">Hugging Face&amp;rsquo;s datasets hub&lt;/a>! 🚀
+&lt;/div>
+&lt;/div>
+-->
+&lt;p>OSCAR or Open Super-large Crawled Aggregated coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus using &lt;a href="https://github.com/oscar-corpus/ungoliant" target="_blank" rel="noopener">Ungoliant&lt;/a>.&lt;/p>
+&lt;p>This release of OSCAR is the third one, and is versioned using &lt;a href="https://calver.org/" target="_blank" rel="noopener">CalVer&lt;/a>.&lt;/p>
+&lt;h2 id="version-info">Version info&lt;/h2>
+&lt;p>These are the versions of tooling, schemes and data&lt;/p>
+&lt;ul>
+&lt;li>CommonCrawl version: November/December 2021 (&lt;a href="https://commoncrawl.org/2021/03/february-march-2021-crawl-archive-now-available/" target="_blank" rel="noopener">2021.49&lt;/a>)&lt;/li>
+&lt;li>OSCAR Schema version: &lt;a href="../oscar-schema-v2">v2&lt;/a> : Document oriented, with text and metadata merged in JSONLines.&lt;/li>
+&lt;li>Ungoliant version: &lt;a href="https://github.com/oscar-corpus/ungoliant/pull/37" target="_blank" rel="noopener">v1.1.0&lt;/a> : Document oriented pipeline, multilingual subcorpus, annotations&lt;/li>
+&lt;/ul>
+&lt;h2 id="changes">Changes&lt;/h2>
+&lt;ul>
+&lt;li>The corpus is &lt;strong>not&lt;/strong> backward compatible, as the metadata and textual content have been merged into JSON objects.&lt;/li>
+&lt;li>&lt;strong>Document-oriented&lt;/strong>: Identifications are done per document, based on the proportion of content in a single language.&lt;/li>
+&lt;li>&lt;strong>Annotations&lt;/strong>: Annotations are labels you can filter on, potentially enabling better quality control (sacrificing corpus size).&lt;/li>
+&lt;li>&lt;strong>Per-line identification&lt;/strong>: Metadata hold line-level identification/confidence.&lt;/li>
+&lt;li>&lt;strong>Multilingual subcorpus&lt;/strong>: A new, 12GB multilingual subcorpus containing documents with sentences in different languages in significant proportion.&lt;/li>
+&lt;li>&lt;strong>Removed languages&lt;/strong>: Bavarian, Chavacano, Northern Frisian, Manx, Haitian Creole, Interlingue, Northern Luri, Mirandese, Eryza, Neapolitan, Pampanga, Romansh, Rusyn, Scots, Tuvinian, Venetian, West Flemish.&lt;/li>
+&lt;li>&lt;strong>No deduplicated corpus&lt;/strong>: Since the subcorpora are document oriented, doing a subcorpus-wide deduplication would break documents&amp;rsquo; integrity. We may consult the community and provide tools for deduplication later on.&lt;/li>
+&lt;/ul>
+&lt;h3 id="data-layout">Data layout&lt;/h3>
+&lt;p>The corpus is now distributed in &lt;a href="https://jsonlines.org/" target="_blank" rel="noopener">JSONLines&lt;/a> format, which means that each line represents a single document, encoded in a JSON object.&lt;/p>
+&lt;p>A text extraction utility is being added in the &lt;a href="https://github.com/oscar-corpus/oscar-tools" target="_blank" rel="noopener">&lt;code>oscar-tools&lt;/code>&lt;/a> binary, enabling the creation of plain-text datasets from JSONL subcorpora.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;content&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;newline\nseparaaaaaaaaaaated\ncontent&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">//content itself
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// Headers from the crawler
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// Note that nothing is changed, so the content length may be incorrect.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;warc_headers&amp;#34;&lt;/span>&lt;span class="p">:{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;warc-refers-to&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;&amp;lt;urn:uuid:83f2e1d4-5ed3-41db-86ff-f7826c4c20f9&amp;gt;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;warc-date&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;2021-09-16T11:07:14Z&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;warc-block-digest&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;sha1:X3OWP47FG2O5LBNMFSNB44FJF2SSRC26&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;warc-type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;conversion&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;warc-identified-content-language&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;eng&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;content-length&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;1694&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;warc-target-uri&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;https://foo.bar&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;warc-record-id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;&amp;lt;urn:uuid:3304bc27-17d0-4ffd-a692-340381478a5f&amp;gt;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;content-type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;text/plain&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;metadata&amp;#34;&lt;/span>&lt;span class="p">:{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Document-wide identification.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// The &amp;#34;prob&amp;#34; is the weighted average of the identified lines.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;identification&amp;#34;&lt;/span>&lt;span class="p">:{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;label&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;en&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;prob&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mf">0.6268374&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Annotations. Can be null if no annotations have been added.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;annotation&amp;#34;&lt;/span>&lt;span class="p">:[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;short_sentences&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;footer&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Line-by-line identifications
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// Can have null values for lines that did not get an identification.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;sentence_identifications&amp;#34;&lt;/span>&lt;span class="p">:[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;label&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;en&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;prob&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mf">0.93925816&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;label&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s2">&amp;#34;en&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;prob&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mf">0.9606543&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="annotations">Annotations&lt;/h3>
+&lt;p>As a first step towards a better filtering of the corpus, we introduce annotations as tools to filter the corpus depending on users&amp;rsquo; criteria.&lt;/p>
+&lt;p>&lt;em>These annotations are imperfect and we will work on improving their usefulness.&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>tiny&lt;/code>: The document has a low (&amp;lt;5) number of lines.&lt;/li>
+&lt;li>&lt;code>short_sentences&lt;/code>: The document has a high number (&amp;gt;50%) of short lines (&amp;lt;400 bytes)&lt;/li>
+&lt;li>&lt;code>header&lt;/code>: The document has a high number of short lines at its head, suggesting the presence of low quality content.&lt;/li>
+&lt;li>&lt;code>footer&lt;/code>: The document has a high number of short lines at its tail, suggesting the presence of low quality content.&lt;/li>
+&lt;li>&lt;code>noisy&lt;/code>: The document has a high percentage of punctuation (&amp;gt;50%)&lt;/li>
+&lt;li>&lt;code>adult&lt;/code>: The document contains adult content. This annotation uses a blocklist and labels a tiny part of the corpus: It does not catch most of the adult content.&lt;/li>
+&lt;/ul>
+&lt;p>More information about the thresholds and annotators are present in our &lt;a href="https://oscar-corpus.com/publication/2022/arxiv/towards/" target="_blank" rel="noopener">paper&lt;/a>.&lt;/p>
+&lt;h3 id="about-the-absence-of-some-low-resource-languages">About the absence of some low-resource languages&lt;/h3>
+&lt;p>A number of low resource languages have disappeared or shrunk dramatically. This is due to the new document-level language identification, which may shadow low-resource languages that exhibit a linguistic proximity with higher-resourced ones.&lt;/p>
+&lt;p>As an example, Swiss German went from 5MB (21.09) to 360KB (22.01), but we found that the German (500GB) subcorpus contained around 30MB of Swiss German (without filtering out the sentences classified as &amp;lt;0.8 confidence).&lt;/p>
+&lt;p>It should be possible to rebuild or increase the size of low resource corpora by looking into other corpora and filtering on identifications.&lt;/p>
+&lt;p>We are working on improving the language classification step, which should help addressing the issue on future corpora.&lt;/p>
+&lt;h2 id="table">Table&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">lang&lt;/th>
+&lt;th style="text-align:left">size&lt;/th>
+&lt;th style="text-align:left">docs&lt;/th>
+&lt;th style="text-align:left">words&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;em>Multilingual&lt;/em>&lt;/td>
+&lt;td style="text-align:left">12.1 GB&lt;/td>
+&lt;td style="text-align:left">1,210,685&lt;/td>
+&lt;td style="text-align:left">936,187,711&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Afrikaans&lt;/td>
+&lt;td style="text-align:left">47.0 MB&lt;/td>
+&lt;td style="text-align:left">12,393&lt;/td>
+&lt;td style="text-align:left">6,227,310&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Albanian&lt;/td>
+&lt;td style="text-align:left">3.0 GB&lt;/td>
+&lt;td style="text-align:left">437,287&lt;/td>
+&lt;td style="text-align:left">326,325,149&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Alemannic / Swiss German&lt;/td>
+&lt;td style="text-align:left">363.6 kB&lt;/td>
+&lt;td style="text-align:left">139&lt;/td>
+&lt;td style="text-align:left">37,381&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Amharic&lt;/td>
+&lt;td style="text-align:left">461.0 MB&lt;/td>
+&lt;td style="text-align:left">37,513&lt;/td>
+&lt;td style="text-align:left">30,481,153&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Arabic&lt;/td>
+&lt;td style="text-align:left">84.2 GB&lt;/td>
+&lt;td style="text-align:left">8,718,929&lt;/td>
+&lt;td style="text-align:left">6,103,711,887&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Aragonese&lt;/td>
+&lt;td style="text-align:left">10.6 kB&lt;/td>
+&lt;td style="text-align:left">12&lt;/td>
+&lt;td style="text-align:left">51&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Armenian&lt;/td>
+&lt;td style="text-align:left">4.7 GB&lt;/td>
+&lt;td style="text-align:left">379,267&lt;/td>
+&lt;td style="text-align:left">268,031,270&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Assamese&lt;/td>
+&lt;td style="text-align:left">221.2 MB&lt;/td>
+&lt;td style="text-align:left">17,084&lt;/td>
+&lt;td style="text-align:left">11,109,557&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Asturian&lt;/td>
+&lt;td style="text-align:left">73.6 kB&lt;/td>
+&lt;td style="text-align:left">77&lt;/td>
+&lt;td style="text-align:left">3,919&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Avaric&lt;/td>
+&lt;td style="text-align:left">18.6 kB&lt;/td>
+&lt;td style="text-align:left">14&lt;/td>
+&lt;td style="text-align:left">582&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Azerbaijani&lt;/td>
+&lt;td style="text-align:left">3.5 GB&lt;/td>
+&lt;td style="text-align:left">491,847&lt;/td>
+&lt;td style="text-align:left">291,927,692&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Bangla&lt;/td>
+&lt;td style="text-align:left">15.1 GB&lt;/td>
+&lt;td style="text-align:left">1,171,501&lt;/td>
+&lt;td style="text-align:left">751,877,226&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Bashkir&lt;/td>
+&lt;td style="text-align:left">95.5 MB&lt;/td>
+&lt;td style="text-align:left">11,198&lt;/td>
+&lt;td style="text-align:left">5,418,474&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Basque&lt;/td>
+&lt;td style="text-align:left">1.1 GB&lt;/td>
+&lt;td style="text-align:left">233,658&lt;/td>
+&lt;td style="text-align:left">97,092,942&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Belarusian&lt;/td>
+&lt;td style="text-align:left">1.8 GB&lt;/td>
+&lt;td style="text-align:left">180,046&lt;/td>
+&lt;td style="text-align:left">107,227,860&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Bihari languages&lt;/td>
+&lt;td style="text-align:left">24.2 kB&lt;/td>
+&lt;td style="text-align:left">27&lt;/td>
+&lt;td style="text-align:left">569&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Bishnupriya&lt;/td>
+&lt;td style="text-align:left">2.0 MB&lt;/td>
+&lt;td style="text-align:left">271&lt;/td>
+&lt;td style="text-align:left">98,419&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Bosnian&lt;/td>
+&lt;td style="text-align:left">10.3 kB&lt;/td>
+&lt;td style="text-align:left">10&lt;/td>
+&lt;td style="text-align:left">422&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Breton&lt;/td>
+&lt;td style="text-align:left">33.7 MB&lt;/td>
+&lt;td style="text-align:left">16,119&lt;/td>
+&lt;td style="text-align:left">3,111,619&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Bulgarian&lt;/td>
+&lt;td style="text-align:left">35.1 GB&lt;/td>
+&lt;td style="text-align:left">2,887,115&lt;/td>
+&lt;td style="text-align:left">2,405,981,285&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Burmese&lt;/td>
+&lt;td style="text-align:left">1.9 GB&lt;/td>
+&lt;td style="text-align:left">158,733&lt;/td>
+&lt;td style="text-align:left">44,835,970&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Catalan&lt;/td>
+&lt;td style="text-align:left">13.9 GB&lt;/td>
+&lt;td style="text-align:left">2,627,307&lt;/td>
+&lt;td style="text-align:left">1,508,919,864&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Cebuano&lt;/td>
+&lt;td style="text-align:left">44.6 MB&lt;/td>
+&lt;td style="text-align:left">5,742&lt;/td>
+&lt;td style="text-align:left">5,253,785&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Central Kurdish&lt;/td>
+&lt;td style="text-align:left">716.4 MB&lt;/td>
+&lt;td style="text-align:left">84,950&lt;/td>
+&lt;td style="text-align:left">43,913,025&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Chechen&lt;/td>
+&lt;td style="text-align:left">14.0 MB&lt;/td>
+&lt;td style="text-align:left">4,086&lt;/td>
+&lt;td style="text-align:left">798,766&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Chinese&lt;/td>
+&lt;td style="text-align:left">900.9 GB&lt;/td>
+&lt;td style="text-align:left">56,524,518&lt;/td>
+&lt;td style="text-align:left">23,149,203,886&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Chuvash&lt;/td>
+&lt;td style="text-align:left">41.8 MB&lt;/td>
+&lt;td style="text-align:left">4,750&lt;/td>
+&lt;td style="text-align:left">2,465,782&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Cornish&lt;/td>
+&lt;td style="text-align:left">1.4 kB&lt;/td>
+&lt;td style="text-align:left">2&lt;/td>
+&lt;td style="text-align:left">55&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Croatian&lt;/td>
+&lt;td style="text-align:left">11.2 MB&lt;/td>
+&lt;td style="text-align:left">11,462&lt;/td>
+&lt;td style="text-align:left">505,369&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Czech&lt;/td>
+&lt;td style="text-align:left">58.6 GB&lt;/td>
+&lt;td style="text-align:left">10,381,916&lt;/td>
+&lt;td style="text-align:left">5,452,724,456&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Danish&lt;/td>
+&lt;td style="text-align:left">12.6 GB&lt;/td>
+&lt;td style="text-align:left">2,265,479&lt;/td>
+&lt;td style="text-align:left">1,454,439,292&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Dimli (individual language)&lt;/td>
+&lt;td style="text-align:left">706 Bytes&lt;/td>
+&lt;td style="text-align:left">1&lt;/td>
+&lt;td style="text-align:left">19&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Divehi&lt;/td>
+&lt;td style="text-align:left">217.2 MB&lt;/td>
+&lt;td style="text-align:left">24,067&lt;/td>
+&lt;td style="text-align:left">10,112,205&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Dutch&lt;/td>
+&lt;td style="text-align:left">114.0 GB&lt;/td>
+&lt;td style="text-align:left">20,206,532&lt;/td>
+&lt;td style="text-align:left">12,329,127,151&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Eastern Mari&lt;/td>
+&lt;td style="text-align:left">11.3 MB&lt;/td>
+&lt;td style="text-align:left">1,612&lt;/td>
+&lt;td style="text-align:left">641,525&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Egyptian Arabic&lt;/td>
+&lt;td style="text-align:left">2.8 MB&lt;/td>
+&lt;td style="text-align:left">1,256&lt;/td>
+&lt;td style="text-align:left">176,096&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">English&lt;/td>
+&lt;td style="text-align:left">3.2 TB&lt;/td>
+&lt;td style="text-align:left">431,992,659&lt;/td>
+&lt;td style="text-align:left">377,376,402,775&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Esperanto&lt;/td>
+&lt;td style="text-align:left">558.3 MB&lt;/td>
+&lt;td style="text-align:left">111,932&lt;/td>
+&lt;td style="text-align:left">58,416,628&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Estonian&lt;/td>
+&lt;td style="text-align:left">9.2 GB&lt;/td>
+&lt;td style="text-align:left">1,362,524&lt;/td>
+&lt;td style="text-align:left">820,975,443&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Filipino&lt;/td>
+&lt;td style="text-align:left">646.5 MB&lt;/td>
+&lt;td style="text-align:left">70,394&lt;/td>
+&lt;td style="text-align:left">81,881,278&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Finnish&lt;/td>
+&lt;td style="text-align:left">37.8 GB&lt;/td>
+&lt;td style="text-align:left">4,948,961&lt;/td>
+&lt;td style="text-align:left">2,900,615,928&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">French&lt;/td>
+&lt;td style="text-align:left">382.2 GB&lt;/td>
+&lt;td style="text-align:left">52,037,098&lt;/td>
+&lt;td style="text-align:left">41,713,990,658&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Galician&lt;/td>
+&lt;td style="text-align:left">255.2 MB&lt;/td>
+&lt;td style="text-align:left">88,803&lt;/td>
+&lt;td style="text-align:left">27,051,212&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Georgian&lt;/td>
+&lt;td style="text-align:left">7.1 GB&lt;/td>
+&lt;td style="text-align:left">488,588&lt;/td>
+&lt;td style="text-align:left">281,430,479&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">German&lt;/td>
+&lt;td style="text-align:left">496.7 GB&lt;/td>
+&lt;td style="text-align:left">70,075,424&lt;/td>
+&lt;td style="text-align:left">46,826,676,844&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Goan Konkani&lt;/td>
+&lt;td style="text-align:left">787.2 kB&lt;/td>
+&lt;td style="text-align:left">46&lt;/td>
+&lt;td style="text-align:left">38,831&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Greek&lt;/td>
+&lt;td style="text-align:left">78.3 GB&lt;/td>
+&lt;td style="text-align:left">6,738,546&lt;/td>
+&lt;td style="text-align:left">5,031,242,803&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Guarani&lt;/td>
+&lt;td style="text-align:left">9.0 kB&lt;/td>
+&lt;td style="text-align:left">10&lt;/td>
+&lt;td style="text-align:left">374&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Gujarati&lt;/td>
+&lt;td style="text-align:left">4.8 GB&lt;/td>
+&lt;td style="text-align:left">136,467&lt;/td>
+&lt;td style="text-align:left">301,170,777&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Hebrew&lt;/td>
+&lt;td style="text-align:left">30.3 GB&lt;/td>
+&lt;td style="text-align:left">3,132,396&lt;/td>
+&lt;td style="text-align:left">2,249,377,984&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Hindi&lt;/td>
+&lt;td style="text-align:left">23.3 GB&lt;/td>
+&lt;td style="text-align:left">1,529,907&lt;/td>
+&lt;td style="text-align:left">1,534,799,198&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Hungarian&lt;/td>
+&lt;td style="text-align:left">53.9 GB&lt;/td>
+&lt;td style="text-align:left">6,866,062&lt;/td>
+&lt;td style="text-align:left">4,598,787,907&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Icelandic&lt;/td>
+&lt;td style="text-align:left">2.0 GB&lt;/td>
+&lt;td style="text-align:left">396,183&lt;/td>
+&lt;td style="text-align:left">210,365,124&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Ido&lt;/td>
+&lt;td style="text-align:left">77.3 kB&lt;/td>
+&lt;td style="text-align:left">105&lt;/td>
+&lt;td style="text-align:left">2,690&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Iloko&lt;/td>
+&lt;td style="text-align:left">97.9 kB&lt;/td>
+&lt;td style="text-align:left">75&lt;/td>
+&lt;td style="text-align:left">8,592&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Indonesian&lt;/td>
+&lt;td style="text-align:left">17.4 GB&lt;/td>
+&lt;td style="text-align:left">2,244,622&lt;/td>
+&lt;td style="text-align:left">1,984,195,207&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Interlingua&lt;/td>
+&lt;td style="text-align:left">40.2 kB&lt;/td>
+&lt;td style="text-align:left">6&lt;/td>
+&lt;td style="text-align:left">10,125&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Irish&lt;/td>
+&lt;td style="text-align:left">45.6 MB&lt;/td>
+&lt;td style="text-align:left">12,233&lt;/td>
+&lt;td style="text-align:left">4,877,850&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Italian&lt;/td>
+&lt;td style="text-align:left">229.3 GB&lt;/td>
+&lt;td style="text-align:left">28,502,092&lt;/td>
+&lt;td style="text-align:left">24,294,684,830&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Japanese&lt;/td>
+&lt;td style="text-align:left">258.7 GB&lt;/td>
+&lt;td style="text-align:left">36,328,931&lt;/td>
+&lt;td style="text-align:left">5,592,948,356&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Javanese&lt;/td>
+&lt;td style="text-align:left">152.7 kB&lt;/td>
+&lt;td style="text-align:left">70&lt;/td>
+&lt;td style="text-align:left">10,441&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Kalmyk&lt;/td>
+&lt;td style="text-align:left">9.3 kB&lt;/td>
+&lt;td style="text-align:left">9&lt;/td>
+&lt;td style="text-align:left">250&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Kannada&lt;/td>
+&lt;td style="text-align:left">2.6 GB&lt;/td>
+&lt;td style="text-align:left">150,850&lt;/td>
+&lt;td style="text-align:left">108,450,571&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Karachay-Balkar&lt;/td>
+&lt;td style="text-align:left">119.6 kB&lt;/td>
+&lt;td style="text-align:left">91&lt;/td>
+&lt;td style="text-align:left">4,089&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Kazakh&lt;/td>
+&lt;td style="text-align:left">2.9 GB&lt;/td>
+&lt;td style="text-align:left">261,085&lt;/td>
+&lt;td style="text-align:left">157,267,307&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Khmer&lt;/td>
+&lt;td style="text-align:left">1.9 GB&lt;/td>
+&lt;td style="text-align:left">121,910&lt;/td>
+&lt;td style="text-align:left">30,564,131&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Komi&lt;/td>
+&lt;td style="text-align:left">119.9 kB&lt;/td>
+&lt;td style="text-align:left">127&lt;/td>
+&lt;td style="text-align:left">3,335&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Korean&lt;/td>
+&lt;td style="text-align:left">51.8 GB&lt;/td>
+&lt;td style="text-align:left">5,881,481&lt;/td>
+&lt;td style="text-align:left">3,854,968,649&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Kurdish&lt;/td>
+&lt;td style="text-align:left">150.3 MB&lt;/td>
+&lt;td style="text-align:left">29,906&lt;/td>
+&lt;td style="text-align:left">17,390,759&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Kyrgyz&lt;/td>
+&lt;td style="text-align:left">518.6 MB&lt;/td>
+&lt;td style="text-align:left">62,244&lt;/td>
+&lt;td style="text-align:left">28,028,986&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Lao&lt;/td>
+&lt;td style="text-align:left">337.1 MB&lt;/td>
+&lt;td style="text-align:left">28,914&lt;/td>
+&lt;td style="text-align:left">6,682,982&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Latin&lt;/td>
+&lt;td style="text-align:left">4.1 MB&lt;/td>
+&lt;td style="text-align:left">4,397&lt;/td>
+&lt;td style="text-align:left">187,446&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Latvian&lt;/td>
+&lt;td style="text-align:left">8.2 GB&lt;/td>
+&lt;td style="text-align:left">1,032,987&lt;/td>
+&lt;td style="text-align:left">707,361,898&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Lezghian&lt;/td>
+&lt;td style="text-align:left">375.5 kB&lt;/td>
+&lt;td style="text-align:left">124&lt;/td>
+&lt;td style="text-align:left">19,250&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Limburgish&lt;/td>
+&lt;td style="text-align:left">1.4 kB&lt;/td>
+&lt;td style="text-align:left">2&lt;/td>
+&lt;td style="text-align:left">41&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Lithuanian&lt;/td>
+&lt;td style="text-align:left">20.0 GB&lt;/td>
+&lt;td style="text-align:left">2,303,070&lt;/td>
+&lt;td style="text-align:left">1,712,802,056&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Lojban&lt;/td>
+&lt;td style="text-align:left">1.9 MB&lt;/td>
+&lt;td style="text-align:left">570&lt;/td>
+&lt;td style="text-align:left">260,542&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Lombard&lt;/td>
+&lt;td style="text-align:left">2.6 kB&lt;/td>
+&lt;td style="text-align:left">2&lt;/td>
+&lt;td style="text-align:left">225&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Low German&lt;/td>
+&lt;td style="text-align:left">9.0 MB&lt;/td>
+&lt;td style="text-align:left">1,938&lt;/td>
+&lt;td style="text-align:left">1,012,561&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Lower Sorbian&lt;/td>
+&lt;td style="text-align:left">707 Bytes&lt;/td>
+&lt;td style="text-align:left">1&lt;/td>
+&lt;td style="text-align:left">17&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Luxembourgish&lt;/td>
+&lt;td style="text-align:left">15.8 MB&lt;/td>
+&lt;td style="text-align:left">5,108&lt;/td>
+&lt;td style="text-align:left">1,545,946&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Macedonian&lt;/td>
+&lt;td style="text-align:left">3.6 GB&lt;/td>
+&lt;td style="text-align:left">341,775&lt;/td>
+&lt;td style="text-align:left">244,058,579&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Maithili&lt;/td>
+&lt;td style="text-align:left">21.6 kB&lt;/td>
+&lt;td style="text-align:left">23&lt;/td>
+&lt;td style="text-align:left">483&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Malagasy&lt;/td>
+&lt;td style="text-align:left">57.3 MB&lt;/td>
+&lt;td style="text-align:left">3,028&lt;/td>
+&lt;td style="text-align:left">7,279,056&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Malay&lt;/td>
+&lt;td style="text-align:left">5.3 MB&lt;/td>
+&lt;td style="text-align:left">5,228&lt;/td>
+&lt;td style="text-align:left">217,818&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Malayalam&lt;/td>
+&lt;td style="text-align:left">4.1 GB&lt;/td>
+&lt;td style="text-align:left">250,972&lt;/td>
+&lt;td style="text-align:left">137,831,247&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Maltese&lt;/td>
+&lt;td style="text-align:left">2.5 MB&lt;/td>
+&lt;td style="text-align:left">2,208&lt;/td>
+&lt;td style="text-align:left">118,190&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Marathi&lt;/td>
+&lt;td style="text-align:left">3.3 GB&lt;/td>
+&lt;td style="text-align:left">250,376&lt;/td>
+&lt;td style="text-align:left">160,179,233&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Mazanderani&lt;/td>
+&lt;td style="text-align:left">128.2 kB&lt;/td>
+&lt;td style="text-align:left">76&lt;/td>
+&lt;td style="text-align:left">7,337&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Minangkabau&lt;/td>
+&lt;td style="text-align:left">6.0 MB&lt;/td>
+&lt;td style="text-align:left">585&lt;/td>
+&lt;td style="text-align:left">614,613&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Mingrelian&lt;/td>
+&lt;td style="text-align:left">7.6 MB&lt;/td>
+&lt;td style="text-align:left">2,550&lt;/td>
+&lt;td style="text-align:left">253,333&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Mongolian&lt;/td>
+&lt;td style="text-align:left">2.8 GB&lt;/td>
+&lt;td style="text-align:left">237,719&lt;/td>
+&lt;td style="text-align:left">176,405,432&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Nahuatl languages&lt;/td>
+&lt;td style="text-align:left">8.7 kB&lt;/td>
+&lt;td style="text-align:left">12&lt;/td>
+&lt;td style="text-align:left">179&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Nepali&lt;/td>
+&lt;td style="text-align:left">3.7 GB&lt;/td>
+&lt;td style="text-align:left">391,947&lt;/td>
+&lt;td style="text-align:left">177,885,116&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Newari&lt;/td>
+&lt;td style="text-align:left">5.7 MB&lt;/td>
+&lt;td style="text-align:left">1,134&lt;/td>
+&lt;td style="text-align:left">273,837&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Norwegian&lt;/td>
+&lt;td style="text-align:left">2.8 GB&lt;/td>
+&lt;td style="text-align:left">973,188&lt;/td>
+&lt;td style="text-align:left">279,182,902&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Norwegian Nynorsk&lt;/td>
+&lt;td style="text-align:left">6.8 MB&lt;/td>
+&lt;td style="text-align:left">5,835&lt;/td>
+&lt;td style="text-align:left">459,183&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Occitan&lt;/td>
+&lt;td style="text-align:left">2.1 MB&lt;/td>
+&lt;td style="text-align:left">373&lt;/td>
+&lt;td style="text-align:left">31,061&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Odia&lt;/td>
+&lt;td style="text-align:left">487.9 MB&lt;/td>
+&lt;td style="text-align:left">52,942&lt;/td>
+&lt;td style="text-align:left">23,755,902&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Ossetic&lt;/td>
+&lt;td style="text-align:left">13.9 MB&lt;/td>
+&lt;td style="text-align:left">3,560&lt;/td>
+&lt;td style="text-align:left">800,430&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Pashto&lt;/td>
+&lt;td style="text-align:left">490.3 MB&lt;/td>
+&lt;td style="text-align:left">50,312&lt;/td>
+&lt;td style="text-align:left">46,293,249&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Persian&lt;/td>
+&lt;td style="text-align:left">77.4 GB&lt;/td>
+&lt;td style="text-align:left">7,665,871&lt;/td>
+&lt;td style="text-align:left">6,430,164,396&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Piedmontese&lt;/td>
+&lt;td style="text-align:left">1.7 MB&lt;/td>
+&lt;td style="text-align:left">698&lt;/td>
+&lt;td style="text-align:left">188,270&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Polish&lt;/td>
+&lt;td style="text-align:left">139.0 GB&lt;/td>
+&lt;td style="text-align:left">19,301,137&lt;/td>
+&lt;td style="text-align:left">12,584,498,906&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Portuguese&lt;/td>
+&lt;td style="text-align:left">170.3 GB&lt;/td>
+&lt;td style="text-align:left">23,735,707&lt;/td>
+&lt;td style="text-align:left">18,441,864,893&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Punjabi&lt;/td>
+&lt;td style="text-align:left">1.1 GB&lt;/td>
+&lt;td style="text-align:left">68,094&lt;/td>
+&lt;td style="text-align:left">70,068,604&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Quechua&lt;/td>
+&lt;td style="text-align:left">744 Bytes&lt;/td>
+&lt;td style="text-align:left">1&lt;/td>
+&lt;td style="text-align:left">14&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Romanian&lt;/td>
+&lt;td style="text-align:left">49.2 GB&lt;/td>
+&lt;td style="text-align:left">4,624,764&lt;/td>
+&lt;td style="text-align:left">5,261,803,995&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Russia Buriat&lt;/td>
+&lt;td style="text-align:left">32.9 kB&lt;/td>
+&lt;td style="text-align:left">39&lt;/td>
+&lt;td style="text-align:left">785&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Russian&lt;/td>
+&lt;td style="text-align:left">1.1 TB&lt;/td>
+&lt;td style="text-align:left">76,060,844&lt;/td>
+&lt;td style="text-align:left">62,811,122,663&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Sakha&lt;/td>
+&lt;td style="text-align:left">65.6 MB&lt;/td>
+&lt;td style="text-align:left">6,284&lt;/td>
+&lt;td style="text-align:left">3,473,813&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Sanskrit&lt;/td>
+&lt;td style="text-align:left">136.0 MB&lt;/td>
+&lt;td style="text-align:left">4,472&lt;/td>
+&lt;td style="text-align:left">5,671,369&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Scottish Gaelic&lt;/td>
+&lt;td style="text-align:left">137.7 kB&lt;/td>
+&lt;td style="text-align:left">136&lt;/td>
+&lt;td style="text-align:left">7,769&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Serbian&lt;/td>
+&lt;td style="text-align:left">6.9 GB&lt;/td>
+&lt;td style="text-align:left">577,472&lt;/td>
+&lt;td style="text-align:left">482,932,670&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Serbian (Latin)&lt;/td>
+&lt;td style="text-align:left">931.8 kB&lt;/td>
+&lt;td style="text-align:left">738&lt;/td>
+&lt;td style="text-align:left">92,875&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Sicilian&lt;/td>
+&lt;td style="text-align:left">1.5 kB&lt;/td>
+&lt;td style="text-align:left">2&lt;/td>
+&lt;td style="text-align:left">50&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Sindhi&lt;/td>
+&lt;td style="text-align:left">117.1 MB&lt;/td>
+&lt;td style="text-align:left">15,516&lt;/td>
+&lt;td style="text-align:left">10,685,611&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Sinhala&lt;/td>
+&lt;td style="text-align:left">2.0 GB&lt;/td>
+&lt;td style="text-align:left">108,593&lt;/td>
+&lt;td style="text-align:left">113,179,741&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Slovak&lt;/td>
+&lt;td style="text-align:left">16.5 GB&lt;/td>
+&lt;td style="text-align:left">2,409,555&lt;/td>
+&lt;td style="text-align:left">1,619,121,944&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Slovenian&lt;/td>
+&lt;td style="text-align:left">1.2 GB&lt;/td>
+&lt;td style="text-align:left">351,894&lt;/td>
+&lt;td style="text-align:left">118,400,246&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Somali&lt;/td>
+&lt;td style="text-align:left">2.1 kB&lt;/td>
+&lt;td style="text-align:left">3&lt;/td>
+&lt;td style="text-align:left">109&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">South Azerbaijani&lt;/td>
+&lt;td style="text-align:left">14.1 MB&lt;/td>
+&lt;td style="text-align:left">5,381&lt;/td>
+&lt;td style="text-align:left">693,746&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Spanish&lt;/td>
+&lt;td style="text-align:left">381.9 GB&lt;/td>
+&lt;td style="text-align:left">51,386,247&lt;/td>
+&lt;td style="text-align:left">42,829,835,316&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Sundanese&lt;/td>
+&lt;td style="text-align:left">5.0 MB&lt;/td>
+&lt;td style="text-align:left">263&lt;/td>
+&lt;td style="text-align:left">547,145&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Swahili&lt;/td>
+&lt;td style="text-align:left">1.3 MB&lt;/td>
+&lt;td style="text-align:left">462&lt;/td>
+&lt;td style="text-align:left">123,050&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Swedish&lt;/td>
+&lt;td style="text-align:left">48.0 GB&lt;/td>
+&lt;td style="text-align:left">7,541,278&lt;/td>
+&lt;td style="text-align:left">5,078,331,128&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Tajik&lt;/td>
+&lt;td style="text-align:left">870.9 MB&lt;/td>
+&lt;td style="text-align:left">46,366&lt;/td>
+&lt;td style="text-align:left">56,627,727&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Tamil&lt;/td>
+&lt;td style="text-align:left">11.4 GB&lt;/td>
+&lt;td style="text-align:left">556,772&lt;/td>
+&lt;td style="text-align:left">452,343,748&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Tatar&lt;/td>
+&lt;td style="text-align:left">915.3 MB&lt;/td>
+&lt;td style="text-align:left">76,398&lt;/td>
+&lt;td style="text-align:left">51,875,265&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Telugu&lt;/td>
+&lt;td style="text-align:left">3.4 GB&lt;/td>
+&lt;td style="text-align:left">249,756&lt;/td>
+&lt;td style="text-align:left">137,752,065&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Thai&lt;/td>
+&lt;td style="text-align:left">66.1 GB&lt;/td>
+&lt;td style="text-align:left">5,030,254&lt;/td>
+&lt;td style="text-align:left">1,626,779,846&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Tibetan&lt;/td>
+&lt;td style="text-align:left">234.5 MB&lt;/td>
+&lt;td style="text-align:left">18,683&lt;/td>
+&lt;td style="text-align:left">2,286,269&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Turkish&lt;/td>
+&lt;td style="text-align:left">75.1 GB&lt;/td>
+&lt;td style="text-align:left">10,826,031&lt;/td>
+&lt;td style="text-align:left">6,421,221,358&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Turkmen&lt;/td>
+&lt;td style="text-align:left">4.4 MB&lt;/td>
+&lt;td style="text-align:left">2,485&lt;/td>
+&lt;td style="text-align:left">276,632&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Ukrainian&lt;/td>
+&lt;td style="text-align:left">48.8 GB&lt;/td>
+&lt;td style="text-align:left">4,558,214&lt;/td>
+&lt;td style="text-align:left">2,879,585,992&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Emiliano-Romagnolo[eml]&lt;/td>
+&lt;td style="text-align:left">901 Bytes&lt;/td>
+&lt;td style="text-align:left">1&lt;/td>
+&lt;td style="text-align:left">53&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Upper Sorbian&lt;/td>
+&lt;td style="text-align:left">132.8 kB&lt;/td>
+&lt;td style="text-align:left">110&lt;/td>
+&lt;td style="text-align:left">8,825&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Urdu&lt;/td>
+&lt;td style="text-align:left">3.4 GB&lt;/td>
+&lt;td style="text-align:left">336,994&lt;/td>
+&lt;td style="text-align:left">332,816,354&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Uyghur&lt;/td>
+&lt;td style="text-align:left">201.9 MB&lt;/td>
+&lt;td style="text-align:left">18,556&lt;/td>
+&lt;td style="text-align:left">11,240,889&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Uzbek&lt;/td>
+&lt;td style="text-align:left">19.9 MB&lt;/td>
+&lt;td style="text-align:left">9,526&lt;/td>
+&lt;td style="text-align:left">1,370,842&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Vietnamese&lt;/td>
+&lt;td style="text-align:left">98.9 GB&lt;/td>
+&lt;td style="text-align:left">9,587,233&lt;/td>
+&lt;td style="text-align:left">12,283,185,482&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Volapük&lt;/td>
+&lt;td style="text-align:left">825.9 kB&lt;/td>
+&lt;td style="text-align:left">661&lt;/td>
+&lt;td style="text-align:left">57,039&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Walloon&lt;/td>
+&lt;td style="text-align:left">105.7 kB&lt;/td>
+&lt;td style="text-align:left">138&lt;/td>
+&lt;td style="text-align:left">4,386&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Waray&lt;/td>
+&lt;td style="text-align:left">7.6 MB&lt;/td>
+&lt;td style="text-align:left">933&lt;/td>
+&lt;td style="text-align:left">830,872&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Welsh&lt;/td>
+&lt;td style="text-align:left">409.3 MB&lt;/td>
+&lt;td style="text-align:left">90,378&lt;/td>
+&lt;td style="text-align:left">49,488,495&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Western Frisian&lt;/td>
+&lt;td style="text-align:left">75.3 MB&lt;/td>
+&lt;td style="text-align:left">21,946&lt;/td>
+&lt;td style="text-align:left">6,357,929&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Western Mari&lt;/td>
+&lt;td style="text-align:left">743.5 kB&lt;/td>
+&lt;td style="text-align:left">155&lt;/td>
+&lt;td style="text-align:left">43,916&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Western Panjabi&lt;/td>
+&lt;td style="text-align:left">46.7 MB&lt;/td>
+&lt;td style="text-align:left">6,790&lt;/td>
+&lt;td style="text-align:left">4,060,419&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Wu Chinese&lt;/td>
+&lt;td style="text-align:left">137.2 kB&lt;/td>
+&lt;td style="text-align:left">88&lt;/td>
+&lt;td style="text-align:left">3,056&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Yiddish&lt;/td>
+&lt;td style="text-align:left">232.5 MB&lt;/td>
+&lt;td style="text-align:left">23,418&lt;/td>
+&lt;td style="text-align:left">15,809,780&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Yoruba&lt;/td>
+&lt;td style="text-align:left">24.7 kB&lt;/td>
+&lt;td style="text-align:left">26&lt;/td>
+&lt;td style="text-align:left">1,042&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Multilingual&lt;/td>
+&lt;td style="text-align:left">12.1 GB&lt;/td>
+&lt;td style="text-align:left">1,210,685&lt;/td>
+&lt;td style="text-align:left">936,187,711&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>OSCAR News: September 2021</title><link>https://oscar-project.org/post/news-21-09/</link><pubDate>Thu, 02 Sep 2021 15:45:55 +0200</pubDate><guid>https://oscar-project.org/post/news-21-09/</guid><description>&lt;p>September 2021 marks an important milestone regarding OSCAR, and we have important news to share.&lt;/p>
+&lt;h2 id="new-pipeline-tool">New pipeline tool&lt;/h2>
+&lt;p>The &lt;a href="../oscar-2019">previous&lt;/a> OSCAR corpus was generated by &lt;a href="https://github.com/oscar-corpus/goclassy" target="_blank" rel="noopener">goclassy&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>The &lt;a href="../oscar-v21-09">latest&lt;/a> (at the time of writing) and future ones will be generated by &lt;a href="https://github.com/oscar-corpus/Ungoliant" target="_blank" rel="noopener">Ungoliant&lt;/a>, a brand new corpus generation tool written in &lt;a href="https://rust-lang.org" target="_blank" rel="noopener">Rust&lt;/a>.&lt;/strong>&lt;/p>
+&lt;p>The tool provides a more accessible Command Line Interface, with the following features:&lt;/p>
+&lt;ul>
+&lt;li>Dowloading of CommonCrawl shards from a &lt;code>wet.paths&lt;/code> file,&lt;/li>
+&lt;li>Generation of a corpus from CommonCrawl shards,&lt;/li>
+&lt;li>Deduplication,&lt;/li>
+&lt;li>Splitting in files of fixed maxiumum size,&lt;/li>
+&lt;li>Packaging (GZipping + checksum file creation)&lt;/li>
+&lt;/ul>
+&lt;p>It is also possible (but not yet used/tested in terms of ergonomics) to use Ungoliant as a library.&lt;/p>
+&lt;h2 id="new-schema">New schema&lt;/h2>
+&lt;p>OSCAR is changing and will change again on the course of the following months/years, and as such it is important to provide a way to announce and specify schema changes.&lt;/p>
+&lt;p>The new OSCAR Corpus release follows the OSCAR Schema v1.1, enabling users to optionally get metadata extracted from CommonCrawl, while retaining backward compatibility, making the update from OSCAR 2018 to OSCAR 21.09 as effortless as possible.&lt;/p>
+&lt;p>In a gist, OSCAR Schema v1.1 adds &lt;code>&amp;lt;lang&amp;gt;_meta.jsonl&lt;/code> &lt;a href="https://jsonlines.org/" target="_blank" rel="noopener">JSONLines&lt;/a> files that holds metadata. Each line has an &lt;code>offset&lt;/code> and an &lt;code>nb_sentences&lt;/code> field that can be used to get related lines in text files.&lt;/p>
+&lt;h2 id="new-corpus">New corpus&lt;/h2>
+&lt;p>OSCAR 21.09 is the latest release of the OSCAR Corpus. The first to be generated by Ungoliant, and also the first containing metadata.&lt;/p>
+&lt;p>Note that the data used to generate the corpus is from February 2021, but the next releases of OSCAR Corpus will try to narrow the gap between source data and corpus release.&lt;/p>
+&lt;p>Another important information is that there is &lt;strong>no shuffled version anymore&lt;/strong>.&lt;/p>
+&lt;p>It is expected to be available during September 2021 via manual application through the Contact form of the website, and later on other platforms.&lt;/p></description></item><item><title>OSCAR 21.09</title><link>https://oscar-project.org/post/oscar-v21-09/</link><pubDate>Thu, 02 Sep 2021 15:02:11 +0200</pubDate><guid>https://oscar-project.org/post/oscar-v21-09/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+If you want to get the new corpus please send us a mail using the &lt;a href="https://oscar-project.org/#contact">mail in our homepage&lt;/a>, with &amp;ldquo;OSCAR Access Request&amp;rdquo; as mail title. Please include your name, last name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR. ✉️📚
+&lt;/div>
+&lt;/div>
+&lt;div class="alert alert-warning">
+&lt;div>
+Please do not create a new Huma-Num account by yourself, this will delay your access to the corpus by weeks! We will create an account for you. 📆
+&lt;/div>
+&lt;/div>
+&lt;div class="alert alert-note">
+&lt;div>
+OSCAR 21.09 is now freely available on the &lt;a href="https://huggingface.co/datasets/oscar-corpus/OSCAR-2109" target="_blank" rel="noopener">Hugging Face&amp;rsquo;s datasets hub&lt;/a>! 🚀
+&lt;/div>
+&lt;/div>
+&lt;p>OSCAR or Open Super-large Crawled Aggregated coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus using &lt;a href="https://github.com/oscar-corpus/ungoliant" target="_blank" rel="noopener">Ungoliant&lt;/a>.&lt;/p>
+&lt;p>This release of OSCAR is the second one, and is versioned using &lt;a href="https://calver.org/" target="_blank" rel="noopener">CalVer&lt;/a>.&lt;/p>
+&lt;details class="toc-inpage d-print-none " open>
+&lt;summary class="font-weight-bold">Table of Contents&lt;/summary>
+&lt;nav id="TableOfContents">
+&lt;ul>
+&lt;li>&lt;a href="#features">Features&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#changes">Changes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#table">Table&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#oscar-schema-v110">OSCAR Schema v1.1.0&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#changes-1">Changes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#file-formats">File formats&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/nav>
+&lt;/details>
+&lt;h2 id="features">Features&lt;/h2>
+&lt;p>These are the versions of tooling, schemes and data&lt;/p>
+&lt;ul>
+&lt;li>CommonCrawl version: February/March 2021 (&lt;a href="https://commoncrawl.org/2021/03/february-march-2021-crawl-archive-now-available/" target="_blank" rel="noopener">2021.10&lt;/a>)&lt;/li>
+&lt;li>OSCAR Schema version: &lt;a href="../oscar-schema-v1-1">v1.1&lt;/a> : Incorporates metadata in a backward compatible manner.&lt;/li>
+&lt;li>Ungoliant version: &lt;a href="../ungoliant-v1">v1&lt;/a> : New generation tool, faster and better documented/tested than the previous one: &lt;a href="https://github.com/oscar-corpus/goclassy" target="_blank" rel="noopener">goclassy&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;h2 id="changes">Changes&lt;/h2>
+&lt;ul>
+&lt;li>As per &lt;a href="../oscar-schema-v1-1">OSCAR Schema v1.1&lt;/a>, each document/record has associated metadata.&lt;/li>
+&lt;li>New languages: Manx, Rusyn, Scots and West Flemish. &lt;strong>Their size and quality still has to be assessed.&lt;/strong>&lt;/li>
+&lt;li>Removed languages: Central Bikol and Cantonese. Cantonsese was of a very &lt;a href="https://github.com/oscar-corpus/oscar-website/issues/11" target="_blank" rel="noopener">low quality&lt;/a>. &lt;strong>Central Bikol corpus is still available on &lt;a href="../oscar-2019">OSCAR 2019&lt;/a>.&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="table">Table&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>Language&lt;/th>
+&lt;th>OSCAR 2019&lt;/th>
+&lt;th>OSCAR 2019 deduplicated&lt;/th>
+&lt;th>OSCAR 21.09&lt;/th>
+&lt;th>OSCAR 21.09 deduplicated&lt;/th>
+&lt;th>Issues&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>af&lt;/td>
+&lt;td>Afrikaans&lt;/td>
+&lt;td>251MB&lt;/td>
+&lt;td>170MB&lt;/td>
+&lt;td>258MB&lt;/td>
+&lt;td>157MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sq&lt;/td>
+&lt;td>Albanian&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>3GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>am&lt;/td>
+&lt;td>Amharic&lt;/td>
+&lt;td>377MB&lt;/td>
+&lt;td>215MB&lt;/td>
+&lt;td>405MB&lt;/td>
+&lt;td>241MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ar&lt;/td>
+&lt;td>Arabic&lt;/td>
+&lt;td>87GB&lt;/td>
+&lt;td>33GB&lt;/td>
+&lt;td>69GB&lt;/td>
+&lt;td>35GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>an&lt;/td>
+&lt;td>Aragonese&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>822KB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>608KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>hy&lt;/td>
+&lt;td>Armenian&lt;/td>
+&lt;td>3GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>4GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>as&lt;/td>
+&lt;td>Assamese&lt;/td>
+&lt;td>117MB&lt;/td>
+&lt;td>73MB&lt;/td>
+&lt;td>135MB&lt;/td>
+&lt;td>95MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ast&lt;/td>
+&lt;td>Asturian&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>7MB&lt;/td>
+&lt;td>4MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>av&lt;/td>
+&lt;td>Avaric&lt;/td>
+&lt;td>418KB&lt;/td>
+&lt;td>331KB&lt;/td>
+&lt;td>421KB&lt;/td>
+&lt;td>325KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>az&lt;/td>
+&lt;td>Azerbaijani&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>3GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bn&lt;/td>
+&lt;td>Bangla&lt;/td>
+&lt;td>10GB&lt;/td>
+&lt;td>6GB&lt;/td>
+&lt;td>14GB&lt;/td>
+&lt;td>7GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ba&lt;/td>
+&lt;td>Bashkir&lt;/td>
+&lt;td>133MB&lt;/td>
+&lt;td>93MB&lt;/td>
+&lt;td>110MB&lt;/td>
+&lt;td>77MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>eu&lt;/td>
+&lt;td>Basque&lt;/td>
+&lt;td>889MB&lt;/td>
+&lt;td>358MB&lt;/td>
+&lt;td>900MB&lt;/td>
+&lt;td>503MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bar&lt;/td>
+&lt;td>Bavarian&lt;/td>
+&lt;td>507B&lt;/td>
+&lt;td>507B&lt;/td>
+&lt;td>2KB&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>be&lt;/td>
+&lt;td>Belarusian&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bh&lt;/td>
+&lt;td>Bihari languages&lt;/td>
+&lt;td>112KB&lt;/td>
+&lt;td>34KB&lt;/td>
+&lt;td>579KB&lt;/td>
+&lt;td>120KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bpy&lt;/td>
+&lt;td>Bishnupriya&lt;/td>
+&lt;td>4MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>11MB&lt;/td>
+&lt;td>4MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bs&lt;/td>
+&lt;td>Bosnian&lt;/td>
+&lt;td>459KB&lt;/td>
+&lt;td>120KB&lt;/td>
+&lt;td>310KB&lt;/td>
+&lt;td>175KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>br&lt;/td>
+&lt;td>Breton&lt;/td>
+&lt;td>29MB&lt;/td>
+&lt;td>16MB&lt;/td>
+&lt;td>49MB&lt;/td>
+&lt;td>23MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bg&lt;/td>
+&lt;td>Bulgarian&lt;/td>
+&lt;td>33GB&lt;/td>
+&lt;td>14GB&lt;/td>
+&lt;td>34GB&lt;/td>
+&lt;td>15GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>my&lt;/td>
+&lt;td>Burmese&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>yue&lt;/td>
+&lt;td>Cantonese&lt;/td>
+&lt;td>3KB&lt;/td>
+&lt;td>2KB&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ca&lt;/td>
+&lt;td>Catalan&lt;/td>
+&lt;td>8GB&lt;/td>
+&lt;td>4GB&lt;/td>
+&lt;td>13GB&lt;/td>
+&lt;td>6GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ceb&lt;/td>
+&lt;td>Cebuano&lt;/td>
+&lt;td>40MB&lt;/td>
+&lt;td>24MB&lt;/td>
+&lt;td>81MB&lt;/td>
+&lt;td>58MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bcl&lt;/td>
+&lt;td>Central Bikol&lt;/td>
+&lt;td>886B&lt;/td>
+&lt;td>886B&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ckb&lt;/td>
+&lt;td>Central Kurdish&lt;/td>
+&lt;td>509MB&lt;/td>
+&lt;td>236MB&lt;/td>
+&lt;td>784MB&lt;/td>
+&lt;td>367MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>cbk&lt;/td>
+&lt;td>Chavacano&lt;/td>
+&lt;td>521B&lt;/td>
+&lt;td>521B&lt;/td>
+&lt;td>168B&lt;/td>
+&lt;td>168B&lt;/td>
+&lt;td>&lt;a href='https://github.com/oscar-corpus/corpus/issues?q=is%3Aissue+is%3Aopen+label:lang:cbk'>
+&lt;img width="750rem" src='https://img.shields.io/github/issues/oscar-corpus/corpus/lang:cbk?label=cbk&amp;style=for-the-badge' />
+&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ce&lt;/td>
+&lt;td>Chechen&lt;/td>
+&lt;td>8MB&lt;/td>
+&lt;td>6MB&lt;/td>
+&lt;td>29MB&lt;/td>
+&lt;td>20MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>zh&lt;/td>
+&lt;td>Chinese&lt;/td>
+&lt;td>544GB&lt;/td>
+&lt;td>267GB&lt;/td>
+&lt;td>500GB&lt;/td>
+&lt;td>266GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>cv&lt;/td>
+&lt;td>Chuvash&lt;/td>
+&lt;td>40MB&lt;/td>
+&lt;td>27MB&lt;/td>
+&lt;td>60MB&lt;/td>
+&lt;td>41MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>kw&lt;/td>
+&lt;td>Cornish&lt;/td>
+&lt;td>44KB&lt;/td>
+&lt;td>14KB&lt;/td>
+&lt;td>119KB&lt;/td>
+&lt;td>72KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>hr&lt;/td>
+&lt;td>Croatian&lt;/td>
+&lt;td>237MB&lt;/td>
+&lt;td>115MB&lt;/td>
+&lt;td>361MB&lt;/td>
+&lt;td>169MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>cs&lt;/td>
+&lt;td>Czech&lt;/td>
+&lt;td>56GB&lt;/td>
+&lt;td>25GB&lt;/td>
+&lt;td>72GB&lt;/td>
+&lt;td>33GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>da&lt;/td>
+&lt;td>Danish&lt;/td>
+&lt;td>16GB&lt;/td>
+&lt;td>10GB&lt;/td>
+&lt;td>18GB&lt;/td>
+&lt;td>10GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>diq&lt;/td>
+&lt;td>Dimli (individual language)&lt;/td>
+&lt;td>147B&lt;/td>
+&lt;td>147B&lt;/td>
+&lt;td>294B&lt;/td>
+&lt;td>147B&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>dv&lt;/td>
+&lt;td>Divehi&lt;/td>
+&lt;td>131MB&lt;/td>
+&lt;td>81MB&lt;/td>
+&lt;td>143MB&lt;/td>
+&lt;td>111MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nl&lt;/td>
+&lt;td>Dutch&lt;/td>
+&lt;td>82GB&lt;/td>
+&lt;td>41GB&lt;/td>
+&lt;td>97GB&lt;/td>
+&lt;td>47GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mhr&lt;/td>
+&lt;td>Eastern Mari&lt;/td>
+&lt;td>7MB&lt;/td>
+&lt;td>6MB&lt;/td>
+&lt;td>15MB&lt;/td>
+&lt;td>10MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>arz&lt;/td>
+&lt;td>Egyptian Arabic&lt;/td>
+&lt;td>68MB&lt;/td>
+&lt;td>34MB&lt;/td>
+&lt;td>48MB&lt;/td>
+&lt;td>21MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>en&lt;/td>
+&lt;td>English&lt;/td>
+&lt;td>2520GB&lt;/td>
+&lt;td>1294GB&lt;/td>
+&lt;td>2936GB&lt;/td>
+&lt;td>1342GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>myv&lt;/td>
+&lt;td>Erzya&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>29KB&lt;/td>
+&lt;td>2KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>eo&lt;/td>
+&lt;td>Esperanto&lt;/td>
+&lt;td>312MB&lt;/td>
+&lt;td>238MB&lt;/td>
+&lt;td>560MB&lt;/td>
+&lt;td>390MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>et&lt;/td>
+&lt;td>Estonian&lt;/td>
+&lt;td>5GB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>7GB&lt;/td>
+&lt;td>3GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tl&lt;/td>
+&lt;td>Filipino&lt;/td>
+&lt;td>601MB&lt;/td>
+&lt;td>426MB&lt;/td>
+&lt;td>699MB&lt;/td>
+&lt;td>383MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>fi&lt;/td>
+&lt;td>Finnish&lt;/td>
+&lt;td>28GB&lt;/td>
+&lt;td>13GB&lt;/td>
+&lt;td>35GB&lt;/td>
+&lt;td>20GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>fr&lt;/td>
+&lt;td>French&lt;/td>
+&lt;td>302GB&lt;/td>
+&lt;td>147GB&lt;/td>
+&lt;td>340GB&lt;/td>
+&lt;td>161GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>gl&lt;/td>
+&lt;td>Galician&lt;/td>
+&lt;td>650MB&lt;/td>
+&lt;td>402MB&lt;/td>
+&lt;td>989MB&lt;/td>
+&lt;td>549MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ka&lt;/td>
+&lt;td>Georgian&lt;/td>
+&lt;td>3GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>6GB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>de&lt;/td>
+&lt;td>German&lt;/td>
+&lt;td>330GB&lt;/td>
+&lt;td>155GB&lt;/td>
+&lt;td>433GB&lt;/td>
+&lt;td>184GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>gom&lt;/td>
+&lt;td>Goan Konkani&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>3MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>el&lt;/td>
+&lt;td>Greek&lt;/td>
+&lt;td>66GB&lt;/td>
+&lt;td>28GB&lt;/td>
+&lt;td>72GB&lt;/td>
+&lt;td>30GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>gn&lt;/td>
+&lt;td>Guarani&lt;/td>
+&lt;td>36KB&lt;/td>
+&lt;td>23KB&lt;/td>
+&lt;td>32KB&lt;/td>
+&lt;td>25KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>gu&lt;/td>
+&lt;td>Gujarati&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>756MB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>950MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ht&lt;/td>
+&lt;td>Haitian Creole&lt;/td>
+&lt;td>3KB&lt;/td>
+&lt;td>3KB&lt;/td>
+&lt;td>2KB&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>he&lt;/td>
+&lt;td>Hebrew&lt;/td>
+&lt;td>21GB&lt;/td>
+&lt;td>10GB&lt;/td>
+&lt;td>29GB&lt;/td>
+&lt;td>11GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>hi&lt;/td>
+&lt;td>Hindi&lt;/td>
+&lt;td>17GB&lt;/td>
+&lt;td>9GB&lt;/td>
+&lt;td>26GB&lt;/td>
+&lt;td>13GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>hu&lt;/td>
+&lt;td>Hungarian&lt;/td>
+&lt;td>42GB&lt;/td>
+&lt;td>18GB&lt;/td>
+&lt;td>60GB&lt;/td>
+&lt;td>29GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>is&lt;/td>
+&lt;td>Icelandic&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>887MB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>io&lt;/td>
+&lt;td>Ido&lt;/td>
+&lt;td>151KB&lt;/td>
+&lt;td>133KB&lt;/td>
+&lt;td>276KB&lt;/td>
+&lt;td>221KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ilo&lt;/td>
+&lt;td>Iloko&lt;/td>
+&lt;td>896KB&lt;/td>
+&lt;td>653KB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>857KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>Indonesian&lt;/td>
+&lt;td>32GB&lt;/td>
+&lt;td>16GB&lt;/td>
+&lt;td>40GB&lt;/td>
+&lt;td>22GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ia&lt;/td>
+&lt;td>Interlingua&lt;/td>
+&lt;td>678KB&lt;/td>
+&lt;td>368KB&lt;/td>
+&lt;td>291KB&lt;/td>
+&lt;td>172KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ie&lt;/td>
+&lt;td>Interlingue&lt;/td>
+&lt;td>24KB&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>7KB&lt;/td>
+&lt;td>2KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ga&lt;/td>
+&lt;td>Irish&lt;/td>
+&lt;td>91MB&lt;/td>
+&lt;td>62MB&lt;/td>
+&lt;td>131MB&lt;/td>
+&lt;td>69MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>it&lt;/td>
+&lt;td>Italian&lt;/td>
+&lt;td>146GB&lt;/td>
+&lt;td>73GB&lt;/td>
+&lt;td>192GB&lt;/td>
+&lt;td>94GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ja&lt;/td>
+&lt;td>Japanese&lt;/td>
+&lt;td>231GB&lt;/td>
+&lt;td>112GB&lt;/td>
+&lt;td>208GB&lt;/td>
+&lt;td>96GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>jv&lt;/td>
+&lt;td>Javanese&lt;/td>
+&lt;td>675KB&lt;/td>
+&lt;td>598KB&lt;/td>
+&lt;td>858KB&lt;/td>
+&lt;td>728KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>xal&lt;/td>
+&lt;td>Kalmyk&lt;/td>
+&lt;td>115KB&lt;/td>
+&lt;td>114KB&lt;/td>
+&lt;td>62KB&lt;/td>
+&lt;td>62KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>kn&lt;/td>
+&lt;td>Kannada&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>krc&lt;/td>
+&lt;td>Karachay-Balkar&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>kk&lt;/td>
+&lt;td>Kazakh&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>3GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>km&lt;/td>
+&lt;td>Khmer&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>608MB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>860MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>kv&lt;/td>
+&lt;td>Komi&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>588KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ko&lt;/td>
+&lt;td>Korean&lt;/td>
+&lt;td>25GB&lt;/td>
+&lt;td>11GB&lt;/td>
+&lt;td>35GB&lt;/td>
+&lt;td>15GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ku&lt;/td>
+&lt;td>Kurdish&lt;/td>
+&lt;td>98MB&lt;/td>
+&lt;td>62MB&lt;/td>
+&lt;td>152MB&lt;/td>
+&lt;td>108MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ky&lt;/td>
+&lt;td>Kyrgyz&lt;/td>
+&lt;td>629MB&lt;/td>
+&lt;td>406MB&lt;/td>
+&lt;td>485MB&lt;/td>
+&lt;td>334MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>lo&lt;/td>
+&lt;td>Lao&lt;/td>
+&lt;td>181MB&lt;/td>
+&lt;td>118MB&lt;/td>
+&lt;td>287MB&lt;/td>
+&lt;td>163MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>la&lt;/td>
+&lt;td>Latin&lt;/td>
+&lt;td>26MB&lt;/td>
+&lt;td>8MB&lt;/td>
+&lt;td>103MB&lt;/td>
+&lt;td>9MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>lv&lt;/td>
+&lt;td>Latvian&lt;/td>
+&lt;td>4GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>6GB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>lez&lt;/td>
+&lt;td>Lezghian&lt;/td>
+&lt;td>3MB&lt;/td>
+&lt;td>3MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>li&lt;/td>
+&lt;td>Limburgish&lt;/td>
+&lt;td>29KB&lt;/td>
+&lt;td>27KB&lt;/td>
+&lt;td>76KB&lt;/td>
+&lt;td>54KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>lt&lt;/td>
+&lt;td>Lithuanian&lt;/td>
+&lt;td>9GB&lt;/td>
+&lt;td>4GB&lt;/td>
+&lt;td>12GB&lt;/td>
+&lt;td>5GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>jbo&lt;/td>
+&lt;td>Lojban&lt;/td>
+&lt;td>753KB&lt;/td>
+&lt;td>694KB&lt;/td>
+&lt;td>929KB&lt;/td>
+&lt;td>731KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>lmo&lt;/td>
+&lt;td>Lombard&lt;/td>
+&lt;td>454KB&lt;/td>
+&lt;td>444KB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nds&lt;/td>
+&lt;td>Low German&lt;/td>
+&lt;td>18MB&lt;/td>
+&lt;td>13MB&lt;/td>
+&lt;td>25MB&lt;/td>
+&lt;td>17MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>dsb&lt;/td>
+&lt;td>Lower Sorbian&lt;/td>
+&lt;td>13KB&lt;/td>
+&lt;td>7KB&lt;/td>
+&lt;td>31KB&lt;/td>
+&lt;td>14KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>lb&lt;/td>
+&lt;td>Luxembourgish&lt;/td>
+&lt;td>30MB&lt;/td>
+&lt;td>21MB&lt;/td>
+&lt;td>54MB&lt;/td>
+&lt;td>37MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mk&lt;/td>
+&lt;td>Macedonian&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>3GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mai&lt;/td>
+&lt;td>Maithili&lt;/td>
+&lt;td>324KB&lt;/td>
+&lt;td>10KB&lt;/td>
+&lt;td>685KB&lt;/td>
+&lt;td>24KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mg&lt;/td>
+&lt;td>Malagasy&lt;/td>
+&lt;td>21MB&lt;/td>
+&lt;td>13MB&lt;/td>
+&lt;td>59MB&lt;/td>
+&lt;td>38MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ms&lt;/td>
+&lt;td>Malay&lt;/td>
+&lt;td>116MB&lt;/td>
+&lt;td>43MB&lt;/td>
+&lt;td>146MB&lt;/td>
+&lt;td>60MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ml&lt;/td>
+&lt;td>Malayalam&lt;/td>
+&lt;td>5GB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>4GB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mt&lt;/td>
+&lt;td>Maltese&lt;/td>
+&lt;td>24MB&lt;/td>
+&lt;td>17MB&lt;/td>
+&lt;td>51MB&lt;/td>
+&lt;td>26MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>gv&lt;/td>
+&lt;td>Manx&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>907B&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mr&lt;/td>
+&lt;td>Marathi&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>3GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mzn&lt;/td>
+&lt;td>Mazanderani&lt;/td>
+&lt;td>708KB&lt;/td>
+&lt;td>617KB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>min&lt;/td>
+&lt;td>Minangkabau&lt;/td>
+&lt;td>622KB&lt;/td>
+&lt;td>317KB&lt;/td>
+&lt;td>8MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>xmf&lt;/td>
+&lt;td>Mingrelian&lt;/td>
+&lt;td>6MB&lt;/td>
+&lt;td>4MB&lt;/td>
+&lt;td>16MB&lt;/td>
+&lt;td>10MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mwl&lt;/td>
+&lt;td>Mirandese&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>3KB&lt;/td>
+&lt;td>2KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mn&lt;/td>
+&lt;td>Mongolian&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>879MB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>912MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nah&lt;/td>
+&lt;td>Nahuatl languages&lt;/td>
+&lt;td>11KB&lt;/td>
+&lt;td>10KB&lt;/td>
+&lt;td>34KB&lt;/td>
+&lt;td>21KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nap&lt;/td>
+&lt;td>Neapolitan&lt;/td>
+&lt;td>17KB&lt;/td>
+&lt;td>13KB&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>&lt;a href='https://github.com/oscar-corpus/corpus/issues?q=is%3Aissue+is%3Aopen+label:lang:nap'>
+&lt;img width="750rem" src='https://img.shields.io/github/issues/oscar-corpus/corpus/lang:nap?label=nap&amp;style=for-the-badge' />
+&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ne&lt;/td>
+&lt;td>Nepali&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>3GB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>new&lt;/td>
+&lt;td>Newari&lt;/td>
+&lt;td>5MB&lt;/td>
+&lt;td>4MB&lt;/td>
+&lt;td>6MB&lt;/td>
+&lt;td>4MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>frr&lt;/td>
+&lt;td>Northern Frisian&lt;/td>
+&lt;td>4KB&lt;/td>
+&lt;td>4KB&lt;/td>
+&lt;td>7KB&lt;/td>
+&lt;td>5KB&lt;/td>
+&lt;td>&lt;a href='https://github.com/oscar-corpus/corpus/issues?q=is%3Aissue+is%3Aopen+label:lang:frr'>
+&lt;img width="750rem" src='https://img.shields.io/github/issues/oscar-corpus/corpus/lang:frr?label=frr&amp;style=for-the-badge' />
+&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>lrc&lt;/td>
+&lt;td>Northern Luri&lt;/td>
+&lt;td>77KB&lt;/td>
+&lt;td>64KB&lt;/td>
+&lt;td>183B&lt;/td>
+&lt;td>183B&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>no&lt;/td>
+&lt;td>Norwegian Bokmål&lt;/td>
+&lt;td>8GB&lt;/td>
+&lt;td>5GB&lt;/td>
+&lt;td>9GB&lt;/td>
+&lt;td>4GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nn&lt;/td>
+&lt;td>Norwegian Nynorsk&lt;/td>
+&lt;td>88MB&lt;/td>
+&lt;td>56MB&lt;/td>
+&lt;td>123MB&lt;/td>
+&lt;td>66MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>oc&lt;/td>
+&lt;td>Occitan&lt;/td>
+&lt;td>6MB&lt;/td>
+&lt;td>3MB&lt;/td>
+&lt;td>12MB&lt;/td>
+&lt;td>5MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>or&lt;/td>
+&lt;td>Odia&lt;/td>
+&lt;td>259MB&lt;/td>
+&lt;td>196MB&lt;/td>
+&lt;td>538MB&lt;/td>
+&lt;td>357MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>os&lt;/td>
+&lt;td>Ossetic&lt;/td>
+&lt;td>12MB&lt;/td>
+&lt;td>10MB&lt;/td>
+&lt;td>11MB&lt;/td>
+&lt;td>6MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pam&lt;/td>
+&lt;td>Pampanga&lt;/td>
+&lt;td>763B&lt;/td>
+&lt;td>307B&lt;/td>
+&lt;td>3KB&lt;/td>
+&lt;td>3KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ps&lt;/td>
+&lt;td>Pashto&lt;/td>
+&lt;td>378MB&lt;/td>
+&lt;td>253MB&lt;/td>
+&lt;td>404MB&lt;/td>
+&lt;td>286MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>fa&lt;/td>
+&lt;td>Persian&lt;/td>
+&lt;td>84GB&lt;/td>
+&lt;td>39GB&lt;/td>
+&lt;td>79GB&lt;/td>
+&lt;td>35GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pms&lt;/td>
+&lt;td>Piedmontese&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>4MB&lt;/td>
+&lt;td>3MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pl&lt;/td>
+&lt;td>Polish&lt;/td>
+&lt;td>116GB&lt;/td>
+&lt;td>50GB&lt;/td>
+&lt;td>122GB&lt;/td>
+&lt;td>48GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pt&lt;/td>
+&lt;td>Portuguese&lt;/td>
+&lt;td>132GB&lt;/td>
+&lt;td>67GB&lt;/td>
+&lt;td>159GB&lt;/td>
+&lt;td>71GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pa&lt;/td>
+&lt;td>Punjabi&lt;/td>
+&lt;td>799MB&lt;/td>
+&lt;td>481MB&lt;/td>
+&lt;td>769MB&lt;/td>
+&lt;td>430MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>qu&lt;/td>
+&lt;td>Quechua&lt;/td>
+&lt;td>80KB&lt;/td>
+&lt;td>68KB&lt;/td>
+&lt;td>322KB&lt;/td>
+&lt;td>230KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ro&lt;/td>
+&lt;td>Romanian&lt;/td>
+&lt;td>26GB&lt;/td>
+&lt;td>11GB&lt;/td>
+&lt;td>37GB&lt;/td>
+&lt;td>15GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>rm&lt;/td>
+&lt;td>Romansh&lt;/td>
+&lt;td>7KB&lt;/td>
+&lt;td>6KB&lt;/td>
+&lt;td>3KB&lt;/td>
+&lt;td>3KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bxr&lt;/td>
+&lt;td>Russia Buriat&lt;/td>
+&lt;td>12KB&lt;/td>
+&lt;td>10KB&lt;/td>
+&lt;td>22KB&lt;/td>
+&lt;td>18KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ru&lt;/td>
+&lt;td>Russian&lt;/td>
+&lt;td>1239GB&lt;/td>
+&lt;td>609GB&lt;/td>
+&lt;td>1201GB&lt;/td>
+&lt;td>542GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>rue&lt;/td>
+&lt;td>Rusyn&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>247B&lt;/td>
+&lt;td>247B&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sah&lt;/td>
+&lt;td>Sakha&lt;/td>
+&lt;td>43MB&lt;/td>
+&lt;td>27MB&lt;/td>
+&lt;td>57MB&lt;/td>
+&lt;td>39MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sa&lt;/td>
+&lt;td>Sanskrit&lt;/td>
+&lt;td>96MB&lt;/td>
+&lt;td>38MB&lt;/td>
+&lt;td>72MB&lt;/td>
+&lt;td>43MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sco&lt;/td>
+&lt;td>Scots&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>1KB&lt;/td>
+&lt;td>&lt;a href='https://github.com/oscar-corpus/corpus/issues?q=is%3Aissue+is%3Aopen+label:lang:sco'>
+&lt;img width="750rem" src='https://img.shields.io/github/issues/oscar-corpus/corpus/lang:sco?label=sco&amp;style=for-the-badge' />
+&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>gd&lt;/td>
+&lt;td>Scottish Gaelic&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sr&lt;/td>
+&lt;td>Serbian&lt;/td>
+&lt;td>4GB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>6GB&lt;/td>
+&lt;td>3GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sh&lt;/td>
+&lt;td>Serbian (Latin)&lt;/td>
+&lt;td>25MB&lt;/td>
+&lt;td>6MB&lt;/td>
+&lt;td>13MB&lt;/td>
+&lt;td>9MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>scn&lt;/td>
+&lt;td>Sicilian&lt;/td>
+&lt;td>3KB&lt;/td>
+&lt;td>2KB&lt;/td>
+&lt;td>4KB&lt;/td>
+&lt;td>3KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sd&lt;/td>
+&lt;td>Sindhi&lt;/td>
+&lt;td>363MB&lt;/td>
+&lt;td>274MB&lt;/td>
+&lt;td>75MB&lt;/td>
+&lt;td>50MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>si&lt;/td>
+&lt;td>Sinhala&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>840MB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>791MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sk&lt;/td>
+&lt;td>Slovak&lt;/td>
+&lt;td>9GB&lt;/td>
+&lt;td>4GB&lt;/td>
+&lt;td>14GB&lt;/td>
+&lt;td>6GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sl&lt;/td>
+&lt;td>Slovenian&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>4GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>so&lt;/td>
+&lt;td>Somali&lt;/td>
+&lt;td>62KB&lt;/td>
+&lt;td>15KB&lt;/td>
+&lt;td>15KB&lt;/td>
+&lt;td>13KB&lt;/td>
+&lt;td>&lt;a href='https://github.com/oscar-corpus/corpus/issues?q=is%3Aissue+is%3Aopen+label:lang:so'>
+&lt;img width="750rem" src='https://img.shields.io/github/issues/oscar-corpus/corpus/lang:so?label=so&amp;style=for-the-badge' />
+&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>azb&lt;/td>
+&lt;td>South Azerbaijani&lt;/td>
+&lt;td>28MB&lt;/td>
+&lt;td>19MB&lt;/td>
+&lt;td>47MB&lt;/td>
+&lt;td>29MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>es&lt;/td>
+&lt;td>Spanish&lt;/td>
+&lt;td>297GB&lt;/td>
+&lt;td>159GB&lt;/td>
+&lt;td>342GB&lt;/td>
+&lt;td>160GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>su&lt;/td>
+&lt;td>Sundanese&lt;/td>
+&lt;td>216KB&lt;/td>
+&lt;td>145KB&lt;/td>
+&lt;td>397KB&lt;/td>
+&lt;td>274KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sw&lt;/td>
+&lt;td>Swahili&lt;/td>
+&lt;td>13MB&lt;/td>
+&lt;td>8MB&lt;/td>
+&lt;td>11MB&lt;/td>
+&lt;td>7MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sv&lt;/td>
+&lt;td>Swedish&lt;/td>
+&lt;td>46GB&lt;/td>
+&lt;td>26GB&lt;/td>
+&lt;td>43GB&lt;/td>
+&lt;td>19GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tg&lt;/td>
+&lt;td>Tajik&lt;/td>
+&lt;td>396MB&lt;/td>
+&lt;td>260MB&lt;/td>
+&lt;td>985MB&lt;/td>
+&lt;td>321MB&lt;/td>
+&lt;td>&lt;a href='https://github.com/oscar-corpus/corpus/issues?q=is%3Aissue+is%3Aopen+label:lang:tg'>
+&lt;img width="750rem" src='https://img.shields.io/github/issues/oscar-corpus/corpus/lang:tg?label=tg&amp;style=for-the-badge' />
+&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ta&lt;/td>
+&lt;td>Tamil&lt;/td>
+&lt;td>9GB&lt;/td>
+&lt;td>5GB&lt;/td>
+&lt;td>10GB&lt;/td>
+&lt;td>5GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tt&lt;/td>
+&lt;td>Tatar&lt;/td>
+&lt;td>701MB&lt;/td>
+&lt;td>319MB&lt;/td>
+&lt;td>947MB&lt;/td>
+&lt;td>424MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>te&lt;/td>
+&lt;td>Telugu&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>3GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>th&lt;/td>
+&lt;td>Thai&lt;/td>
+&lt;td>38GB&lt;/td>
+&lt;td>17GB&lt;/td>
+&lt;td>62GB&lt;/td>
+&lt;td>26GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bo&lt;/td>
+&lt;td>Tibetan&lt;/td>
+&lt;td>195MB&lt;/td>
+&lt;td>144MB&lt;/td>
+&lt;td>439MB&lt;/td>
+&lt;td>358MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>gsw&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>Alemannic German&lt;/td>
+&lt;td>5MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>7MB&lt;/td>
+&lt;td>5MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tr&lt;/td>
+&lt;td>Turkish&lt;/td>
+&lt;td>63GB&lt;/td>
+&lt;td>28GB&lt;/td>
+&lt;td>73GB&lt;/td>
+&lt;td>33GB&lt;/td>
+&lt;td>&lt;a href='https://github.com/oscar-corpus/corpus/issues?q=is%3Aissue+is%3Aopen+label:lang:tr'>
+&lt;img width="750rem" src='https://img.shields.io/github/issues/oscar-corpus/corpus/lang:tr?label=tr&amp;style=for-the-badge' />
+&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tk&lt;/td>
+&lt;td>Turkmen&lt;/td>
+&lt;td>10MB&lt;/td>
+&lt;td>7MB&lt;/td>
+&lt;td>25MB&lt;/td>
+&lt;td>20MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tyv&lt;/td>
+&lt;td>Tuvinian&lt;/td>
+&lt;td>11KB&lt;/td>
+&lt;td>8KB&lt;/td>
+&lt;td>9KB&lt;/td>
+&lt;td>7KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>uk&lt;/td>
+&lt;td>Ukrainian&lt;/td>
+&lt;td>56GB&lt;/td>
+&lt;td>29GB&lt;/td>
+&lt;td>53GB&lt;/td>
+&lt;td>28GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>eml&lt;/td>
+&lt;td>Emiliano-Romagnolo&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>25KB&lt;/td>
+&lt;td>23KB&lt;/td>
+&lt;td>22KB&lt;/td>
+&lt;td>20KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>hsb&lt;/td>
+&lt;td>Upper Sorbian&lt;/td>
+&lt;td>4MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ur&lt;/td>
+&lt;td>Urdu&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>2GB&lt;/td>
+&lt;td>1GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ug&lt;/td>
+&lt;td>Uyghur&lt;/td>
+&lt;td>127MB&lt;/td>
+&lt;td>86MB&lt;/td>
+&lt;td>187MB&lt;/td>
+&lt;td>123MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>uz&lt;/td>
+&lt;td>Uzbek&lt;/td>
+&lt;td>21MB&lt;/td>
+&lt;td>11MB&lt;/td>
+&lt;td>56MB&lt;/td>
+&lt;td>28MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vec&lt;/td>
+&lt;td>Venetian&lt;/td>
+&lt;td>18KB&lt;/td>
+&lt;td>16KB&lt;/td>
+&lt;td>37KB&lt;/td>
+&lt;td>28KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vi&lt;/td>
+&lt;td>Vietnamese&lt;/td>
+&lt;td>72GB&lt;/td>
+&lt;td>33GB&lt;/td>
+&lt;td>87GB&lt;/td>
+&lt;td>42GB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vo&lt;/td>
+&lt;td>Volapük&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>wa&lt;/td>
+&lt;td>Walloon&lt;/td>
+&lt;td>280KB&lt;/td>
+&lt;td>207KB&lt;/td>
+&lt;td>511KB&lt;/td>
+&lt;td>329KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>war&lt;/td>
+&lt;td>Waray&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>2MB&lt;/td>
+&lt;td>4MB&lt;/td>
+&lt;td>4MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>cy&lt;/td>
+&lt;td>Welsh&lt;/td>
+&lt;td>223MB&lt;/td>
+&lt;td>139MB&lt;/td>
+&lt;td>307MB&lt;/td>
+&lt;td>180MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>vls&lt;/td>
+&lt;td>West Flemish&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>134B&lt;/td>
+&lt;td>134B&lt;/td>
+&lt;td>&lt;a href='https://github.com/oscar-corpus/corpus/issues?q=is%3Aissue+is%3Aopen+label:lang:vls'>
+&lt;img width="750rem" src='https://img.shields.io/github/issues/oscar-corpus/corpus/lang:vls?label=vls&amp;style=for-the-badge' />
+&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>fy&lt;/td>
+&lt;td>Western Frisian&lt;/td>
+&lt;td>35MB&lt;/td>
+&lt;td>26MB&lt;/td>
+&lt;td>82MB&lt;/td>
+&lt;td>57MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mrj&lt;/td>
+&lt;td>Western Mari&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>1MB&lt;/td>
+&lt;td>645KB&lt;/td>
+&lt;td>521KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pnb&lt;/td>
+&lt;td>Western Panjabi&lt;/td>
+&lt;td>11MB&lt;/td>
+&lt;td>9MB&lt;/td>
+&lt;td>68MB&lt;/td>
+&lt;td>45MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>wuu&lt;/td>
+&lt;td>Wu Chinese&lt;/td>
+&lt;td>111KB&lt;/td>
+&lt;td>32KB&lt;/td>
+&lt;td>145KB&lt;/td>
+&lt;td>69KB&lt;/td>
+&lt;td>&lt;a href='https://github.com/oscar-corpus/corpus/issues?q=is%3Aissue+is%3Aopen+label:lang:wuu'>
+&lt;img width="750rem" src='https://img.shields.io/github/issues/oscar-corpus/corpus/lang:wuu?label=wuu&amp;style=for-the-badge' />
+&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>yi&lt;/td>
+&lt;td>Yiddish&lt;/td>
+&lt;td>146MB&lt;/td>
+&lt;td>87MB&lt;/td>
+&lt;td>199MB&lt;/td>
+&lt;td>93MB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>yo&lt;/td>
+&lt;td>Yoruba&lt;/td>
+&lt;td>56KB&lt;/td>
+&lt;td>26KB&lt;/td>
+&lt;td>229KB&lt;/td>
+&lt;td>120KB&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="oscar-schema-v110">OSCAR Schema v1.1.0&lt;/h2>
+&lt;p>The new OSCAR schema incorporates backward-compatible changes.&lt;/p>
+&lt;h3 id="changes-1">Changes&lt;/h3>
+&lt;p>The old OSCAR Schema v1.0 featured the following file hierarchy, in an uncompressed form:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── af
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── af_sha256.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── af.txt.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── de_sha256.txt &lt;span class="c1"># Checksum file &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── de.txt.gz &lt;span class="c1"># Textual content&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── en
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── en_part_1.txt.gz &lt;span class="c1"># Multipart example&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── en_part_2.txt.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── en_sha256.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── yi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── yi_sha256.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── yi.txt.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── zh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── zh_sha256.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └── zh.txt.gz
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The new OSCAR Schema v1.1 features the following file hierarchy (some languages omitted):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── af
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── af_meta.jsonl.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── af_sha256.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── af.txt.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── de_meta.jsonl.gz &lt;span class="c1"># Metadata, in JSONLines format&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── de_sha256.txt &lt;span class="c1"># Checksum file &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── de.txt.gz &lt;span class="c1"># Textual content&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── en
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── en_meta_part_1.jsonl.gz &lt;span class="c1"># Multipart example&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── en_meta_part_2.jsonl.gz &lt;span class="c1"># Each part is independent,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── en_part_1.txt.gz &lt;span class="c1"># Ex: en_part_2.txt.gz and en_meta_part_2.jsonl.gz&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── en_part_2.txt.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── en_sha256.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── yi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── yi_meta.jsonl.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── yi_sha256.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── yi.txt.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── zh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── zh_meta.jsonl.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── zh_sha256.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └── zh.txt.gz
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="file-formats">File formats&lt;/h3>
+&lt;h4 id="txt-files">&lt;code>.txt&lt;/code> files&lt;/h4>
+&lt;p>Lines are newline-separated, and documents are double-newline separated.
+In other terms, there is a blank line between each document.&lt;/p>
+&lt;h4 id="jsonl-files">&lt;code>.jsonl&lt;/code> files&lt;/h4>
+&lt;p>These are the metadata, in &lt;a href="https://jsonlines.org/" target="_blank" rel="noopener">JSONLines&lt;/a> format.&lt;/p>
+&lt;p>Each line follows the following JSON Scheme:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;$schema&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://json-schema.org/draft-07/schema#&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;title&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Metadata&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;description&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Holds record headers.\n\nEach metadata is linked to a specific paragraph/text zone&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;object&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;required&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;headers&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;nb_sentences&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;offset&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;properties&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;headers&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;object&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;additionalProperties&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;string&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;nb_sentences&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;integer&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;format&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;uint&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;minimum&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;offset&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;integer&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;format&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;uint&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;minimum&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;headers&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="c1">// these headers keys are *almost* always present.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;content-length&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s2">&amp;#34;11062&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// the content length is not changed and reflects the
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// length before filtering and eventual deduplication.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;warc-target-uri&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s2">&amp;#34;...&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;warc-type&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s2">&amp;#34;conversion&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;content-type&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s2">&amp;#34;text/plain&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;warc-date&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s2">&amp;#34;2021-02-24T17:55:29Z&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// Following WARC specification, it is the crawl date.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;warc-identified-content-language&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s2">&amp;#34;eng,zho&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;warc-refers-to&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s2">&amp;#34;&amp;lt;urn:uuid:c649de0e-42a3-4e69-b675-98e28e084698&amp;gt;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;warc-block-digest&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s2">&amp;#34;sha1:V4PYYGYA6ZYA2WACDKSNL6NXGDN6XK6X&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;warc-record-id&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s2">&amp;#34;&amp;lt;urn:uuid:121a822f-5362-4559-8891-d085415cdd90&amp;gt;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;offset&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// Related text is in the text file, from lines offset+1 to lines offset+nb_sentences.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;nb_sentences&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">9&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="lang_sha256txt-files">&lt;code>&amp;lt;lang&amp;gt;_sha256.txt&lt;/code> files&lt;/h4>
+&lt;p>These are used to check for eventual corruption during download.
+They can be used by running &lt;code>sha256sum -c &amp;lt;lang&amp;gt;_sha256.txt&lt;/code>.&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>&lt;code>gsw&lt;/code> is &lt;a href="https://www.loc.gov/standards/iso639-2/php/langcodes_name.php?code_ID=177" target="_blank" rel="noopener">ISO 639-2&lt;/a> for Alemannic German. It was previously identified as &lt;code>als&lt;/code> in previous OSCAR versions, due to a &lt;a href="https://github.com/facebookresearch/fastText/issues/482" target="_blank" rel="noopener">bug&lt;/a> in fasttext.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>&lt;code>eml&lt;/code> identification tag is deprecated and corresponds to &lt;code>rgn&lt;/code> and &lt;code>egl&lt;/code> tags in &lt;a href="https://iso639-3.sil.org/request/2008-040" target="_blank" rel="noopener">ISO 639-3&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Ungoliant: An Optimized Pipeline for the Generation of a Very Large-Scale Multilingual Web Corpus</title><link>https://oscar-project.org/publication/2021/cmlc9/ungoliant/</link><pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate><guid>https://oscar-project.org/publication/2021/cmlc9/ungoliant/</guid><description/></item><item><title>Ungoliant: An Optimized Pipeline for the Generation of a Very Large-Scale Multilingual Web Corpus</title><link>https://oscar-project.org/talk/cmlc9/</link><pubDate>Mon, 12 Jul 2021 10:00:00 +0000</pubDate><guid>https://oscar-project.org/talk/cmlc9/</guid><description/></item></channel></rss>
