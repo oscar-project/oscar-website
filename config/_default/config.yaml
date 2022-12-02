@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: OSCAR # Website name
-baseurl: 'https://oscar-corpus.com/' # Website URL
+baseurl: 'https://oscar-project.org/' # Website URL
 
 ############################
 ## LANGUAGE

@@ -9262,6 +9262,34 @@ ul.ul-edu li .description p.institution {
   background-color: #000;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04), 0 0 1px rgba(255, 255, 255, 0.96); }
 
+.wg-about-avatar .avatar {
+  width: auto;
+  height: auto;
+  max-width: 225px;
+  max-height: 225px; }
+
+.wg-about-avatar #profile .network-icon {
+  margin-top: 0.5rem; }
+
+.wg-about-avatar ul.network-icon .big-icon {
+  font-size: 1.5rem; }
+
+@media (max-width: 767.98px) {
+  .wg-about-avatar .network-icon li {
+    /* Min 48px Lighthouse tap targets on mobile */
+    margin-right: 12px; } }
+
+.wg-about-avatar .dark .portrait-title h3 {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold; }
+
+.wg-about-avatar .dark .portrait-title h2 {
+  color: #fff;
+  font-weight: bold; }
+
+.wg-about-avatar .bio-text {
+  max-width: 680px; }
+
 /*************************************************
  *  Contact
  **************************************************/

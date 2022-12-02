@@ -51,12 +51,15 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/oscarnlp
+- icon: mastodon
+  icon_pack: fab
+  link: https://mastodon.social/@oscarproj
 #- icon: google-scholar
 #  icon_pack: ai
 #  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/oscar-corpus
+  link: https://github.com/oscar-project
 - icon: discord
   icon_pack: fab
   link: https://discord.com/invite/4JNg9FTar4
