@@ -5,8 +5,6 @@ title: Pedro Ortiz Suarez
 # Is this the primary user of the site?
 superuser: true
 
-weight: 1
-
 # Role/position/tagline
 role: "Postdoctoral Researcher"
 
@@ -51,7 +49,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:pedro.ortiz@uni-mannheim.de'  # For a direct email link, use "mailto:test@example.org".
+  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.fr/citations?user=5sNdyvkAAAAJ&hl=en
@@ -82,6 +80,9 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/pjox/
+- icon: mastodon
+  icon_pack: fab
+  link: https://mastodon.social/@pjox
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/pjox13
