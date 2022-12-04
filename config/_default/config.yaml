@@ -69,7 +69,7 @@ related:
       weight: 70
 security:
   _merge: deep
-  sitemap:
+sitemap:
   _merge: deep
 minify:
   _merge: deep
