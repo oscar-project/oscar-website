@@ -5,8 +5,6 @@ title: Patrick Teufert
 # Is this the primary user of the site?
 superuser: true
 
-weight: 10
-
 # Role/position/tagline
 role: "Data Scientist"
 
@@ -84,6 +82,8 @@ email: ""
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
+
+weight: 20
 
 # Organizational groups that you belong to (for People widget)
 #   Remove this if you are not using the People widget.
