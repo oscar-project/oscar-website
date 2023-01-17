@@ -11,6 +11,7 @@ weight: 80
 role: "Open Source Project on Multilinagual Resources for Machine Learning"
 
 # Organizations/Affiliations
+
 # organizations: 
 # - name: Inria
 #   url: "https://www.inria.fr/en/"
@@ -18,7 +19,7 @@ role: "Open Source Project on Multilinagual Resources for Machine Learning"
 #   url: "https://almanach.inria.fr/index-en.html"
 # - name: PRAIRIE
 #   url: "https://prairie-institute.fr/"
-  
+
 # Short bio (displayed in user profile at end of posts)
 bio: Open Source Project on Multilinagual Resources for Machine Learning
 
@@ -100,6 +101,7 @@ Join our Discord community [here](https://discord.com/invite/4JNg9FTar4)!
 Data is distributed by language in both original and deduplicated form. There are currently 166 different languages available. If you use OSCAR please consider giving us some feedback by writing to our [mail address](#contact) down below. Also consider citing our [papers](#featured).
 
 If you want to contribute to OSCAR, for example by tokenizing one of the corpora for a particular language, or by helping us translate our webpage, please open a pull request [here](https://github.com/oscar-corpus/oscar-website).
+
 
 The OSCAR Project is mainly funded by [Inria](https://www.inria.fr/en) (project-team [ALMAnaCH](https://almanach.inria.fr/index-en.html)), the [PRAIRIE institute](https://prairie-institute.fr/), [DFKI](https://www.dfki.de/en/web), and by the German Federal Ministry for Economic Affairs and Climate Action ([BMWK](https://www.bmwk.de/Navigation/EN/Home/home.html)) through the project [OpenGPT-X](https://opengpt-x.de/en/). The project was also previously funded by [The University of Mannheim](https://www.uni-mannheim.de/en/).
 
