@@ -1,6 +1,6 @@
 ---
 # Display name
-title: DWS at University of Mannheim
+title: DWS at the University of Mannheim
 
 # Is this the primary user of the site?
 superuser: false
@@ -100,4 +100,4 @@ user_groups:
 - Partners
 ---
 
-Data and Web Science Group at the University of Mannheim conducts research and offer teaching in the areas data analytics, artificial intelligence, natural language processing, and data integration. The group consists of 7 professors and around 35 researchers and supporting staff members.
+The Data and Web Science Group at the University of Mannheim conducts research and offer teaching in the areas data analytics, artificial intelligence, natural language processing, and data integration. The group consists of 7 professors and around 35 researchers and supporting staff members.
