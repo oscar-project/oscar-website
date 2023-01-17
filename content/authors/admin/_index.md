@@ -8,17 +8,20 @@ superuser: true
 weight: 80
 
 # Role/position
-role: "Humongous Corpus"
+role: "Open Source Project on Multilinagual Resources for Machine Learning"
 
 # Organizations/Affiliations
-organizations: 
-- name: Inria
-  url: "https://www.inria.fr/en/"
-- name: ALMAnaCH
-  url: "https://almanach.inria.fr/index-en.html"
+
+# organizations: 
+# - name: Inria
+#   url: "https://www.inria.fr/en/"
+# - name: ALMAnaCH
+#   url: "https://almanach.inria.fr/index-en.html"
+# - name: PRAIRIE
+#   url: "https://prairie-institute.fr/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Humongous multilingual Corpus put together by Pedro Ortiz Suarez, Julien Abadji, Benoît Sagot and Laurent Romary, researchers at the ALMAnaCH research team at Inria
+bio: Open Source Project on Multilinagual Resources for Machine Learning
 
 #interests:
 #- Corpus Linguistics
@@ -85,7 +88,7 @@ highlight_name: false
 #- Visitors
 ---
 
-OSCAR or **O**pen **S**uper-large **C**rawled **A**ggregated co**R**pus is a huge multilingual corpus obtained by language classification and filtering of the [Common Crawl](https://commoncrawl.org/) corpus using the [Ungoliant](https://github.com/oscar-corpus/ungoliant) architecture.
+The OSCAR project (**O**pen **S**uper-large **C**rawled **A**ggregated co**R**pus) is an Open Source project aiming to provide web-based multilingual resources and datasets for Machine Learning (ML) and Artificial Intelligence (AI) applications. The project focuses specifically in providing large quantities of unannotated raw data that is commonly used in the pre-training of large deep learning models. The OSCAR project has developed [high-performance data pipelines](https://github.com/oscar-corpus/ungoliant) specifically conceived to classify and filter large amounts of [web data](https://commoncrawl.org/). The project has also put special attention in improving the data quality of web-based corpora as well as providing data for low-resource languages, so that these new ML/AI technologies are accessible to as many communities as possible.
 
 {{% callout note %}}
 Grab the latest OSCAR release [here](post/oscar-v22-01/)!
@@ -99,8 +102,7 @@ Data is distributed by language in both original and deduplicated form. There ar
 
 If you want to contribute to OSCAR, for example by tokenizing one of the corpora for a particular language, or by helping us translate our webpage, please open a pull request [here](https://github.com/oscar-corpus/oscar-website).
 
-The corpus was put together by [Pedro Ortiz Suarez](https://portizs.eu/), [Julien Abadji](https://ujj.space), [Benoît Sagot](http://alpage.inria.fr/~sagot/), and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
+
+The OSCAR Project is mainly funded by [Inria](https://www.inria.fr/en) (project-team [ALMAnaCH](https://almanach.inria.fr/index-en.html)), the [PRAIRIE institute](https://prairie-institute.fr/), [DFKI](https://www.dfki.de/en/web), and by the German Federal Ministry for Economic Affairs and Climate Action ([BMWK](https://www.bmwk.de/Navigation/EN/Home/home.html)) through the project [OpenGPT-X](https://opengpt-x.de/en/). The project was also previously funded by [The University of Mannheim](https://www.uni-mannheim.de/en/).
 
 If you are interested in OSCAR and would like to access the corpus, send us a mail using the [mail address down below](#contact), with "OSCAR Access Request" as mail title. Please include your name, last name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR.
-
-Even though OSCAR is not [Postcardware](https://en.wikipedia.org/wiki/Shareware#Postcardware), we do appreciate when our users send us a postcard. If you want to send us one, you can find the address in the contact section down below.

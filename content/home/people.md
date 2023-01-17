@@ -7,7 +7,7 @@ widget: people
 headless: true
 
 # Order that this section appears on the page.
-weight: 20
+weight: 90
 
 title: The OSCAR Team
 subtitle:
@@ -18,6 +18,8 @@ content:
   user_groups:
   - Core
   - Contributors
+  - Funding
+  - Partners
 design:
   show_interests: false
   show_role: true
