@@ -16,14 +16,14 @@ content:
   # Automatically link email and phone or display as text?
   autolink: true
   email: oscar-corpus@inria.fr
-  phone: (+33) 01 80 49 40 00
-  address:
-    street: 'Centre Inria de Paris <br> Équipe ALMAnaCH <br> 2 rue Simone Iff <br> CS 42112'
-    city: Paris
-    region: Île-de-France
-    postcode: '75012'
-    country: France
-    country_code: FR
+  # phone: (+33) 01 80 49 40 00
+  # address:
+  #   street: 'Centre Inria de Paris <br> Équipe ALMAnaCH <br> 2 rue Simone Iff <br> CS 42112'
+  #   city: Paris
+  #   region: Île-de-France
+  #   postcode: '75012'
+  #   country: France
+  #   country_code: FR
   contact_links:
   - icon: discord
     icon_pack: fab
