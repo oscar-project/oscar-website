@@ -16,7 +16,9 @@ organizations:
   url: "https://www.inria.fr/en/"
 - name: ALMAnaCH
   url: "https://almanach.inria.fr/index-en.html"
-
+- name: PRAIRIE
+  url: "https://prairie-institute.fr/"
+  
 # Short bio (displayed in user profile at end of posts)
 bio: Humongous multilingual Corpus put together by Pedro Ortiz Suarez, Julien Abadji, Benoît Sagot and Laurent Romary, researchers at the ALMAnaCH research team at Inria
 
@@ -99,7 +101,7 @@ Data is distributed by language in both original and deduplicated form. There ar
 
 If you want to contribute to OSCAR, for example by tokenizing one of the corpora for a particular language, or by helping us translate our webpage, please open a pull request [here](https://github.com/oscar-corpus/oscar-website).
 
-The corpus was put together by [Pedro Ortiz Suarez](https://portizs.eu/), [Julien Abadji](https://ujj.space), [Benoît Sagot](http://alpage.inria.fr/~sagot/), and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary).
+The corpus was put together by [Pedro Ortiz Suarez](https://portizs.eu/), [Julien Abadji](https://ujj.space), [Benoît Sagot](http://alpage.inria.fr/~sagot/), and [Laurent Romary](https://cv.archives-ouvertes.fr/laurentromary). OSCAR is mainly funded by Inria (project-team ALMAnaCH) and by the PRAIRIE institute.
 
 If you are interested in OSCAR and would like to access the corpus, send us a mail using the [mail address down below](#contact), with "OSCAR Access Request" as mail title. Please include your name, last name, affiliation, contact details, which languages do you need and a brief description of how you intend to use OSCAR.
 
