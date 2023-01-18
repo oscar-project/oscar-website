@@ -15,7 +15,7 @@ subtitle:
 content:
   # Automatically link email and phone or display as text?
   autolink: true
-  email: oscar-corpus@inria.fr
+  email: contact@oscar-project.org
   # phone: (+33) 01 80 49 40 00
   # address:
   #   street: 'Centre Inria de Paris <br> Équipe ALMAnaCH <br> 2 rue Simone Iff <br> CS 42112'

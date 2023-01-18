@@ -50,7 +50,7 @@ bio: Open Source Project on Multilinagual Resources for Machine Learning
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:oscar-corpus@inria.fr'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:contact@oscar-project.org'  # For a direct email link, use "mailto:test@example.org".
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/oscarnlp
