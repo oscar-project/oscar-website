@@ -6,7 +6,7 @@ title: Laurent Romary
 superuser: true
 
 # Role/position/tagline
-role: "Senior researcher"
+role: "Senior Researcher"
 
 # Organizations/Affiliations to show in About widget
 organizations: 
