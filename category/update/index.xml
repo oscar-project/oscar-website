@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>update | OSCAR</title><link>https://oscar-project.org/category/update/</link><atom:link href="https://oscar-project.org/category/update/index.xml" rel="self" type="application/rss+xml"/><description>update</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2022 15:02:11 +0200</lastBuildDate><image><url>https://oscar-project.org/media/sharing.png</url><title>update</title><link>https://oscar-project.org/category/update/</link></image><item><title>OSCAR 22.01</title><link>https://oscar-project.org/post/oscar-v22-01/</link><pubDate>Sat, 01 Jan 2022 15:02:11 +0200</pubDate><guid>https://oscar-project.org/post/oscar-v22-01/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
-&lt;p>If you want to get the new corpus please send us a mail using the &lt;a href="https://oscar-project.org/#contact">mail in our homepage&lt;/a>, with &amp;ldquo;OSCAR Access Request&amp;rdquo; as mail title.
+&lt;p>For prople working in research, if you want to get the new corpus please send us a mail using the &lt;a href="https://oscar-project.org/#contact">mail in our homepage&lt;/a>, with &amp;ldquo;OSCAR Access Request&amp;rdquo; as mail title. Please send you mail using your institutional/academic address.
 We will need the following information to properly create your account. Missing information could delay your access by days:&lt;/p>
 &lt;ul>
 &lt;li>First and last name:&lt;/li>
-&lt;li>Affiliation:&lt;/li>
+&lt;li>Affiliation (mandatory):&lt;/li>
 &lt;li>Contact details:&lt;/li>
 &lt;li>Corpus version (or all if you need multiple ones):&lt;/li>
 &lt;li>Languages:&lt;/li>
@@ -19,7 +19,7 @@ Please do not create a new Huma-Num account by yourself, this will delay your ac
 &lt;/div>
 &lt;div class="alert alert-note">
 &lt;div>
-OSCAR 22.01 is also freely available on the &lt;a href="https://huggingface.co/datasets/oscar-corpus/OSCAR-2201" target="_blank" rel="noopener">Hugging Face&amp;rsquo;s datasets hub&lt;/a>! 🚀
+OSCAR 22.01 is also freely available on the &lt;a href="https://huggingface.co/datasets/oscar-corpus/OSCAR-2201" target="_blank" rel="noopener">Hugging Face&amp;rsquo;s datasets hub&lt;/a> for individuals! 🚀
 &lt;/div>
 &lt;/div>
 &lt;p>OSCAR or Open Super-large Crawled Aggregated coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus using &lt;a href="https://github.com/oscar-corpus/ungoliant" target="_blank" rel="noopener">Ungoliant&lt;/a>.&lt;/p>
