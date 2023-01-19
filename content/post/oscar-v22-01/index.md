@@ -43,9 +43,9 @@ We will need the following information to properly create your account. Missing 
 Please do not create a new Huma-Num account by yourself, this will delay your access to the corpus by weeks! We will create an account for you. :calendar:
 {{% /callout %}}
 
-<!-- {{% callout note %}}
-OSCAR 22.01 is now freely available on the [Hugging Face's datasets hub](https://huggingface.co/datasets/oscar-corpus/OSCAR-2109)! :rocket:
-{{% /callout %}} -->
+{{% callout note %}}
+OSCAR 22.01 is also freely available on the [Hugging Face's datasets hub](https://huggingface.co/datasets/oscar-corpus/OSCAR-2201)! :rocket:
+{{% /callout %}}
 
 OSCAR or Open Super-large Crawled Aggregated coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus using [Ungoliant](https://github.com/oscar-corpus/ungoliant).
 
