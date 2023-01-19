@@ -17,13 +17,11 @@ We will need the following information to properly create your account. Missing 
 Please do not create a new Huma-Num account by yourself, this will delay your access to the corpus by weeks! We will create an account for you. 📆
 &lt;/div>
 &lt;/div>
-&lt;!--
 &lt;div class="alert alert-note">
 &lt;div>
-OSCAR 22.01 is now freely available on the &lt;a href="https://huggingface.co/datasets/oscar-corpus/OSCAR-2109" target="_blank" rel="noopener">Hugging Face&amp;rsquo;s datasets hub&lt;/a>! 🚀
+OSCAR 22.01 is also freely available on the &lt;a href="https://huggingface.co/datasets/oscar-corpus/OSCAR-2201" target="_blank" rel="noopener">Hugging Face&amp;rsquo;s datasets hub&lt;/a>! 🚀
 &lt;/div>
 &lt;/div>
--->
 &lt;p>OSCAR or Open Super-large Crawled Aggregated coRpus is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus using &lt;a href="https://github.com/oscar-corpus/ungoliant" target="_blank" rel="noopener">Ungoliant&lt;/a>.&lt;/p>
 &lt;p>This release of OSCAR is the third one, and is versioned using &lt;a href="https://calver.org/" target="_blank" rel="noopener">CalVer&lt;/a>.&lt;/p>
 &lt;h2 id="version-info">Version info&lt;/h2>
