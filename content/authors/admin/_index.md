@@ -8,7 +8,7 @@ superuser: true
 weight: 80
 
 # Role/position
-role: "Open Source Project on Multilinagual Resources for Machine Learning"
+role: "Open Source Project on Multilingual Resources for Machine Learning"
 
 # Organizations/Affiliations
 
@@ -21,7 +21,7 @@ role: "Open Source Project on Multilinagual Resources for Machine Learning"
 #   url: "https://prairie-institute.fr/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Open Source Project on Multilinagual Resources for Machine Learning
+bio: Open Source Project on Multilingual Resources for Machine Learning
 
 #interests:
 #- Corpus Linguistics
