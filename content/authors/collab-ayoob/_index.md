@@ -1,20 +1,20 @@
 ---
 # Display name
-title: Sebastian Nagel
+title: Ayyoob Imani
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position/tagline
-role: "Crawl Engineer & Data Scientist"
+role: "Ph.D. student at LMU Munich"
 
 # Organizations/Affiliations to show in About widget
 organizations: 
-- name: Common Crawl
-  url: "https://commoncrawl.org/"
+- name: LMU Munich
+  url: "https://www.lmu.de/en/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a programmer and computational linguist living in the south of Germany
+bio: I am a PhD student at Ludwig Ludwig Maximilian University of Munich
 
 # Interests to show in About widget
 # interests:
@@ -38,9 +38,12 @@ social:
 # - icon: envelope
 #   icon_pack: fas
 #   link: ''  # For a direct email link, use "mailto:test@example.org".
-# - icon: google-scholar
-#   icon_pack: ai
-#   link: https://scholar.google.fr/citations?user=cDSr-PUAAAAJ
+- icon: globe
+  icon_pack: fas
+  link: https://ayyoobimani.github.io/
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=vtpOxL8AAAAJ&hl=en
 # - icon: hal
 #   icon_pack: ai
 #   link: https://cv.archives-ouvertes.fr/julien-abadji
@@ -61,13 +64,13 @@ social:
 #   link: https://dblp.uni-trier.de/pers/hd/s/Su=aacute=rez:Pedro_Javier_Ortiz
 - icon: github
   icon_pack: fab
-  link: https://github.com/sebastian-nagel
+  link: https://github.com/ayyoobimani
 # - icon: gitlab
 #   icon_pack: fab
 #   link: https://gitlab.com/uinelj
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/sebastiannagel/
+  link: https://linkedin.com/in/ayyoob-imanigooghari-49abb68a/
 # - icon: twitter
 #   icon_pack: fab
 #   link: https://twitter.com/uinelj
@@ -83,7 +86,7 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 
-weight: 10
+weight: 20
 
 # Organizational groups that you belong to (for People widget)
 #   Remove this if you are not using the People widget.
@@ -91,13 +94,6 @@ user_groups:
 - Collaborators
 ---
 
-Sebastian is a programmer and computational linguist living in the
-south of Germany.  He is responsible for running and maintaining the
-crawler and will support you to use the data.  Prior to joining Common
-Crawl, he worked as software developer at Exorbyte, implementing
-search and data quality solutions.
+I am a PhD student at Ludwig Ludwig Maximilian University of Munich, supervised by prof Hinrich Schuetze. My research is in natural language processing and machine learning.
 
-Sebastian holds a PhD in computational linguistics from University of
-Munich.  He studied linguistics (Slavic languages) and cultural
-anthropology in Munich, Kazan and Prague.  Sebastian is a committer of
-Apache Nutch and a member of the Apache Software Foundation.
+My research focus is on various aspects of multilingual models, including their cross-lingual transferability capability and their applications. I am also interested in parameter-efficient methods, and low-resource learning. 

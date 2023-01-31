@@ -1,33 +1,42 @@
 ---
 # Display name
-title: Sebastian Nagel
+title: Ludwig-Maximilians-Universität München
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position/tagline
-role: "Crawl Engineer & Data Scientist"
+role: "Partner University"
 
 # Organizations/Affiliations to show in About widget
-organizations: 
-- name: Common Crawl
-  url: "https://commoncrawl.org/"
+# organizations: 
+# - name: Data and Web Science Group
+#   url: "https://www.uni-mannheim.de/dws/"
+# - name: University of Mannheim
+#   url: "https://www.uni-mannheim.de/en/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a programmer and computational linguist living in the south of Germany
+# bio: I am a Ph.D. student at the Data and Web Science Group at the University of Mannheim
 
 # Interests to show in About widget
 # interests:
-# - Generative models
-# - Normalizing Flows
-# - Language Models
+# - Text Summarization
+# - Scholarly Document Processing
+# - Information Extraction
+# - Multilinguality in NLP Models
 
 
 # Education to show in About widget
 # education:
 #   courses:
-#   - course: MSc in Computer Science
-#     institution: Université de Cergy-Pontoise / CY Université
+#   - course: Ph.D. in Computer Science
+#     institution: University of Mannheim
+#     year: Present
+#   - course: M.S. in Computer Science
+#     institution: National University of Electro-Communications
+#     year: 2020
+#   - course: B.A. in Information Science
+#     institution: National University of Electro-Communications
 #     year: 2018
 
 # Social/Academic Networking
@@ -37,19 +46,19 @@ bio: I am a programmer and computational linguist living in the south of Germany
 social:
 # - icon: envelope
 #   icon_pack: fas
-#   link: ''  # For a direct email link, use "mailto:test@example.org".
+#   link: 'mailto:sotaro.takeshita@uni-mannheim.de'  # For a direct email link, use "mailto:test@example.org".
 # - icon: google-scholar
 #   icon_pack: ai
-#   link: https://scholar.google.fr/citations?user=cDSr-PUAAAAJ
+#   link: https://scholar.google.com/citations?user=jNhDmicAAAAJ
 # - icon: hal
 #   icon_pack: ai
 #   link: https://cv.archives-ouvertes.fr/julien-abadji
 # - icon: semantic-scholar
 #   icon_pack: ai
-#   link: https://www.semanticscholar.org/author/Julien-Abadji/2122367898
-#- icon: arxiv
-#  icon_pack: ai
-#  link: https://arxiv.org/search/cs?searchtype=author&query=Suárez%2C+P+J+O
+#   link: https://www.semanticscholar.org/author/Sotaro-Takeshita/9390836
+# - icon: arxiv
+#   icon_pack: ai
+#   link: https://arxiv.org/search/cs?searchtype=author&query=Takeshita%2C+S
 # - icon: researchgate
 #   icon_pack: ai
 #   link: https://www.researchgate.net/profile/Julien-Abadji-2
@@ -58,19 +67,19 @@ social:
 #   link: https://orcid.org/0000-0003-4006-8045
 # - icon: dblp
 #   icon_pack: ai
-#   link: https://dblp.uni-trier.de/pers/hd/s/Su=aacute=rez:Pedro_Javier_Ortiz
-- icon: github
-  icon_pack: fab
-  link: https://github.com/sebastian-nagel
+#   link: https://dblp.org/pid/321/4075
+# - icon: github
+#   icon_pack: fab
+#   link: https://github.com/sobamchan
 # - icon: gitlab
 #   icon_pack: fab
 #   link: https://gitlab.com/uinelj
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/in/sebastiannagel/
-# - icon: twitter
+# - icon: linkedin
 #   icon_pack: fab
-#   link: https://twitter.com/uinelj
+#   link: https://www.linkedin.com/in/sotaro-takeshita-920a99198/
+- icon: globe
+  icon_pack: fas
+  link: https://www.lmu.de/en/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -83,21 +92,12 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 
-weight: 10
+weight: 30
 
 # Organizational groups that you belong to (for People widget)
 #   Remove this if you are not using the People widget.
 user_groups:
-- Collaborators
+- Partners
 ---
 
-Sebastian is a programmer and computational linguist living in the
-south of Germany.  He is responsible for running and maintaining the
-crawler and will support you to use the data.  Prior to joining Common
-Crawl, he worked as software developer at Exorbyte, implementing
-search and data quality solutions.
-
-Sebastian holds a PhD in computational linguistics from University of
-Munich.  He studied linguistics (Slavic languages) and cultural
-anthropology in Munich, Kazan and Prague.  Sebastian is a committer of
-Apache Nutch and a member of the Apache Software Foundation.
+The Ludwig Maximilian University of Munich is a public research university in Munich, Germany. It is Germany's sixth-oldest university in continuous operation.
