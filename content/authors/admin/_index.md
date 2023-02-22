@@ -91,7 +91,7 @@ highlight_name: false
 The OSCAR project (**O**pen **S**uper-large **C**rawled **A**ggregated co**R**pus) is an Open Source project aiming to provide web-based multilingual resources and datasets for Machine Learning (ML) and Artificial Intelligence (AI) applications. The project focuses specifically in providing large quantities of unannotated raw data that is commonly used in the pre-training of large deep learning models. The OSCAR project has developed [high-performance data pipelines](https://github.com/oscar-corpus/ungoliant) specifically conceived to classify and filter large amounts of [web data](https://commoncrawl.org/). The project has also put special attention in improving the data quality of web-based corpora as well as providing data for low-resource languages, so that these new ML/AI technologies are accessible to as many communities as possible.
 
 {{% callout note %}}
-Grab the latest OSCAR release [here](post/oscar-v22-01/)! :rocket:
+The new OSCAR 23.01 is finally available, check it out [here](https://oscar-project.github.io/documentation/versions/oscar-2301/)! :rocket:
 {{% /callout %}}
 
 {{% callout note %}}

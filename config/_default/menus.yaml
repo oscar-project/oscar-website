@@ -15,7 +15,7 @@ main:
     url: '#blog'
   - name: Releases
     weight: 16
-    url: '#release'
+    url: 'https://oscar-project.github.io/documentation/versions/oscar-2301/'
   - name: FAQ
     weight: 17
     url: 'faq'
