@@ -4,7 +4,7 @@
 title: "News: OSCAR 23.01 Release"
 subtitle: ""
 summary: "New filters, new categories, more compression, a fresh corpus and more"
-authors: ["julien", "pedro"]
+authors: ["pedro", "julien"]
 tags: []
 categories: ["news"]
 date: 2023-02-22T15:02:11+02:00
@@ -42,3 +42,5 @@ After one year of work, we're happy to announce the release of OSCAR 23.01! :roc
 6. Language naming changes to better respect the BCP47 standard :pencil2::nerd_face:
 
 To get access to this version and more information about it, please visit our documentation [here](https://oscar-project.github.io/documentation/versions/oscar-2301/).
+
+This release was made possible by [Julien Abadji](/authors/julien/), [Pedro Ortiz Suarez](/authors/pedro/), [Rua Ismail](/authors/rua), [Sotaro Takeshita](/authors/contrib-sotaro), [Sebastian Nagel](/authors/collab-sebastian) and [Benoit Sagot](/authors/benoit).
