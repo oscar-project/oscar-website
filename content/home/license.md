@@ -37,7 +37,7 @@ These data are released under this licensing scheme:
 
 ## Code Licenses
 
-All of the software repositories produced by the OSCAR project are available [GitHub](https://github.com/oscar-project) and include repository-specific licensing information. For more information pleae visit the [OSCAR Project Organization on GitHub](https://github.com/oscar-project).
+All of the software repositories produced by the OSCAR Project are available [GitHub](https://github.com/oscar-project) and include repository-specific licensing information. For more information please visit the [OSCAR Project Organization on GitHub](https://github.com/oscar-project).
 
 ## Notice and take down policy
 
