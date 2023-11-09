@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog posts | OSCAR</title><link>https://oscar-project.org/post/</link><atom:link href="https://oscar-project.org/post/index.xml" rel="self" type="application/rss+xml"/><description>Blog posts</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://oscar-project.org/media/sharing.png</url><title>Blog posts</title><link>https://oscar-project.org/post/</link></image><item><title>News: OSCAR 23.01 Release</title><link>https://oscar-project.org/post/news-23-01/</link><pubDate>Wed, 22 Feb 2023 15:02:11 +0200</pubDate><guid>https://oscar-project.org/post/news-23-01/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
-The new OSCAR 23.01 is finally available, check it out &lt;a href="https://oscar-project.github.io/documentation/versions/oscar-2301/" target="_blank" rel="noopener">here&lt;/a>! 🚀
+The new OSCAR 23.01 is finally available, check it out &lt;a href="https://oscar-project.github.io/documentation/versions/oscar-2301/" target="_blank" rel="noopener">here&lt;/a>! &amp;#x1f680;
 &lt;/div>
 &lt;/div>
-&lt;p>After one year of work, we&amp;rsquo;re happy to announce the release of OSCAR 23.01! 🚀 OSCAR 23.01 is the January 2023 version of the OSCAR Corpus based on the &lt;a href="https://commoncrawl.org/2022/12/nov-dec-2022-crawl-archive-now-available/" target="_blank" rel="noopener">November/December 2022 dump of Common Crawl&lt;/a>. While being quite similar to OSCAR 22.01, it contains several new features, including:&lt;/p>
+&lt;p>After one year of work, we&amp;rsquo;re happy to announce the release of OSCAR 23.01! &amp;#x1f680; OSCAR 23.01 is the January 2023 version of the OSCAR Corpus based on the &lt;a href="https://commoncrawl.org/2022/12/nov-dec-2022-crawl-archive-now-available/" target="_blank" rel="noopener">November/December 2022 dump of Common Crawl&lt;/a>. While being quite similar to OSCAR 22.01, it contains several new features, including:&lt;/p>
 &lt;ol>
-&lt;li>&lt;a href="https://kheafield.com/code/kenlm/" target="_blank" rel="noopener">KenLM&lt;/a>-based adult content detection 👀&lt;/li>
-&lt;li>Precomputed &lt;a href="https://fr.wikipedia.org/wiki/Locality_sensitive_hashing" target="_blank" rel="noopener">Locality-Sensitive Hashes&lt;/a> for near deduplication 📍&lt;/li>
-&lt;li>&lt;a href="https://dsi.ut-capitole.fr/blacklists/index_en.php" target="_blank" rel="noopener">Blocklist&lt;/a>-based categories 📚&lt;/li>
-&lt;li>&lt;a href="https://facebook.github.io/zstd/" target="_blank" rel="noopener">Zstandard compression&lt;/a> 📦&lt;/li>
-&lt;li>A new blocklist specifically made for Japanese 🇯🇵&lt;/li>
-&lt;li>Language naming changes to better respect the BCP47 standard ✏️🤓&lt;/li>
+&lt;li>&lt;a href="https://kheafield.com/code/kenlm/" target="_blank" rel="noopener">KenLM&lt;/a>-based adult content detection &amp;#x1f440;&lt;/li>
+&lt;li>Precomputed &lt;a href="https://fr.wikipedia.org/wiki/Locality_sensitive_hashing" target="_blank" rel="noopener">Locality-Sensitive Hashes&lt;/a> for near deduplication &amp;#x1f4cd;&lt;/li>
+&lt;li>&lt;a href="https://dsi.ut-capitole.fr/blacklists/index_en.php" target="_blank" rel="noopener">Blocklist&lt;/a>-based categories &amp;#x1f4da;&lt;/li>
+&lt;li>&lt;a href="https://facebook.github.io/zstd/" target="_blank" rel="noopener">Zstandard compression&lt;/a> &amp;#x1f4e6;&lt;/li>
+&lt;li>A new blocklist specifically made for Japanese &amp;#x1f1ef;&amp;#x1f1f5;&lt;/li>
+&lt;li>Language naming changes to better respect the BCP47 standard &amp;#x270f;&amp;#xfe0f;&amp;#x1f913;&lt;/li>
 &lt;/ol>
 &lt;p>To get access to this version and more information about it, please visit our documentation &lt;a href="https://oscar-project.github.io/documentation/versions/oscar-2301/" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
 &lt;p>This release was made possible by &lt;a href="https://oscar-project.org/authors/julien/">Julien Abadji&lt;/a>, &lt;a href="https://oscar-project.org/authors/pedro/">Pedro Ortiz Suarez&lt;/a>, &lt;a href="https://oscar-project.org/authors/rua">Rua Ismail&lt;/a>, &lt;a href="https://oscar-project.org/authors/contrib-sotaro">Sotaro Takeshita&lt;/a>, &lt;a href="https://oscar-project.org/authors/collab-sebastian">Sebastian Nagel&lt;/a> and &lt;a href="https://oscar-project.org/authors/benoit">Benoit Sagot&lt;/a>.&lt;/p></description></item><item><title>OSCAR News: September 2021</title><link>https://oscar-project.org/post/news-21-09/</link><pubDate>Thu, 02 Sep 2021 15:45:55 +0200</pubDate><guid>https://oscar-project.org/post/news-21-09/</guid><description>&lt;p>September 2021 marks an important milestone regarding OSCAR, and we have important news to share.&lt;/p>
