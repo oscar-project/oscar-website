@@ -20,6 +20,8 @@ sections:
       columns: '1'
 ---
 
+## Corpus License
+
 These data are released under this licensing scheme:
 
 * We do not own any of the text from which these data has been extracted.
@@ -32,6 +34,10 @@ These data are released under this licensing scheme:
     href="http://creativecommons.org/publicdomain/zero/1.0/">
   <img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
 </a>
+
+## Code Licenses
+
+All of the software repositories produced by the OSCAR project are available [GitHub](https://github.com/oscar-project) and include repository-specific licensing information. For more information pleae visit the [OSCAR Project Organization on GitHub](https://github.com/oscar-project).
 
 ## Notice and take down policy
 
