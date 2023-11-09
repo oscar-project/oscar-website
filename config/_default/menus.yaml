@@ -28,6 +28,9 @@ main:
   - name: Team
     url: '#people'
     weight: 40
+  - name: License
+    url: '#license'
+    weight: 50
   - name: Contact
     url: '#contact'
     weight: 50
